@@ -1,0 +1,297 @@
+#include <stdlib.h>
+#include <math.h>
+#include "hog.hpp"
+
+#define PI 3.14159265359
+#define EPSILLON 0.0001f
+
+/**
+ * TODO: ajouter des vérifications comme quoi tous les size sont positives
+ */
+HOG::HOG(char* image, int row_size, int col_size)
+{
+	//Initialisation
+	this->image = image;
+	this->row_size = row_size;
+	this->col_size = col_size;
+	this->img_size = row_size*col_size;
+
+	//Les cellules font 8x8 pixels
+	this->cell_size_x = col_size/8;
+	this->cell_size_y = row_size/8;
+	this->cell_size = cell_size_x*cell_size_y;
+
+	//Les blocs font 2X2 cellules. Il y a donc 1 bloc de moins que de cellule dans chaque directions
+	this->block_size_x = (cell_size_x-1);
+	this->block_size_y = (cell_size_y-1);
+	this->block_size = block_size_x*block_size_y;
+
+	//Une fenêtre fait 8 cellules par 16 cellules. Une image de 8X16 aura donc une seule fenêtre
+	this->win_size_x = cell_size_x-7;
+	this->win_size_y = cell_size_y-15;
+	this->win_size = win_size_x*win_size_y;
+
+	//On réserve beaucoup de mémoire
+	xGrad = (char*)malloc(img_size*sizeof(char));
+	yGrad = (char*)malloc(img_size*sizeof(char));
+	norm = (float*)malloc(img_size*sizeof(float));
+	angle = (float*)malloc(img_size*sizeof(float));
+
+	cells = new Histogram[cell_size];
+	blocks = new NormalizedHistogram[block_size];
+}
+
+HOG::~HOG()
+{
+	free(xGrad);
+	free(yGrad);
+	free(norm);
+	free(angle);
+
+	delete cells;
+	delete blocks;
+}
+
+void HOG::calculate_gradient()
+{
+	unsigned int i, j,index;
+
+	for (i=0;i<row_size;i++)
+	{
+		for (j=0;j<col_size;j++)
+		{
+			index = i*col_size+j;
+
+			//gradient X
+			if (j==0)
+			{
+				xGrad[index] = image[index+1]-image[index];
+			}
+			else if (j==(col_size-1))
+			{
+				xGrad[index] = image[index]-image[index-1];
+			}
+			else
+			{
+				xGrad[index] = image[index+1]-image[index-1];
+			}
+
+			//gradient y
+			if (i==0)
+			{
+				yGrad[index] = image[index+col_size]-image[index];
+			}
+			else if (i==(row_size-1))
+			{
+				yGrad[index] = image[index]-image[index-col_size];
+			}
+			else
+			{
+				yGrad[index] = image[index+col_size]-image[index-col_size];
+			}
+
+			float xGradPow = ((float)xGrad[index])*xGrad[index];
+			float yGradPow = ((float)yGrad[index])*yGrad[index];
+			float gradDiv = ((float)yGrad[index])/((float)xGrad[index]+EPSILLON);
+
+			norm[index] = sqrt(xGradPow+yGradPow);
+			angle[index] = (atan(gradDiv)*180/PI)+90;
+		}
+	}
+}
+
+void HOG::calculate_cells()
+{
+	unsigned int i,j;
+	int cellIndex,pixelIndex;
+
+	for (i=0;i<cell_size_y;i++)
+	{
+		for (j=0;j<cell_size_x;j++)
+		{
+			cellIndex = (i*cell_size_x)+j;
+			pixelIndex = (i*col_size)+(j*8);
+
+			cells[cellIndex].calculate_hist(&norm[pixelIndex],
+								 	 	 	&norm[pixelIndex],
+											col_size);
+		}
+	}
+}
+
+void HOG::calculate_blocks()
+{
+	unsigned int i,j;
+	unsigned int cellIndex,blockIndex;
+	std::list<const Histogram*> hlist;
+
+	for (i=0;i<block_size_y;i++)
+	{
+		for (j=0;j<block_size_x;j++)
+		{
+			blockIndex = (i*block_size_x)+j;
+			cellIndex = (i*cell_size_x)+j;
+
+			hlist.clear();
+			hlist.push_back(&cells[cellIndex]);
+			hlist.push_back(&cells[cellIndex+1]);
+			hlist.push_back(&cells[cellIndex+cell_size_x]);
+			hlist.push_back(&cells[cellIndex+cell_size_x+1]);
+
+			blocks[blockIndex].calculate_normedhist(hlist);
+		}
+	}
+}
+
+void HOG::calculate_windows(SVM* reference)
+{
+	unsigned int i,j;
+	unsigned int cellIndex;
+	std::list<const NormalizedHistogram*> nhlist;
+
+
+
+	for (i=0;i<cell_size_y-16;i++)
+	{
+		for (j=0;j<cell_size_x-8;j++)
+		{
+			cellIndex = (i*(cell_size_x-1))+j;
+		}
+	}
+
+}
+
+
+
+/**
+ *
+ *
+ * Histogram CLASS
+ *
+ *
+ */
+Histogram::Histogram()
+{
+	for (int i=0;i<9;i++)
+	{
+		hist[i]=0.0f;
+	}
+}
+
+void Histogram::calculate_hist(const float* norm,const float* angle,int col_size)
+{
+	static const float binsAngle[9] = {0.0f, 20.0f, 40.0f, 60.0f, 80.0f,
+									   100.0f, 120.0f, 140.0f, 160.0f};
+
+	int i,j,index;
+	char bin;
+	float a,n;
+	float excentricity, angleToNextBin;
+
+	for (i=0;i<8;i++)
+	{
+		for (j=0;j<8;j++)
+		{
+			index=i*col_size+j;
+			a = angle[index];
+			n = norm[index];
+
+			// simple decision tree to determine the bin
+			if (a<=80) {
+				if (a<=40) {
+					if (a<=20) {
+						bin=0;
+					}
+					else {
+						bin=1;
+					}
+				}
+				else {
+					if (a<=60) {
+						bin=2;
+					}
+					else {
+						bin=3;
+					}
+				}
+			}
+			else {
+				if (a<=120) {
+					if (a<=100) {
+						bin=4;
+					}
+					else {
+						bin=5;
+					}
+				}
+				else {
+					if (a<=140) {
+						bin=6;
+					}
+					else {
+						if (a<=160) {
+							bin=7;
+						}
+						else {
+							bin=8;
+						}
+					}
+				}
+			}
+
+			//excentricity is between 0 and 1
+			excentricity = (a-binsAngle[bin])/20.0f;
+
+			angleToNextBin = n*excentricity;
+
+			//if the angle is above 160, the next bin is 0 degrees
+			hist[(bin+1)%9]=angleToNextBin;
+			hist[bin]=n-angleToNextBin;
+		}
+	}
+}
+
+
+
+/**
+ *
+ *
+ *
+ * NormalizedHistogram Class
+ *
+ *
+ */
+NormalizedHistogram::NormalizedHistogram()
+{
+	l2hys = 0.0f;
+
+	for (int i=0;i<36;i++)
+	{
+		hist[i]=0.0f;
+	}
+}
+
+void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists)
+{
+	int i,j, index;
+
+	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
+	{
+		for (j=0;j<9;j++)
+		{
+			l2hys += pow((*it)->hist[j],2);
+		}
+	}
+
+	l2hys = sqrt(l2hys);
+
+	index=0;
+	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
+	{
+		for (j=0;j<9;j++)
+		{
+			this->hist[index] = ((*it)->hist[j])/l2hys;
+			index++;
+		}
+	}
+}
