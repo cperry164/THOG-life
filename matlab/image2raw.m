@@ -1,12 +1,12 @@
-function image2raw(filename)
+function image2raw(filename_in,filename_out)
 
 % Reads the poly.jpg image, converts it into grayscale and writes it in raw format in image_in.rimg  
-[X,map] = imread(filename);
-%[X,map] = imread('poly.jpg');
-Gray_img=rgb2gray(X)
-[R_size,C_size] = size(Gray_img)
+[X,map] = imread(filename_in);
 
-fid = fopen('image_in.rimg', 'w');
+Gray_img=rgb2gray(X);
+[R_size,C_size] = size(Gray_img);
+
+fid = fopen(filename_out, 'w');
 fwrite(fid,R_size,'integer*4');
 fwrite(fid,C_size,'integer*4');
 fwrite(fid,Gray_img.');

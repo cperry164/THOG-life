@@ -2,7 +2,9 @@
 #define __HOG_H_
 
 #include <list>
-#include "svm.hpp"
+#include <string>
+#include "image.hpp"
+
 
 /**
  * \brief Une seule cellule
@@ -44,6 +46,18 @@ public:
 	float l2hys;
 };
 
+class SVM
+{
+public:
+	/**
+	 * \brief Create an SVM from a .svm file
+	 */
+	SVM(std::string filepath);
+
+	float values[3780];
+	float bias;
+};
+
 /**
  * \brief Une fenêtre contient 7 blocs de large par 15 de haut
  */
@@ -53,22 +67,29 @@ public:
 	HogWindow();
 
 	/**
-	 * \brief batit la SVM à partir d'un ensemble d'histogrammes normalisés
+	 * \brief Calcul du tableau de dimension 3780
 	 */
-	void build_svm(std::list<const NormalizedHistogram*> nhists);
+	void calculate_values();
 
 	/**
 	 * \detecte la présence d'un objet à partir d'une SVM de référence
 	 */
-	bool detect(SVM* reference);
+	bool detect(const SVM* reference);
 
 	// liste de 105 histogrammes normalisées
+	// Doivent impérativement être dans l'ordre (serait peut-etre plus efficace d'utiliser un vector)
 	std::list<const NormalizedHistogram*> nhists;
+
+	// Utilisation d'un tableau de dimension fixe pour stocker les
+	// 105*36 dimensions
+	float values[3780];
 };
 
 class HOG {
 public:
-	HOG(char* image, int row_size, int col_size);
+	HOG(Image* img, SVM* svm=NULL);
+
+	HOG(char* image, int row_size, int col_size, SVM* svm=NULL);
 	~HOG();
 
 	/**
@@ -90,9 +111,11 @@ public:
 	void calculate_blocks();
 
 	/**
-	 * \brief Calcul la presence d'un objet selon une svm de reference
+	 * \brief Build the windows
 	 */
-	void calculate_windows(SVM* reference);
+	void calculate_windows();
+
+	bool detect(SVM* svm);
 
 	//Nombre de ligne de l'image (direction y)
 	unsigned int row_size;
@@ -118,15 +141,22 @@ public:
 	unsigned int win_size_x;
 	unsigned int win_size;
 
+	//Aggregation
 	char* image;
+	SVM* svm;
+
+	//Composition pointer
 	char *xGrad, *yGrad;
 	float *norm, *angle;
+	bool *detection;
+
 	Histogram *cells;
 	NormalizedHistogram* blocks;
+	HogWindow* windows;
+
 private:
 
 };
-
 
 
 #endif

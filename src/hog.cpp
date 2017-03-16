@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include <stdio.h>
 #include <math.h>
 #include "hog.hpp"
 
@@ -8,13 +9,16 @@
 /**
  * TODO: ajouter des vérifications comme quoi tous les size sont positives
  */
-HOG::HOG(char* image, int row_size, int col_size)
+HOG::HOG(char* image, int row_size, int col_size, SVM* svm)
 {
-	//Initialisation
+	//Initialisation image
 	this->image = image;
 	this->row_size = row_size;
 	this->col_size = col_size;
 	this->img_size = row_size*col_size;
+
+	//svm
+	this->svm = svm;
 
 	//Les cellules font 8x8 pixels
 	this->cell_size_x = col_size/8;
@@ -36,9 +40,15 @@ HOG::HOG(char* image, int row_size, int col_size)
 	yGrad = (char*)malloc(img_size*sizeof(char));
 	norm = (float*)malloc(img_size*sizeof(float));
 	angle = (float*)malloc(img_size*sizeof(float));
+	detection = (bool*)malloc(win_size*sizeof(bool));
 
 	cells = new Histogram[cell_size];
 	blocks = new NormalizedHistogram[block_size];
+	windows = new HogWindow[win_size];
+}
+
+HOG::HOG(Image* img, SVM* svm) : HOG(img->buffer,img->size_y,img->size_x,svm)
+{
 }
 
 HOG::~HOG()
@@ -47,9 +57,11 @@ HOG::~HOG()
 	free(yGrad);
 	free(norm);
 	free(angle);
+	free(detection);
 
 	delete cells;
 	delete blocks;
+	//delete windows;
 }
 
 void HOG::calculate_gradient()
@@ -113,7 +125,7 @@ void HOG::calculate_cells()
 			pixelIndex = (i*col_size)+(j*8);
 
 			cells[cellIndex].calculate_hist(&norm[pixelIndex],
-								 	 	 	&norm[pixelIndex],
+								 	 	 	&angle[pixelIndex],
 											col_size);
 		}
 	}
@@ -143,19 +155,48 @@ void HOG::calculate_blocks()
 	}
 }
 
-void HOG::calculate_windows(SVM* reference)
+void HOG::calculate_windows()
 {
-	unsigned int i,j;
-	unsigned int cellIndex;
-	std::list<const NormalizedHistogram*> nhlist;
+	unsigned int i,j,m,n;
+	unsigned int winIndex, blockIndex;
+	std::list<const NormalizedHistogram*> *nhlist;
 
-
-
-	for (i=0;i<cell_size_y-16;i++)
+	//For each window in y
+	for (i=0;i<win_size_y;i++)
 	{
-		for (j=0;j<cell_size_x-8;j++)
+		//For each window in x
+		for (j=0;j<win_size_x;j++)
 		{
-			cellIndex = (i*(cell_size_x-1))+j;
+			//index of the first block in the window
+			winIndex = i*win_size_x+j;
+
+			//Each window contains a NormalizedHistogram list.
+			//nhlist is a pointer to this list
+			nhlist = &(windows[winIndex].nhists);
+
+			//For each block of the window in x
+			for (m=0;m<7;m++)
+			{
+				//For each block of the window in y
+				for (n=0;n<15;n++)
+				{
+					//the index of the block in the global image block indexing system
+					blockIndex=winIndex+(m*block_size_x)+n;
+
+					//add the block to the current window's block list
+					nhlist->push_back(&blocks[blockIndex]);
+				}
+			}
+
+			//Once a window is completed we can fill the values array
+			//There might be some optimisation to do here since calculate_values() will
+			//iterate over the nhlist we just built in the loop before
+			windows[winIndex].calculate_values();
+
+			//If we have an SVM, calculate the detection
+			if (this->svm != NULL)
+			{
+			}
 		}
 	}
 
@@ -283,7 +324,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 		}
 	}
 
-	l2hys = sqrt(l2hys);
+	l2hys = sqrt(l2hys)+EPSILLON;
 
 	index=0;
 	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
@@ -295,3 +336,74 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 		}
 	}
 }
+
+
+
+/*
+ *
+ * HogWindow CLASS
+ *
+ */
+HogWindow::HogWindow()
+{
+
+}
+
+void HogWindow::calculate_values()
+{
+	if (nhists.size()==105)
+	{
+		unsigned int index=0;
+
+		for(std::list<const NormalizedHistogram*>::iterator it = nhists.begin();
+				it != nhists.end(); it++)
+		{
+			for(unsigned int j=0;j<36;j++)
+			{
+				values[index]=(*it)->hist[j];
+				index++;
+			}
+		}
+	}
+	else
+	{
+		printf("HogWindow trying to calculate values of a window with %d normalized histograms (105 required)",nhists.size());
+	}
+}
+
+bool HogWindow::detect(const SVM* reference)
+{
+	unsigned int i;
+	float dotProduct=0.0f;
+
+	for (i=0;i<3780;i++)
+	{
+		dotProduct += this->values[i]*reference->values[i];
+	}
+
+	return (dotProduct>=reference->bias);
+}
+
+/*
+ *
+ * SVM Class
+ *
+ */
+SVM::SVM(std::string filepath)
+{
+	FILE* fd;
+
+	fd=fopen(filepath.c_str(),"rb");
+
+	if(fd==NULL){
+		printf("Cannot open %s\n",filepath);
+		return;
+	}
+
+	//Reading the file
+	fread(&this->bias,sizeof(float),1,fd);
+	fread(this->values,sizeof(float),3780,fd);
+
+	fclose(fd);
+}
+
