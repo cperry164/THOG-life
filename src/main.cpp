@@ -19,12 +19,13 @@ void write_image(float* image_out, string filename, int row_size, int col_size);
 void write_cells(Histogram* hists, string filename, int y_size, int x_size);
 void write_blocks(NormalizedHistogram* hists, string filename, int y_size, int x_size);
 void write_windows(HOG* hog, string filename);
+void write_detection(HOG* hog, string filename);
 void compute_image_window(string rawImageFilename, string outputFilename);
 void compute_all_image_window(string inDir, string outDir);
-void detect_image_window(string rawImageFilename);
+void detect_image_window(string imagePath, string svmPath, string windowPath);
 void histogramTest(string rawImageFilename, string outputFilename);
 
-void detect_image_window(string imagePath, string svmPath)
+void detect_image_window(string imagePath, string svmPath, string windowPath)
 {
 	bool detected=false;
 
@@ -38,7 +39,9 @@ void detect_image_window(string imagePath, string svmPath)
 	hog.calculate_cells();
 	hog.calculate_blocks();
 	hog.calculate_windows();
+	hog.printDetection();
 
+	write_detection(&hog,windowPath);
 }
 
 void histogramTest(string rawImageFilename, string outputPath)
@@ -68,12 +71,15 @@ void histogramTest(string rawImageFilename, string outputPath)
 
 int main(void)
 {
-
-	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos/per00001.raw";
+	string svm="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/thog2.svm";
+	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test2.raw";
+	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/neg/00000002a.raw";
+	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos/per00001.raw";
 	string testOutput="/home/kakaroth/Ecole/INF8505/projet/workspace/hog";
+	string windowOutput="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test2.rect";
 
-	histogramTest(testImage,testOutput);
-
+	//histogramTest(testImage,testOutput);
+	detect_image_window(testImage,svm,windowOutput);
 
 	//positive sample
 	string input_dir="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos";
@@ -103,7 +109,10 @@ void compute_all_image_window(string inDir, string outDir)
 				string inName = ent->d_name;
 				string outName = inName.substr(0,inName.find("."))+".hogwin";
 
-				compute_image_window(inDir+"/"+inName,outDir+"/"+outName);
+				string inPath = inDir+"/"+inName;
+				string outPath = outDir+"/"+outName;
+
+				compute_image_window(inPath,outPath);
 
 				//printf("%s -> %s\n", fullname.c_str(),(name+".hogwin").c_str());
 			}
@@ -115,6 +124,7 @@ void compute_all_image_window(string inDir, string outDir)
 		/* could not open directory */
 	}
 }
+
 
 void compute_image_window(string rawImageFilename, string outputFilename)
 {
@@ -304,3 +314,38 @@ void write_windows(HOG* hog, string filename)
 	return;
 }
 
+void write_detection(HOG* hog, string filename)
+{
+	FILE * fd;
+
+	fd=fopen(filename.c_str(), "wb" );
+
+	if(fd==NULL){
+		perror("fopen()");
+		exit(-1);
+	}
+
+	unsigned int winWrite=0;
+	for (unsigned int i=0;i<hog->win_size_y;i++)
+	{
+		for (unsigned int j=0;j<hog->win_size_x;j++)
+		{
+			if (hog->detection[(i*hog->win_size_x)+j])
+			{
+				fwrite(&i,sizeof(int),1,fd);
+				fwrite(&j,sizeof(int),1,fd);
+				winWrite++;
+			}
+		}
+	}
+
+	printf("%d window(s) written to %s\n",winWrite,filename.c_str());
+
+	//for (unsigned int i=0;i<10;i++) {
+	//	printf("%f\n",win->values[i]);
+	//}
+
+	fclose(fd);
+
+	return;
+}

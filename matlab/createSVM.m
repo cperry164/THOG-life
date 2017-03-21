@@ -4,7 +4,7 @@ clear all;
 
 input_dir_pos='../database/window/pos';
 input_dir_neg='../database/window/neg';
-svm_name_out='../database/thog.svm';
+svm_name_out='../database/thog2.svm';
 
 pos_samples=[];
 neg_samples=[];
@@ -25,7 +25,7 @@ end
 fprintf(1,'%d positives samples on %d files found\n',size(pos_samples,1),filecount);
 
 %Read negatives samples
-fprintf(1,'Reading positives samples...\n');
+fprintf(1,'Reading negatives samples...\n');
 files=dir(input_dir_neg);
 
 filecount=0;
@@ -49,7 +49,8 @@ type=[true(size(pos_samples,1),1);
   
 %SVM train algorithm of Matlab. Disable scaling, otherwise we would have to
 %do scaling in the C code
-svmStruct = svmtrain(data,type,'autoscale',false);
+%options.MaxIter = 10000000;
+svmStruct = svmtrain(data,type,'autoscale',false);%,'Options', options);
 
 %A vector of 3780 dimensions that will multiply the hog windows
 vector=svmStruct.Alpha'*svmStruct.SupportVectors;

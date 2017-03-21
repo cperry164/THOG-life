@@ -117,6 +117,8 @@ public:
 
 	bool detect(SVM* svm);
 
+	void printDetection();
+
 	//Nombre de ligne de l'image (direction y)
 	unsigned int row_size;
 

@@ -1,10 +1,12 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
+#include <limits>
 #include "hog.hpp"
 
+
 #define PI 3.14159265359
-#define EPSILLON 0.0001f
+#define EPSILLON std::numeric_limits<float>::epsilon()
 
 /**
  * TODO: ajouter des vérifications comme quoi tous les size sont positives
@@ -59,9 +61,18 @@ HOG::~HOG()
 	free(angle);
 	free(detection);
 
-	delete cells;
-	delete blocks;
-	//delete windows;
+	if (cells!=NULL)
+	{
+		delete[] cells;
+	}
+	if (blocks!=NULL)
+	{
+		delete[] blocks;
+	}
+	if (windows!=NULL)
+	{
+		delete[] windows;
+	}
 }
 
 void HOG::calculate_gradient()
@@ -117,17 +128,28 @@ void HOG::calculate_cells()
 	unsigned int i,j;
 	int cellIndex,pixelIndex;
 
+	cellIndex=0;
+	pixelIndex=0;
+
 	for (i=0;i<cell_size_y;i++)
 	{
 		for (j=0;j<cell_size_x;j++)
 		{
-			cellIndex = (i*cell_size_x)+j;
-			pixelIndex = (i*col_size)+(j*8);
+			//cellIndex = (i*cell_size_x)+j;
+			//pixelIndex = (i*col_size)+(j*8);
 
 			cells[cellIndex].calculate_hist(&norm[pixelIndex],
 								 	 	 	&angle[pixelIndex],
 											col_size);
+			cellIndex++;
+			//go to the next first pixel of the next cell in the same cell row
+			//which is 8 pixels to the right
+			pixelIndex+=8;
 		}
+		//go to the next pixel of the nest cell in the same cell column
+		//we already incremented pixelIndex by one col_size
+		//we need to go 7 row further to reach the first pixel of the next row of cells
+		pixelIndex+=(7*col_size);
 	}
 }
 
@@ -158,7 +180,7 @@ void HOG::calculate_blocks()
 void HOG::calculate_windows()
 {
 	unsigned int i,j,m,n;
-	unsigned int winIndex, blockIndex;
+	unsigned int winIndex, blockIndex, winBlockIndex;
 	std::list<const NormalizedHistogram*> *nhlist;
 
 	//For each window in y
@@ -169,19 +191,20 @@ void HOG::calculate_windows()
 		{
 			//index of the first block in the window
 			winIndex = i*win_size_x+j;
+			winBlockIndex = i*block_size_x+j;
 
 			//Each window contains a NormalizedHistogram list.
 			//nhlist is a pointer to this list
 			nhlist = &(windows[winIndex].nhists);
 
-			//For each block of the window in x
-			for (m=0;m<7;m++)
+			//For each block of the window in y
+			for (m=0;m<15;m++)
 			{
-				//For each block of the window in y
-				for (n=0;n<15;n++)
+				//For each block of the window in x
+				for (n=0;n<7;n++)
 				{
 					//the index of the block in the global image block indexing system
-					blockIndex=winIndex+(m*block_size_x)+n;
+					blockIndex=winBlockIndex+(m*block_size_x)+n;
 
 					//add the block to the current window's block list
 					nhlist->push_back(&blocks[blockIndex]);
@@ -196,12 +219,36 @@ void HOG::calculate_windows()
 			//If we have an SVM, calculate the detection
 			if (this->svm != NULL)
 			{
+				detection[winIndex] = windows[winIndex].detect(this->svm);
 			}
 		}
 	}
-
 }
 
+void HOG::printDetection()
+{
+	unsigned int i;
+
+	for (unsigned int i=0;i<win_size_y;i++)
+	{
+		for (unsigned int j=0;j<win_size_x;j++)
+		{
+			if (detection[(i*win_size_x)+j])
+			{
+				printf("Person detected in window x=%d,y=%d\n",j*8,i*8);
+			}
+		}
+	}
+	/*
+	for (i=0;i<win_size;i++)
+	{
+		if (detection[i])
+		{
+			printf("Person detected in window %d\n",i);
+		}
+	}
+	*/
+}
 
 
 /**
@@ -286,13 +333,11 @@ void Histogram::calculate_hist(const float* norm,const float* angle,int col_size
 			angleToNextBin = n*excentricity;
 
 			//if the angle is above 160, the next bin is 0 degrees
-			hist[(bin+1)%9]=angleToNextBin;
-			hist[bin]=n-angleToNextBin;
+			hist[(bin+1)%9]+=angleToNextBin;
+			hist[bin]+=(n-angleToNextBin);
 		}
 	}
 }
-
-
 
 /**
  *
@@ -381,7 +426,8 @@ bool HogWindow::detect(const SVM* reference)
 		dotProduct += this->values[i]*reference->values[i];
 	}
 
-	return (dotProduct>=reference->bias);
+	//printf("prod=%f",dotProduct);
+	return (dotProduct<=-reference->bias);
 }
 
 /*
