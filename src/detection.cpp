@@ -52,7 +52,7 @@ void detect_image_window(string imagePath, string svmPath, string windowPath)
 	hog.calculate_windows();
 	hog.printDetection();
 
-	write_detection(&hog,windowPath);
+	//write_detection(&hog,windowPath);
 }
 
 void write_detection(HOG* hog, string filename)
