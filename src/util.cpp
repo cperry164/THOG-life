@@ -1,5 +1,7 @@
 /*
- * Fichier du laboratoire 2 du lab INF8505
+ * Contient les fonctions relatives au développement de l'application
+ * (fichier d'histograme et gradients reconnaissables par Matlab,
+ *  génération de la base de donnée)
  */
 
 #include <stdio.h>
@@ -64,6 +66,7 @@ void histogramTest(string rawImageFilename, string outputPath)
 	write_blocks(hog.blocks, outputPath+"/histogram", hog.block_size_y, hog.block_size_x);
 	write_image(image_in, outputPath+"/image", row_size, col_size);
 	write_image(hog.norm, outputPath+"/norm", row_size, col_size);
+	write_windows(&hog, outputPath+"/windows.hogwin");
 
 	free(image_in);
 }
@@ -72,11 +75,12 @@ void histogramTest(string rawImageFilename, string outputPath)
 int main(void)
 {
 	string svm="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/thog2.svm";
-	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test2.raw";
-	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/neg/00000002a.raw";
+	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.raw";
+	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/neg/00000002a.raw";
+	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/circle.raw";
 	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos/per00001.raw";
 	string testOutput="/home/kakaroth/Ecole/INF8505/projet/workspace/hog";
-	string windowOutput="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test2.rect";
+	string windowOutput="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.rect";
 
 	//histogramTest(testImage,testOutput);
 	detect_image_window(testImage,svm,windowOutput);

@@ -228,6 +228,7 @@ void HOG::calculate_windows()
 void HOG::printDetection()
 {
 	unsigned int i;
+	unsigned int detect=0;
 
 	for (unsigned int i=0;i<win_size_y;i++)
 	{
@@ -235,19 +236,13 @@ void HOG::printDetection()
 		{
 			if (detection[(i*win_size_x)+j])
 			{
+				detect++;
 				printf("Person detected in window x=%d,y=%d\n",j*8,i*8);
 			}
 		}
 	}
-	/*
-	for (i=0;i<win_size;i++)
-	{
-		if (detection[i])
-		{
-			printf("Person detected in window %d\n",i);
-		}
-	}
-	*/
+
+	printf("%d detection on %d windows\n",detect,win_size);
 }
 
 
@@ -427,7 +422,7 @@ bool HogWindow::detect(const SVM* reference)
 	}
 
 	//printf("prod=%f",dotProduct);
-	return (dotProduct<=-reference->bias);
+	return (dotProduct<=-0.7*reference->bias);
 }
 
 /*
