@@ -15,13 +15,21 @@ using namespace std;
 void write_detection(HOG* hog, string filename);
 void detect_image_window(string imagePath, string svmPath, string windowPath);
 
-int main(void)
+int main(int argc, char* argv[])
 {
-	string svm="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/thog2.svm";
-	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.raw";
-	string windowOutput="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.rect";
+	if (argc==2)
+	{
+		string path(argv[1]);
+		string svm(path+"/thog2.svm");
+		string testImage(path+"/test/test5.raw");
+		string windowOutput(path+"/test/test5.rect");
 
-	detect_image_window(testImage,svm,windowOutput);
+		detect_image_window(testImage,svm,windowOutput);
+	}
+	else
+	{
+		printf("Argument must be the path to the database directory");
+	}
 }
 
 void detect_image_window(string imagePath, string svmPath, string windowPath)
@@ -34,9 +42,13 @@ void detect_image_window(string imagePath, string svmPath, string windowPath)
 	HOG hog(&img);
 	hog.svm = &svm;
 
+	printf("Calculating gradients...\n");
 	hog.calculate_gradient();
+	printf("Calculating cells (building histograms)...\n");
 	hog.calculate_cells();
+	printf("Calculating blocks (normalization)...\n");
 	hog.calculate_blocks();
+	printf("Calculating windows (svm product)...\n");
 	hog.calculate_windows();
 	hog.printDetection();
 

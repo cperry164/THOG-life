@@ -13,6 +13,16 @@
  */
 HOG::HOG(char* image, int row_size, int col_size, SVM* svm)
 {
+	construct(image, row_size, col_size, svm);
+}
+
+HOG::HOG(Image* img, SVM* svm)
+{
+	construct(img->buffer,img->size_y,img->size_x,svm);
+}
+
+void HOG::construct(char* image, int row_size, int col_size, SVM* svm)
+{
 	//Initialisation image
 	this->image = image;
 	this->row_size = row_size;
@@ -38,8 +48,8 @@ HOG::HOG(char* image, int row_size, int col_size, SVM* svm)
 	this->win_size = win_size_x*win_size_y;
 
 	//On réserve beaucoup de mémoire
-	xGrad = (char*)malloc(img_size*sizeof(char));
-	yGrad = (char*)malloc(img_size*sizeof(char));
+	xGrad = (signed char*)malloc(img_size*sizeof(char));
+	yGrad = (signed char*)malloc(img_size*sizeof(char));
 	norm = (float*)malloc(img_size*sizeof(float));
 	angle = (float*)malloc(img_size*sizeof(float));
 	detection = (bool*)malloc(win_size*sizeof(bool));
@@ -47,10 +57,6 @@ HOG::HOG(char* image, int row_size, int col_size, SVM* svm)
 	cells = new Histogram[cell_size];
 	blocks = new NormalizedHistogram[block_size];
 	windows = new HogWindow[win_size];
-}
-
-HOG::HOG(Image* img, SVM* svm) : HOG(img->buffer,img->size_y,img->size_x,svm)
-{
 }
 
 HOG::~HOG()

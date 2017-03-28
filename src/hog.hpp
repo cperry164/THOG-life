@@ -148,7 +148,7 @@ public:
 	SVM* svm;
 
 	//Composition pointer
-	char *xGrad, *yGrad;
+	signed char *xGrad, *yGrad;
 	float *norm, *angle;
 	bool *detection;
 
@@ -157,7 +157,7 @@ public:
 	HogWindow* windows;
 
 private:
-
+	void construct(char* image, int row_size, int col_size, SVM* svm);
 };
 
 
