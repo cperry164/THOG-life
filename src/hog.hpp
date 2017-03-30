@@ -149,7 +149,8 @@ public:
 
 	//Composition pointer
 	signed char *xGrad, *yGrad;
-	float *norm, *angle;
+	unsigned long *norm;
+	unsigned char *angle;
 	bool *detection;
 
 	Histogram *cells;

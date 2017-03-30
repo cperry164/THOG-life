@@ -7,6 +7,7 @@
 
 #define PI 3.14159265359
 #define EPSILLON std::numeric_limits<float>::epsilon()
+#define EPSILLON_INT 1
 
 /**
  * TODO: ajouter des vérifications comme quoi tous les size sont positives
@@ -50,8 +51,8 @@ void HOG::construct(char* image, int row_size, int col_size, SVM* svm)
 	//On réserve beaucoup de mémoire
 	xGrad = (signed char*)malloc(img_size*sizeof(char));
 	yGrad = (signed char*)malloc(img_size*sizeof(char));
-	norm = (float*)malloc(img_size*sizeof(float));
-	angle = (float*)malloc(img_size*sizeof(float));
+	norm = (unsigned long*)malloc(img_size*sizeof(float));
+	angle = (unsigned char*)malloc(img_size*sizeof(float));
 	detection = (bool*)malloc(win_size*sizeof(bool));
 
 	cells = new Histogram[cell_size];
@@ -119,9 +120,9 @@ void HOG::calculate_gradient()
 				yGrad[index] = image[index+col_size]-image[index-col_size];
 			}
 
-			float xGradPow = ((float)xGrad[index])*xGrad[index];
-			float yGradPow = ((float)yGrad[index])*yGrad[index];
-			float gradDiv = ((float)yGrad[index])/((float)xGrad[index]+EPSILLON);
+			unsigned long xGradPow = ((unsigned long)xGrad[index])*xGrad[index];
+			unsigned long yGradPow = ((unsigned long)yGrad[index])*yGrad[index];
+			signed long gradDiv = (((signed long)yGrad[index])<<8)/((signed long)xGrad[index]+EPSILLON_INT);
 
 			norm[index] = sqrt(xGradPow+yGradPow);
 			angle[index] = (atan(gradDiv)*180/PI)+90;
@@ -267,7 +268,7 @@ Histogram::Histogram()
 	}
 }
 
-void Histogram::calculate_hist(const float* norm,const float* angle,int col_size)
+void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* angle,int col_size)
 {
 	static const float binsAngle[9] = {0.0f, 20.0f, 40.0f, 60.0f, 80.0f,
 									   100.0f, 120.0f, 140.0f, 160.0f};
