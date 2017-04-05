@@ -60,7 +60,7 @@ bias = svmStruct.Bias;
 
 %Write the data to a file
 fid = fopen(svm_name_out, 'w');
-fwrite(fid,bias,'*float');
-fwrite(fid,vector,'*float');
+fwrite(fid,bias,'float=>int32');
+fwrite(fid,vector,'float=>int32');
 
 fprintf(1,'Done\n');

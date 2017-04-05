@@ -20,7 +20,7 @@ Image::Image(std::string filepath)
 
     size_img=R_size*C_size;
 
-    buffer = (char*)malloc(size_img*sizeof(char));
+    buffer = (unsigned char*)malloc(size_img*sizeof(char));
 
     fread(buffer,1,size_img,fd);
 

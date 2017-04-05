@@ -20,11 +20,11 @@ public:
 	 * \param angle Angle du gradient du premier pixel de la cellule
 	 * \param col_size Saut à faire pour changer de ligne dans le tableau
 	 */
-	void calculate_hist(const float* norm,
-						const float* angle,
+	void calculate_hist(const signed int* norm,
+						const signed int* angle,
 						int col_size);
 
-	float hist[9];
+	signed int hist[9];
 private:
 };
 
@@ -42,8 +42,8 @@ public:
 	 */
 	void calculate_normedhist(std::list<const Histogram*> hists);
 
-	float hist[36];
-	float l2hys;
+	signed int hist[36];
+	signed int l2hys;
 };
 
 class SVM
@@ -54,8 +54,8 @@ public:
 	 */
 	SVM(std::string filepath);
 
-	float values[3780];
-	float bias;
+	signed int values[3780];
+	signed int bias;
 };
 
 /**
@@ -82,14 +82,14 @@ public:
 
 	// Utilisation d'un tableau de dimension fixe pour stocker les
 	// 105*36 dimensions
-	float values[3780];
+	signed int values[3780];
 };
 
 class HOG {
 public:
 	HOG(Image* img, SVM* svm=NULL);
 
-	HOG(char* image, int row_size, int col_size, SVM* svm=NULL);
+	HOG(unsigned char* image, int row_size, int col_size, SVM* svm=NULL);
 	~HOG();
 
 	/**
@@ -144,13 +144,13 @@ public:
 	unsigned int win_size;
 
 	//Aggregation
-	char* image;
+	unsigned char* image;
 	SVM* svm;
 
 	//Composition pointer
-	signed char *xGrad, *yGrad;
-	unsigned long *norm;
-	unsigned char *angle;
+	signed short *xGrad, *yGrad;
+	signed int *norm;
+	signed int *angle;
 	bool *detection;
 
 	Histogram *cells;
@@ -158,7 +158,7 @@ public:
 	HogWindow* windows;
 
 private:
-	void construct(char* image, int row_size, int col_size, SVM* svm);
+	void construct(unsigned char* image, int row_size, int col_size, SVM* svm);
 };
 
 

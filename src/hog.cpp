@@ -3,7 +3,7 @@
 #include <math.h>
 #include <limits>
 #include "hog.hpp"
-
+#include "cordic.hpp"
 
 #define PI 3.14159265359
 #define EPSILLON std::numeric_limits<float>::epsilon()
@@ -12,7 +12,7 @@
 /**
  * TODO: ajouter des vérifications comme quoi tous les size sont positives
  */
-HOG::HOG(char* image, int row_size, int col_size, SVM* svm)
+HOG::HOG(unsigned char* image, int row_size, int col_size, SVM* svm)
 {
 	construct(image, row_size, col_size, svm);
 }
@@ -22,7 +22,7 @@ HOG::HOG(Image* img, SVM* svm)
 	construct(img->buffer,img->size_y,img->size_x,svm);
 }
 
-void HOG::construct(char* image, int row_size, int col_size, SVM* svm)
+void HOG::construct(unsigned char* image, int row_size, int col_size, SVM* svm)
 {
 	//Initialisation image
 	this->image = image;
@@ -49,10 +49,10 @@ void HOG::construct(char* image, int row_size, int col_size, SVM* svm)
 	this->win_size = win_size_x*win_size_y;
 
 	//On réserve beaucoup de mémoire
-	xGrad = (signed char*)malloc(img_size*sizeof(char));
-	yGrad = (signed char*)malloc(img_size*sizeof(char));
-	norm = (unsigned long*)malloc(img_size*sizeof(float));
-	angle = (unsigned char*)malloc(img_size*sizeof(float));
+	xGrad = (signed short*)malloc(img_size*sizeof(short));
+	yGrad = (signed short*)malloc(img_size*sizeof(short));
+	norm = (signed int*)malloc(img_size*sizeof(int));
+	angle = (signed int*)malloc(img_size*sizeof(int));
 	detection = (bool*)malloc(win_size*sizeof(bool));
 
 	cells = new Histogram[cell_size];
@@ -120,12 +120,27 @@ void HOG::calculate_gradient()
 				yGrad[index] = image[index+col_size]-image[index-col_size];
 			}
 
+			//signed int gradXe = xGrad[index];
+			//signed int gradYe = yGrad[index];
+
+			signed int n,a;
+			atan_cordic((signed int)yGrad[index],(signed int)xGrad[index], &n, &a, 24);
+
+			norm[index] = n;
+			angle[index] = a;
+
+			//float angle_cordicf = ((float)a)*180.0f/(float)CORDIC_PI;
+			//float norm_cordicf = (float)n/(float)CORDIC_ONE;
+
+			/*
 			unsigned long xGradPow = ((unsigned long)xGrad[index])*xGrad[index];
 			unsigned long yGradPow = ((unsigned long)yGrad[index])*yGrad[index];
 			signed long gradDiv = (((signed long)yGrad[index])<<8)/((signed long)xGrad[index]+EPSILLON_INT);
 
-			norm[index] = sqrt(xGradPow+yGradPow);
-			angle[index] = (atan(gradDiv)*180/PI)+90;
+			float norm_f = sqrt(xGradPow+yGradPow);
+			float angle_f = (atan(gradDiv)*180/PI);
+			float banane=24;
+			*/
 		}
 	}
 }
@@ -264,19 +279,16 @@ Histogram::Histogram()
 {
 	for (int i=0;i<9;i++)
 	{
-		hist[i]=0.0f;
+		hist[i]=0;
 	}
 }
 
-void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* angle,int col_size)
+void Histogram::calculate_hist(const signed int* norm, const signed int* angle,int col_size)
 {
-	static const float binsAngle[9] = {0.0f, 20.0f, 40.0f, 60.0f, 80.0f,
-									   100.0f, 120.0f, 140.0f, 160.0f};
-
 	int i,j,index;
 	char bin;
-	float a,n;
-	float excentricity, angleToNextBin;
+	signed int a,n;
+	signed int excentricity, angleToNextBin;
 
 	for (i=0;i<8;i++)
 	{
@@ -287,9 +299,9 @@ void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* an
 			n = norm[index];
 
 			// simple decision tree to determine the bin
-			if (a<=80) {
-				if (a<=40) {
-					if (a<=20) {
+			if (a<=binsAngle[4]) {
+				if (a<=binsAngle[2]) {
+					if (a<=binsAngle[1]) {
 						bin=0;
 					}
 					else {
@@ -297,7 +309,7 @@ void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* an
 					}
 				}
 				else {
-					if (a<=60) {
+					if (a<=binsAngle[3]) {
 						bin=2;
 					}
 					else {
@@ -306,8 +318,8 @@ void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* an
 				}
 			}
 			else {
-				if (a<=120) {
-					if (a<=100) {
+				if (a<=binsAngle[6]) {
+					if (a<=binsAngle[5]) {
 						bin=4;
 					}
 					else {
@@ -315,11 +327,11 @@ void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* an
 					}
 				}
 				else {
-					if (a<=140) {
+					if (a<=binsAngle[7]) {
 						bin=6;
 					}
 					else {
-						if (a<=160) {
+						if (a<=binsAngle[8]) {
 							bin=7;
 						}
 						else {
@@ -330,9 +342,9 @@ void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* an
 			}
 
 			//excentricity is between 0 and 1
-			excentricity = (a-binsAngle[bin])/20.0f;
+			excentricity = (a-binsAngle[bin]);
 
-			angleToNextBin = n*excentricity;
+			angleToNextBin = (n*excentricity)/CORDIC_NINTH_PI;
 
 			//if the angle is above 160, the next bin is 0 degrees
 			hist[(bin+1)%9]+=angleToNextBin;
@@ -351,11 +363,11 @@ void Histogram::calculate_hist(const unsigned long* norm,const unsigned char* an
  */
 NormalizedHistogram::NormalizedHistogram()
 {
-	l2hys = 0.0f;
+	l2hys = 0;
 
 	for (int i=0;i<36;i++)
 	{
-		hist[i]=0.0f;
+		hist[i]=0;
 	}
 }
 
@@ -363,22 +375,37 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 {
 	int i,j, index;
 
-	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
-	{
-		for (j=0;j<9;j++)
-		{
-			l2hys += pow((*it)->hist[j],2);
-		}
-	}
-
-	l2hys = sqrt(l2hys)+EPSILLON;
+	//need a 64 bits container to store squared values
+	signed long int l2hysSum=0;
 
 	index=0;
 	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
 	{
 		for (j=0;j<9;j++)
 		{
-			this->hist[index] = ((*it)->hist[j])/l2hys;
+			//We will not right shift the result by CORDIC_FRAC_PART since the square root
+			//will remove the fractional part added by the square.
+			l2hysSum += ((signed long int)((*it)->hist[j]))*((*it)->hist[j]);
+
+			//debug remove later
+			this->hist[index] = ((*it)->hist[j]);
+			index++;
+		}
+	}
+
+	l2hysSum = sqrt(l2hysSum);
+
+	//Add an epsillon to avoid dividing by zero. This epsillon will be equal
+	//to 1/2^CORDIC_FRAC_PART which is 0.000976562 for 10 bits
+	l2hys = ((int)l2hysSum)+EPSILLON_INT;
+
+	index=0;
+	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
+	{
+		for (j=0;j<9;j++)
+		{
+			//left shift by CORDIC_FRAC_PART before dividing to preserve alignment.
+			this->hist[index] = (((*it)->hist[j])<<CORDIC_FRAC_PART)/l2hys;
 			index++;
 		}
 	}
@@ -421,7 +448,7 @@ void HogWindow::calculate_values()
 bool HogWindow::detect(const SVM* reference)
 {
 	unsigned int i;
-	float dotProduct=0.0f;
+	float dotProduct=0;
 
 	for (i=0;i<3780;i++)
 	{

@@ -15,9 +15,10 @@
 
 using namespace std;
 
-char* read_image(const char* file_name, int* row_size, int* col_size);
-void write_image(char* image_out, string filename, int row_size, int col_size);
-void write_image(float* image_out, string filename, int row_size, int col_size);
+unsigned char* read_image(const char* file_name, int* row_size, int* col_size);
+void write_image(unsigned char* image_out, string filename, int row_size, int col_size);
+void write_image(signed short* image_out, string filename, int row_size, int col_size);
+void write_image(signed int* image_out, string filename, int row_size, int col_size);
 void write_cells(Histogram* hists, string filename, int y_size, int x_size);
 void write_blocks(NormalizedHistogram* hists, string filename, int y_size, int x_size);
 void write_windows(HOG* hog, string filename);
@@ -48,7 +49,7 @@ void detect_image_window(string imagePath, string svmPath, string windowPath)
 
 void histogramTest(string rawImageFilename, string outputPath)
 {
-	char* image_in;
+	unsigned char* image_in;
 	int row_size, col_size;
 
 	//Reading input image
@@ -66,6 +67,7 @@ void histogramTest(string rawImageFilename, string outputPath)
 	write_blocks(hog.blocks, outputPath+"/histogram", hog.block_size_y, hog.block_size_x);
 	write_image(image_in, outputPath+"/image", row_size, col_size);
 	write_image(hog.norm, outputPath+"/norm", row_size, col_size);
+	write_image(hog.angle, outputPath+"/angle", row_size, col_size);
 	write_windows(&hog, outputPath+"/windows.hogwin");
 
 	free(image_in);
@@ -75,15 +77,16 @@ void histogramTest(string rawImageFilename, string outputPath)
 int main(void)
 {
 	string svm="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/thog2.svm";
-	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.raw";
+	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.raw";
 	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/neg/00000002a.raw";
 	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/circle.raw";
+	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/wave2.raw";
 	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos/per00001.raw";
 	string testOutput="/home/kakaroth/Ecole/INF8505/projet/workspace/hog";
 	string windowOutput="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.rect";
 
-	//histogramTest(testImage,testOutput);
-	detect_image_window(testImage,svm,windowOutput);
+	histogramTest(testImage,testOutput);
+	//detect_image_window(testImage,svm,windowOutput);
 
 	//positive sample
 	string input_dir="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos";
@@ -132,7 +135,7 @@ void compute_all_image_window(string inDir, string outDir)
 
 void compute_image_window(string rawImageFilename, string outputFilename)
 {
-	char* image_in;
+	unsigned char* image_in;
 	int row_size, col_size;
 
 	//Reading input image
@@ -155,12 +158,12 @@ void compute_image_window(string rawImageFilename, string outputFilename)
 /*----------------------------------------------------------------------------*/
 // Reading input image file (raw format)
 
-char* read_image(const char* file_name, int* row_size, int* col_size)
+unsigned char* read_image(const char* file_name, int* row_size, int* col_size)
 {
 
     FILE* fd;
     int R_size, C_size, img_size;
-    char* buf;
+    unsigned char* buf;
 
     fd=fopen( file_name, "rb" );
 
@@ -175,7 +178,7 @@ char* read_image(const char* file_name, int* row_size, int* col_size)
 
     img_size=R_size*C_size;
 
-    buf = (char*)malloc(img_size*sizeof(char));
+    buf = (unsigned char*)malloc(img_size*sizeof(char));
 
     fread(buf,1,img_size,fd);
 
@@ -192,7 +195,7 @@ char* read_image(const char* file_name, int* row_size, int* col_size)
 /*----------------------------------------------------------------------------*/
 // Writes the output image in a file
 
-void write_image(char* image_out, string filename, int row_size, int col_size)
+void write_image(unsigned char* image_out, string filename, int row_size, int col_size)
 {
 
     FILE * fd;
@@ -217,22 +220,53 @@ void write_image(char* image_out, string filename, int row_size, int col_size)
     return;
 }
 
-void write_image(float* image_out, string filename, int row_size, int col_size)
+void write_image(signed  short* image_out, string filename, int row_size, int col_size)
 {
 
-	char* buf = (char*)malloc(row_size*col_size*sizeof(char));
-	int i;
+    FILE * fd;
 
-	for (i=0;i<row_size*col_size;i++)
-	{
-		buf[i] = (char)image_out[i];
-	}
+    fd=fopen(filename.c_str(), "wb" );
 
-	write_image(buf,filename,row_size,col_size);
+    if(fd==NULL){
+        perror("fopen()");
+        exit(-1);
 
-	free(buf);
+    }
+
+    //writing the image size
+    fwrite(&row_size,sizeof(int),1,fd);
+    fwrite(&col_size,sizeof(int),1,fd);
+
+    //writing pixels
+    fwrite(image_out,sizeof(short),col_size*row_size,fd);
+
+    fclose(fd);
 
     return;
+}
+
+void write_image(signed int* image_out, string filename, int row_size, int col_size)
+{
+
+	FILE * fd;
+
+	fd=fopen(filename.c_str(), "wb" );
+
+	if(fd==NULL){
+		perror("fopen()");
+		exit(-1);
+	}
+
+	//writing the image size
+	fwrite(&row_size,sizeof(int),1,fd);
+	fwrite(&col_size,sizeof(int),1,fd);
+
+	//writing pixels
+	fwrite(image_out,sizeof(int),col_size*row_size,fd);
+
+	fclose(fd);
+
+	return;
 }
 
 void write_cells(Histogram* hists, string filename, int y_size, int x_size)
@@ -279,7 +313,7 @@ void write_blocks(NormalizedHistogram* hists, string filename, int y_size, int x
 	//writing histograms
 	for (int i=0;i<y_size*x_size;i++)
 	{
-		fwrite(hists[i].hist,sizeof(float),36,fd);
+		fwrite(hists[i].hist,sizeof(int),36,fd);
 	}
 
 	fclose(fd);
@@ -304,7 +338,7 @@ void write_windows(HOG* hog, string filename)
 	//writing each window vector back to back
 	for (unsigned int i=0;i<hog->win_size;i++)
 	{
-		fwrite(hog->windows[i].values,sizeof(float),3780,fd);
+		fwrite(hog->windows[i].values,sizeof(int),3780,fd);
 	}
 
 	printf("%d window(s) written to %s\n",hog->win_size,filename.c_str());

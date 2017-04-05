@@ -10,7 +10,7 @@ public:
 	~Image();
 
 	int size_x, size_y, size_img;
-	char *buffer;
+	unsigned char *buffer;
 };
 
 
