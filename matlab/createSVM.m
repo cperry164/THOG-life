@@ -50,7 +50,7 @@ type=[true(size(pos_samples,1),1);
 %SVM train algorithm of Matlab. Disable scaling, otherwise we would have to
 %do scaling in the C code
 %options.MaxIter = 10000000;
-svmStruct = svmtrain(data,type,'autoscale',false);%,'Options', options);
+svmStruct = svmtrain(data,type,'autoscale',true);%,'Options', options);
 
 %A vector of 3780 dimensions that will multiply the hog windows
 vector=svmStruct.Alpha'*svmStruct.SupportVectors;
@@ -58,9 +58,19 @@ vector=svmStruct.Alpha'*svmStruct.SupportVectors;
 %Bias of the svm
 bias = svmStruct.Bias;
 
+biasFactor = (2^22)/bias;
+
 %Write the data to a file
 fid = fopen(svm_name_out, 'w');
-fwrite(fid,bias,'float=>int32');
-fwrite(fid,vector,'float=>int32');
+fwrite(fid,round(biasFactor*bias,0),'int32');
+fwrite(fid,round(biasFactor.*vector,0),'int32');
 
 fprintf(1,'Done\n');
+
+pos = pos_samples*vector';
+neg = neg_samples*vector';
+
+subplot(1,2,1);
+histogram(pos);
+subplot(1,2,2);
+histogram(neg);

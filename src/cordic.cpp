@@ -32,11 +32,17 @@ void atan_cordic(signed int y_in, signed int x_in, signed int *norm, signed int 
 	//nombre d'itérations maximums
 	n = (n>CORDIC_NTAB) ? CORDIC_NTAB : n;
 
-	//special case with 0,0
-	if (y_in==0 && x_in==0)
+	//special case with y=0
+	if (y_in==0)
 	{
-		*norm = 0;
-		*angle = 0;
+		if (x_in>=0) {
+			*norm = x_in;
+			*angle = 0;
+		}
+		else {
+			*norm = -x_in;
+			*angle = CORDIC_PI;
+		}
 		return;
 	}
 
@@ -65,11 +71,11 @@ void atan_cordic(signed int y_in, signed int x_in, signed int *norm, signed int 
 	}
 	//quadrant 2
 	else if (x_in>=0 && y_in<0) {
-		*angle = z+CORDIC_HALF_PI;
+		*angle = CORDIC_PI-z;
 	}
 	//quadrant 3
 	else if (x_in<0 && y_in>=0) {
-		*angle = z+CORDIC_HALF_PI;
+		*angle = CORDIC_PI-z;
 	}
 	//quadrant 4
 	else {

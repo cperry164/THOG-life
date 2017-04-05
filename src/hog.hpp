@@ -24,7 +24,7 @@ public:
 						const signed int* angle,
 						int col_size);
 
-	signed int hist[9];
+	unsigned int hist[9];
 private:
 };
 
@@ -42,8 +42,8 @@ public:
 	 */
 	void calculate_normedhist(std::list<const Histogram*> hists);
 
-	signed int hist[36];
-	signed int l2hys;
+	unsigned int hist[36];
+	unsigned int l2hys;
 };
 
 class SVM

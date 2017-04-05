@@ -23,6 +23,8 @@
 	#define CORDIC_PI 0x00000C91  //decimal is:
 	#define CORDIC_HALF_PI 0x00000648
 	#define CORDIC_NINTH_PI 0x00000165
+	#define CORDIC_255 0x3FC00
+	#define CORDIC_SQRT2_255 0x5A280
 #endif
 
 void cordic(int theta, int *s, int *c, int n);

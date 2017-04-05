@@ -124,8 +124,17 @@ void HOG::calculate_gradient()
 			//signed int gradYe = yGrad[index];
 
 			signed int n,a;
-			atan_cordic((signed int)yGrad[index],(signed int)xGrad[index], &n, &a, 24);
+			signed int x_in=(signed int)xGrad[index];
+			signed int y_in=(signed int)yGrad[index];
 
+			atan_cordic(y_in,x_in, &n, &a, 10);
+
+			if (n<0 || n>CORDIC_SQRT2_255) {
+				printf("Error: polar gradient norm out of bound\n");
+			}
+			if (a<0 || a>CORDIC_PI) {
+				printf("Error: polar gradient angle out of bound\n");
+			}
 			norm[index] = n;
 			angle[index] = a;
 
@@ -288,7 +297,7 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 	int i,j,index;
 	char bin;
 	signed int a,n;
-	signed int excentricity, angleToNextBin;
+	signed int excentricity, angleToNextBin, angleToCurrentBin;
 
 	for (i=0;i<8;i++)
 	{
@@ -344,11 +353,22 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 			//excentricity is between 0 and 1
 			excentricity = (a-binsAngle[bin]);
 
+			if (excentricity<0 || excentricity>CORDIC_NINTH_PI) {
+				printf("Error: histogram excentricity is out of bound\n");
+			}
+
 			angleToNextBin = (n*excentricity)/CORDIC_NINTH_PI;
 
 			//if the angle is above 160, the next bin is 0 degrees
-			hist[(bin+1)%9]+=angleToNextBin;
-			hist[bin]+=(n-angleToNextBin);
+			hist[(bin+1)%9]+=(unsigned int)angleToNextBin;
+
+			angleToCurrentBin = n-angleToNextBin;
+
+			if (angleToCurrentBin<0) {
+				printf("Error: Norm to current bin is out of bound\n");
+			}
+
+			hist[bin]+=angleToCurrentBin;
 		}
 	}
 }
@@ -405,7 +425,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 		for (j=0;j<9;j++)
 		{
 			//left shift by CORDIC_FRAC_PART before dividing to preserve alignment.
-			this->hist[index] = (((*it)->hist[j])<<CORDIC_FRAC_PART)/l2hys;
+			this->hist[index] = (((unsigned long int)((*it)->hist[j]))<<CORDIC_FRAC_PART)/l2hys;
 			index++;
 		}
 	}
@@ -448,15 +468,19 @@ void HogWindow::calculate_values()
 bool HogWindow::detect(const SVM* reference)
 {
 	unsigned int i;
-	float dotProduct=0;
+
+	signed long int dotProduct=0;
 
 	for (i=0;i<3780;i++)
 	{
-		dotProduct += this->values[i]*reference->values[i];
+		dotProduct += ((signed long int)this->values[i])*reference->values[i];
 	}
 
-	//printf("prod=%f",dotProduct);
-	return (dotProduct<=-0.7*reference->bias);
+	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
+
+	printf("prod=%d reference=%d\n",dotProduct,reference->bias);
+	//return (dotProduct<=-0.7*reference->bias);
+	return (dotProduct<=-(reference->bias/7));
 }
 
 /*
@@ -476,8 +500,8 @@ SVM::SVM(std::string filepath)
 	}
 
 	//Reading the file
-	fread(&this->bias,sizeof(float),1,fd);
-	fread(this->values,sizeof(float),3780,fd);
+	fread(&this->bias,sizeof(int),1,fd);
+	fread(this->values,sizeof(int),3780,fd);
 
 	fclose(fd);
 }

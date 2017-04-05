@@ -2,8 +2,8 @@ clc;
 clear all;
 close all;
 
-imgPath='../database/test/test5.png';
-rectPath='../database/test/test5.rect';
+imgPath='../database/test/test4.png';
+rectPath='../database/test/test4.rect';
 
 I = imread(imgPath);
 imshow(I);

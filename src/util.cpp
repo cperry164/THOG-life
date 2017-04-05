@@ -66,6 +66,8 @@ void histogramTest(string rawImageFilename, string outputPath)
 
 	write_blocks(hog.blocks, outputPath+"/histogram", hog.block_size_y, hog.block_size_x);
 	write_image(image_in, outputPath+"/image", row_size, col_size);
+	write_image(hog.xGrad, outputPath+"/gradx", row_size, col_size);
+	write_image(hog.yGrad, outputPath+"/grady", row_size, col_size);
 	write_image(hog.norm, outputPath+"/norm", row_size, col_size);
 	write_image(hog.angle, outputPath+"/angle", row_size, col_size);
 	write_windows(&hog, outputPath+"/windows.hogwin");
@@ -77,16 +79,17 @@ void histogramTest(string rawImageFilename, string outputPath)
 int main(void)
 {
 	string svm="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/thog2.svm";
-	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.raw";
+	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test4.raw";
 	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/neg/00000002a.raw";
 	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/circle.raw";
-	string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/wave2.raw";
+	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/stripe2.raw";
+	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/wave2.raw";
 	//string testImage="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos/per00001.raw";
 	string testOutput="/home/kakaroth/Ecole/INF8505/projet/workspace/hog";
-	string windowOutput="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test5.rect";
+	string windowOutput="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/test/test4.rect";
 
-	histogramTest(testImage,testOutput);
-	//detect_image_window(testImage,svm,windowOutput);
+	//histogramTest(testImage,testOutput);
+	detect_image_window(testImage,svm,windowOutput);
 
 	//positive sample
 	string input_dir="/home/kakaroth/Ecole/INF8505/projet/THOG-life/database/raw/pos";
