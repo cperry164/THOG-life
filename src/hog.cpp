@@ -398,7 +398,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 	int i,j, index;
 
 	//need a 64 bits container to store squared values
-	signed long int l2hysSum=0;
+	signed int l2hysSum=0;
 
 	index=0;
 	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
@@ -407,7 +407,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 		{
 			//We will not right shift the result by CORDIC_FRAC_PART since the square root
 			//will remove the fractional part added by the square.
-			l2hysSum += ((signed long int)((*it)->hist[j]))*((*it)->hist[j]);
+			l2hysSum += ((*it)->hist[j])*((*it)->hist[j]);
 
 			//debug remove later
 			this->hist[index] = ((*it)->hist[j]);
@@ -427,7 +427,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 		for (j=0;j<9;j++)
 		{
 			//left shift by CORDIC_FRAC_PART before dividing to preserve alignment.
-			this->hist[index] = (((unsigned long int)((*it)->hist[j]))<<CORDIC_FRAC_PART)/l2hys;
+			this->hist[index] = (((*it)->hist[j])<<CORDIC_FRAC_PART)/l2hys;
 			index++;
 		}
 	}
@@ -471,11 +471,11 @@ bool HogWindow::detect(const SVM* reference)
 {
 	unsigned int i;
 
-	signed long int dotProduct=0;
+	signed int dotProduct=0;
 
 	for (i=0;i<3780;i++)
 	{
-		dotProduct += ((signed long int)this->values[i])*reference->values[i];
+		dotProduct += this->values[i]*reference->values[i];
 	}
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);

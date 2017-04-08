@@ -1,5 +1,6 @@
 #include "cordic.hpp"
 
+#include "C:\TEMP\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
 
 //Taken online from http://www.dcs.gla.ac.uk/~jhw/cordic/
 
@@ -46,6 +47,8 @@ void atan_cordic(signed int y_in, signed int x_in, signed int *norm, signed int 
 		return;
 	}
 
+	tie_cordic_init(x,y);
+
 	for (k=0; k<n; ++k)
 	{
 		//direction
@@ -56,6 +59,14 @@ void atan_cordic(signed int y_in, signed int x_in, signed int *norm, signed int 
 		ty = y + (((x>>k) ^ d) - d);
 		tz = z - ((cordic_ctab[k] ^ d) - d);
 
+		tie_cordic_iterate(4000,-2000);
+
+		signed int tie_x = RUR_cordic_x();
+		signed int tie_y = RUR_cordic_y();
+		signed int tie_z = RUR_cordic_z();
+		int mask = RUR_mask_out();
+		signed int xdiv2 = RUR_xdiv2_out();
+		signed int ydiv2 = RUR_ydiv2_out();
 		//update
 		x = tx;
 		y = ty;
