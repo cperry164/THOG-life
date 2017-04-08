@@ -135,7 +135,7 @@ void HOG::calculate_gradient()
 			if (a<0 || a>CORDIC_PI) {
 				printf("Error: polar gradient angle out of bound\n");
 			}
-			norm[index] = n;
+			norm[index] = (n>>CORDIC_FRAC_PART);
 			angle[index] = a;
 
 			//float angle_cordicf = ((float)a)*180.0f/(float)CORDIC_PI;
@@ -480,7 +480,7 @@ bool HogWindow::detect(const SVM* reference)
 
 	printf("prod=%d reference=%d\n",dotProduct,reference->bias);
 	//return (dotProduct<=-0.7*reference->bias);
-	return (dotProduct<=-(reference->bias/7));
+	return (dotProduct<=-(reference->bias/10));
 }
 
 /*
