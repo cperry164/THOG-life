@@ -229,7 +229,7 @@ void HOG::calculate_windows()
 			//Each window contains a NormalizedHistogram list.
 			//nhlist is a pointer to this list
 			nhlist = &(windows[winIndex].nhists);
-
+			blockIndex=winBlockIndex;
 			//For each block of the window in y
 			for (m=0;m<15;m++)
 			{
@@ -237,11 +237,12 @@ void HOG::calculate_windows()
 				for (n=0;n<7;n++)
 				{
 					//the index of the block in the global image block indexing system
-					blockIndex=winBlockIndex+(m*block_size_x)+n;
+					//blockIndex=winBlockIndex+(m*block_size_x)+n;
 
 					//add the block to the current window's block list
-					nhlist->push_back(&blocks[blockIndex]);
+					nhlist->push_back(&blocks[blockIndex+n]);
 				}
+				blockIndex +=block_size_x;
 			}
 
 			//Once a window is completed we can fill the values array
@@ -471,12 +472,16 @@ bool HogWindow::detect(const SVM* reference)
 {
 	unsigned int i;
 
-	signed long int dotProduct=0;
+	int dotProduct=0;
+	WUR_reg_A(dotProduct);
 
-	for (i=0;i<3780;i++)
+	for (i=0;i<3780;i+=2)
 	{
-		dotProduct += ((signed long int)this->values[i])*reference->values[i];
+		tie_add(this->values[i],reference->values[i],this->values[i+1],reference->values[i+1]);
+		//dotProduct += this->values[i]*reference->values[i];
 	}
+
+	dotProduct = RUR_reg_A();
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
 
