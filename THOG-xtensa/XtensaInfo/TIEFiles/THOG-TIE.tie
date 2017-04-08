@@ -1,0 +1,20 @@
+/* Registres spécialisés*/
+state reg_A 32 add_read_write
+state reg_B 32 add_read_write
+state reg_C 32 add_read_write
+state reg_D 32 add_read_write
+state reg_E 32 add_read_write
+state reg_F 32 add_read_write
+state reg_G 32 add_read_write
+state reg_H 32 add_read_write
+
+operation tie_TEMP1  {in AR W, in AR K, out AR TEMP1}  {in reg_E, in reg_F, in reg_G, in reg_H}
+	{
+		// calcul de TEMP1
+		wire[31:0] ROTR6  = {reg_E[5:0] ,reg_E[31:6] }; 
+		wire[31:0] ROTR11 = {reg_E[10:0],reg_E[31:11]}; 
+		wire[31:0] ROTR25 = {reg_E[24:0],reg_E[31:25]}; 
+		wire[31:0] S3     = ROTR6 ^ ROTR11 ^ ROTR25; 
+		wire[31:0] F1     = reg_G ^(  reg_E & (reg_F ^ reg_G)); 
+		assign TEMP1  = reg_H + S3 + F1 + W + K;
+	}

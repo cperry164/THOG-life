@@ -1,0 +1,28 @@
+**** Incremental Build [mar., 28 mars 2017 13:32:18] ****
+ Project: THOG
+ Configuration: tie_dev1
+ Build Target: Debug
+********************************
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/THOG" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params= "C:/TEMP/THOG-xtensa/THOG/util.cpp" -o "C:/TEMP/THOG-xtensa/THOG/bin/tie_dev1/Debug/util.o" 
+In file included from C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/xtensa-elf/include/dirent.h:6,
+                 from C:/TEMP/THOG-xtensa/THOG/util.cpp:11:
+C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/xtensa-elf/include/sys/dirent.h:10:2: error: #error "<dirent.h> not supported"
+Time taken: 142 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/THOG" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params= "C:/TEMP/THOG-xtensa/THOG/hog.cpp" -o "C:/TEMP/THOG-xtensa/THOG/bin/tie_dev1/Debug/hog.o" 
+C:/TEMP/THOG-xtensa/THOG/hog.cpp: In constructor 'HOG::HOG(Image*, SVM*)':
+C:/TEMP/THOG-xtensa/THOG/hog.cpp:52: error: type 'HOG' is not a direct base of 'HOG'
+C:/TEMP/THOG-xtensa/THOG/hog.cpp: In constructor 'SVM::SVM(std::string)':
+C:/TEMP/THOG-xtensa/THOG/hog.cpp:440: warning: cannot pass objects of non-POD type 'struct std::string' through '...'; call will abort at runtime
+Time taken: 249 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/THOG" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params= "C:/TEMP/THOG-xtensa/THOG/image.cpp" -o "C:/TEMP/THOG-xtensa/THOG/bin/tie_dev1/Debug/image.o" 
+Time taken: 8192 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/THOG" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params= "C:/TEMP/THOG-xtensa/THOG/detection.cpp" -o "C:/TEMP/THOG-xtensa/THOG/bin/tie_dev1/Debug/detection.o" 
+Time taken: 8192 ms 
+
+Build error encountered... cannot continue further.
+Total time taken: 9.099 secs
+**** Build Finished [mar., 28 mars 2017 13:32:27] ****

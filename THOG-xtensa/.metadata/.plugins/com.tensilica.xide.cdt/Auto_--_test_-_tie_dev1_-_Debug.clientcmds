@@ -1,0 +1,2 @@
+# client commands for the simulator launch
+profile --force-suffix --all C:\TEMP\THOG-xtensa\test\bin\tie_dev1\Debug\gmon.xx

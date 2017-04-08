@@ -1,0 +1,247 @@
+# +-------------------------------------------------------------------------------+
+# |          Copyright (c) 2003-2009 by Tensilica Inc.  ALL RIGHTS RESERVED.           |
+# |   These coded instructions, statements, and computer programs are the         |
+# |   copyrighted works and confidential proprietary information of Tensilica Inc.|
+# |   They may not be modified, copied, reproduced, distributed, or disclosed to  |
+# |   third parties in any manner, medium, or form, in whole or in part, without  |
+# |   the prior written consent of Tensilica Inc.                                 |
+# +-------------------------------------------------------------------------------+
+# $Id$
+# Must be invoked as perl -e '$xtensa_tools=<path>;' tie_verplex
+BEGIN {@INC = map({s,/usr/xtensa/tools-7.0,$ENV{XTENSA_TOOLS},; $_} @INC);}
+use Getopt::Long;
+use Cwd;
+use strict;
+
+use vars qw( $inst $curdir $maxerr %portdesc %global_ports);
+
+$curdir = cwd();
+$inst = undef;
+$maxerr = undef;
+{
+$::myname = 'tie_verplex';
+my $opt_help;
+
+my $ret = GetOptions("help"   => \$opt_help, 
+           "check=s" => \$inst,
+           "stop=i"  => \$maxerr);
+            
+if( $opt_help || !$ret || !$inst ) {
+        print "\nUsage: $::myname -check <inst> [-stop <number>]\n";
+        print "\t\tRun Verplex on an instruction and analyze the results\n";
+        print "\t\tIf there is a mismatch report the test vector\n";
+        print "\t\t-check <inst>, inst is the name of the <format>_<slot>_<opcode>\n";
+        print "\t\t-stop <num>, report <num> mismatched points only\n";
+        print "\n";
+	exit(1);
+}
+my $portfile = $curdir . '/ports';
+my $dofile = $curdir . '/' . $inst . '.do';
+my $vectorfile = $curdir . '/' . $inst . '.vector.do';
+my $dologfile = $dofile . '.log';
+my $vectorlogfile = $vectorfile . '.log';
+my $cmd = 'lec -nogui';
+my $mismatch = 0;
+my $timeout = 0;
+my $unmapped = 0;
+my $abort = 0;
+my $line;
+my @datapoints = ();
+my $err = 0;
+
+die "No script \"$dofile\" to run Verplex for $inst" unless -f $dofile;
+
+# ----------------------------------------------------------------------------
+# If there is a file with port maps read it
+# ----------------------------------------------------------------------------
+if ( -f "$portfile" ) {
+
+    my $p = '%' .  $inst . '_ports';
+    my $evalstr .= '%portdesc = ' . $p . ';';
+    require($portfile);
+    eval ($evalstr);
+
+    #my $p = '%' .  $inst . '_ports';
+    #my $evalstr = 'use vars qw(' . $p.  ');';
+    #open(PFILE, "$portfile") || die "Could not open log $portfile for reading: $!\n";
+    #while( $line = <PFILE> ) {
+    #	if ( $line =~ /^$inst\s+=\s+/ ) {
+    #	    $line =~ s/$inst/$p/;
+    #	    $line =~ s/\=\>/,/g;
+    #	    $evalstr .= $line;
+    #    }
+    #}
+    #gnat 19015, suppress warning
+    #warn "No portmap for $inst" unless defined %portdesc;
+    #warn "No global portmap" unless defined %global_ports;
+}
+
+# ----------------------------------------------------------------------------
+# Run first pass of LEC
+# ----------------------------------------------------------------------------
+#open(LOGFILE, ">$dologfile") || die "Could not open log $dologfile for writing: $!\n";
+#open(LEC, "$cmd < $dofile|") || die "Could not run $cmd < $vectorfile: $!\n";
+my $status = system("$cmd < $dofile >$dologfile 2>&1");
+#print STDERR "Exit status  of LEC is $status\n";
+$status >>= 8;
+if ( $status != 0 ) {
+    if (($status >> 4)&1) {
+        print "LEC reports errors.\n";
+        #Don't exit, collect non-equivalent points and dump vectors.
+    } else {
+        print "LEC reported Internal Error. See $dologfile for details.\n" if ( $status & 1 ); 
+        print "LEC reported no quivalent points in the design. See $dologfile for details.\n" if ( ($status>>1) & 1 ) ;
+        print "LEC reports command error. See $dologfile for details.\n" if ( ($status>>2) & 1 ) ;
+        print "LEC reports unmapped points in the design. See $dologfile for details.\n" if ( ($status>>3) & 1 ) ;
+        print "LEC reports abort points in the design\n" if ( ($status>>5) & 1 ) ;
+        exit(1);
+  }
+}
+# ----------------------------------------------------------------------------
+# Read the logfile to chekc if there are mismtaches. If so collect the
+# mismatched data points
+# ----------------------------------------------------------------------------
+open(LOGFILE, "$dologfile") || die "Could not open log $dologfile for reading: $!\n";
+while ( $line = <LOGFILE> ) {
+	chop($line);
+	#if ( $line =~ /0 compared point\(s\) reported/ ) {
+	#    $mismatch = 0;
+        #}
+        $err = 1 if ($line =~ /Error:/);
+	$mismatch = 1 if ( $line =~ /^Non-equivalent/ );
+	$abort = 1 if ( $line =~ /^Abort/ );
+	$timeout = 1  if ( $line =~ /Time out:\s+process\s+[0-9]+\s+killed/ );
+	$timeout = 1  if ( $line =~ /Process\s+[0-9]+\s+terminated/ );
+	next if !$mismatch;
+        if ( $line =~ /Compared points are: Non-equivalent/ ) {
+	    $line = <LOGFILE>;
+	    chop($line);
+            my @tmp = split('\s+', $line);
+            push(@datapoints, pop(@tmp));
+	    last if defined $maxerr && ++$err >= $maxerr;
+        }
+}
+close(LOGFILE);
+if ( !$mismatch ) {
+    if ( $timeout ) {
+        print "Instruction $inst, could not finish the formal compare in 30 minutes.\n";
+        print "You can modify the script $dofile to increase the time limit.\n\n\n";
+        exit(1);
+    } elsif ( $abort ) {
+        print "Instruction $inst, formal compare aborted for some data points.\n";
+        print "You can modify the script $dofile to increase the compare effort.\n\n\n";
+        print "See logfile $dologfile for details\n\n\n";
+        exit(1);
+    } elsif ( $err ) {
+	print "There were errors reported by LEC. See $dologfile for details\n";
+	exit(1);
+    } elsif ( $status != 0 ) {
+	print "There were errors running LEC. See $dologfile for details\n";
+	exit(1);
+    } else  {
+        print "The design $inst is formally equivalent\n";
+        exit(0);
+    }
+}
+# ----------------------------------------------------------------------------
+# Generate a new do file with the original commands followed by 
+# report test vector commands for each mismatch.
+# This could have been done by opening a bi-directional pipe to LEC but
+# the Perl experts advise against IPC:Open2 or socketpair.
+# Besides it may be useful to have the do file around anyway.
+# ----------------------------------------------------------------------------
+open(DOFILE, "$dofile") || die "Could not open log $dofile for reading: $!\n";
+open(VECFILE, ">$vectorfile") || die "Could not open log $vectorfile for writing: $!\n";
+print VECFILE "set log file $vectorlogfile.orig -replace\n";
+while(<DOFILE>) {
+    chop;
+    next if /set log file/ || /set system mode setup/ || /delete pin constraints/ ;
+    print VECFILE "$_\n";
+}
+close(DOFILE);
+print VECFILE map( 'report test vector ' . $_ . "\n", @datapoints);
+close(VECFILE);
+
+
+# ----------------------------------------------------------------------------
+# Generate a new do file with the original commands followed by 
+# report test vector commands for each mismatch.
+# Parse the output tp translate signal names to more understandable ones
+# ----------------------------------------------------------------------------
+open(LOGFILE, ">$vectorlogfile") || die "Could not open log $vectorlogfile for writing: $!\n";
+open(LEC, "$cmd < $vectorfile|") || die "Could not run $cmd < $vectorfile: $!\n";
+
+while( $line = <LEC>) {
+    chop($line);
+
+    #next if $line =~ /\/\/\s+[0-9]+\%\s+completed/;
+    #next if $line =~ /\/\/\s+[0-9]+\%\s+Comparing\s+[0-9]+\s+out\s+of\s+[0-9]+\spoints/;
+    #Remove control characters
+    $line =~ s/\cM\s*//g;
+    $line =~ s/\[([0-9]+)\s+([0-9]+)\]/\[$1$2\]/g;
+    $line =~ s/\[\s*([0-9]+)\s*\]/\[$1\]/g;
+
+    # Core operands
+    $line =~ s/\/Instr_R/Inst/g ;
+    $line =~ s/\/SBus_E/ars/g;
+    $line =~ s/\/TBus_E/art/g;
+    $line =~ s/\/Kill_E/"E-stage-kill"/g;
+    $line =~ s/\/TIE_Stall_R /"Data Stall"/g;
+    $line =~ s/\/TIE_GlobalStall /"Stall"/g;
+    $line =~ s/\/TIE_[a-zA-Z0-9_]*Except_W*/"Exception"/g;
+    $line =~ s/\/[a-zA-Z0-9_]*Replay_W/"Replay"/g;
+    $line =~ s/\/iTIE_Except_MW\/tmp_reg/"Exception"/g;
+
+    # Interface signals
+    $line =~ s/\/TIE_LSSize_R/LSSize/g;
+    $line =~ s/\/TIE_LSVAddr([0-9]+)_E/VAddr$1/g;
+    $line =~ s/\/TIE_MemStoreData([0-9]+)_[A-Z]+/MemDataOut$1/g;
+    $line =~ s/\/MemDataIn([0-9]+)_([0-9]+)_C[0-9]+/MemDataIn$1 for LSUnit $2/g;
+
+    # TIE Regfile
+    $line =~ s/\/TIE_Regfile_([a-zA-Z0-9_]+)\/TIE_Regfile_[a-zA-Z0-9_]+_bank([0-9]+)\/([a-z0-9]+)_verify\/tmp_reg\s*\[([0-9]+)\]/&portmap($1, $2, $3, $4)/e;
+    $line =~ s/\/TIE_Regfile_([a-zA-Z0-9_]+)\/TIE_Regfile_[a-zA-Z0-9_]+_bank([0-9]+)\/([a-z0-9]+)_verify\/xt[inout]+\s*\[([0-9]+)\]/&portmap($1, $2, $3, $4)/e;
+    $line =~ s/\/TIE_Regfile_([a-zA-Z0-9_]+)\/TIE_Regfile_[a-zA-Z0-9_]+_bank([0-9]+)\/([a-z0-9]+)_verify\/(U\$[0-9]+)\/U\$([0-9]+)/&portmap($1, $2, $3, $5)/;
+
+    # Core Regfile
+    $line =~ s/\/TIE_([a-zA-Z0-9]+)_(s[0-9]+wr[0-9]+)_data[0-9]+_C[0-9]+\s*\[([0-9]+)\]/&portmap($1, 0, $2, $3)/e;
+    $line =~ s/\/TIE_([a-zA-Z0-9]+)_(s[0-9]+rd[0-9]+)_data_C[0-9]+\s*\[([0-9]+)\]/&portmap($1, 0, $2, $3)/e;
+
+    # TIE State
+    $line =~ s/\/TIE_State_([a-zA-Z0-9_]+)\/TIE_State_[a-zA-Z0-9_]+_bank0\/ns_verify\/tmp_reg\s*\[([0-9]+)\]/$1\[$2\]/;
+    $line =~ s/\/TIE_State_([a-zA-Z0-9_]+)\/TIE_State_[a-zA-Z0-9_]+_bank0\/ns_verify\/xt[inout]+\s*\[([0-9]+)\]/$1\[$2\]/;
+    $line =~ s/\/TIE_State_([a-zA-Z0-9_]+)\/TIE_State_[a-zA-Z0-9_]+_bank0\/ns_verify\/(U\$[0-9]+)\/U\$([0-9]+)/$1\[$3\]/;
+
+    $line =~ s/report test vector ([\w-]+)\[([0-9]+)\].*/report test vector $1\[$2\]/g;
+    #print "$line\n";
+    print LOGFILE "$line\n";
+}
+close(LOGFILE);
+print "Instruction $inst, the designs are not formally equivalent.\n";
+print "See logfile $vectorlogfile for mismatched data points and test vectors\n\n\n";
+
+
+}
+sub portmap
+{
+    my( $regfile, $bank, $port, $bit ) = @_;
+    my $name = "regfile $regfile, bank $bank, port $port, bit $bit";
+    foreach my $op ( keys %portdesc ) {
+        my $desc = $portdesc{$op};
+        my $r = $desc->[0]; # regfile name
+        my $p = $desc->[1]; # port
+        my $w = $desc->[2]; # width of register file
+        my $e = $desc->[3]; # number of entries in this operand
+        if ( $regfile eq $r && $p eq $port ) {
+           my $bnum = ($bank%$e)*$w + $bit;
+           $name = $op . '[' . $bnum . ']';
+        }
+    }
+    $name;
+}
+ 
+# Local Variables:
+# mode:perl
+# perl-indent-level:2
+# cperl-indent-level:2
+# End:

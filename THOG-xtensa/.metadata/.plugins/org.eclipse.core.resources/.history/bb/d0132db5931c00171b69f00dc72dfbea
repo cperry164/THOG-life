@@ -496,7 +496,7 @@ bool HogWindow::detect(const SVM* reference)
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
 
-	printf("prod=%d \t reference=%d\n",dotProduct,reference->bias);
+	printf("prod=%d reference=%d\n",dotProduct,reference->bias);
 	//return (dotProduct<=-0.7*reference->bias);
 	return (dotProduct<=-(reference->bias/10));
 }

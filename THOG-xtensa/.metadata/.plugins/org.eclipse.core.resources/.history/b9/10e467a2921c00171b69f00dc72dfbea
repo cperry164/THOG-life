@@ -484,6 +484,7 @@ bool HogWindow::detect(const SVM* reference)
 	for (i=0;i<3780;i+=2)
 	{
 		tie_add(this->values[i],reference->values[i],this->values[i+1],reference->values[i+1]);
+		//dotProduct += this->values[i]*reference->values[i];
 	}
 	dotProduct = RUR_reg_A();
 #else
@@ -496,7 +497,7 @@ bool HogWindow::detect(const SVM* reference)
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
 
-	printf("prod=%d \t reference=%d\n",dotProduct,reference->bias);
+	printf("prod=%d reference=%d\n",dotProduct,reference->bias);
 	//return (dotProduct<=-0.7*reference->bias);
 	return (dotProduct<=-(reference->bias/10));
 }
