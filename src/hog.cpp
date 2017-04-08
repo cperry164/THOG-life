@@ -5,6 +5,8 @@
 #include "hog.hpp"
 #include "cordic.hpp"
 
+#include "C:\TEMP\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
+
 #define PI 3.14159265359
 #define EPSILLON std::numeric_limits<float>::epsilon()
 #define EPSILLON_INT 1
