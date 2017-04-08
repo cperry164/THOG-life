@@ -1,0 +1,15 @@
+**** Incremental Build [sam., 8 avr. 2017 13:42:16] ****
+ Project: lol
+ Configuration: tie_dev1
+ Build Target: Debug
+********************************
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-xtensa/lol/src" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-xtensa/lol/src/util.cpp" -o "C:/TEMP/THOG-xtensa/lol/bin/tie_dev1/Debug/src/util.o" 
+In file included from C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/xtensa-elf/include/dirent.h:6,
+                 from C:/TEMP/THOG-xtensa/lol/src/util.cpp:11:
+C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/xtensa-elf/include/sys/dirent.h:10:2: error: #error "<dirent.h> not supported"
+Time taken: 156 ms 
+
+Build error encountered... cannot continue further.
+Total time taken: 0.672 secs
+**** Build Finished [sam., 8 avr. 2017 13:42:17] ****

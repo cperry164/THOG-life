@@ -1,0 +1,12 @@
+
+package "first_tie" ""
+state reg_A 32 add_read_write
+
+operation tie_add {in AR in1, in AR in2,in AR in3,in AR in4} {inout reg_A}
+{
+	assign reg_A = reg_A + in1 * in2 + in3*in4;
+	//wire[31:0] a1 = {in1[31:0]};
+	//wire[31:0] a2 = {in2[31:0]};
+	//assign res = a1+a2;
+}
+endpackage "first_tie"

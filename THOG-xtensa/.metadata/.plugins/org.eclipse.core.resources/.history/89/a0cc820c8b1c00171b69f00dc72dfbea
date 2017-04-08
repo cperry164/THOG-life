@@ -5,9 +5,7 @@
 #include "hog.hpp"
 #include "cordic.hpp"
 
-#ifdef TIE
-	#include "C:\TEMP\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
-#endif
+#include "C:\TEMP\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
 
 #define PI 3.14159265359
 #define EPSILLON std::numeric_limits<float>::epsilon()
@@ -130,11 +128,8 @@ void HOG::calculate_gradient()
 			signed int n,a;
 			signed int x_in=(signed int)xGrad[index];
 			signed int y_in=(signed int)yGrad[index];
-#ifdef TIE
+
 			atan_cordic(y_in,x_in, &n, &a, 10);
-#else
-			atan_cordic(y_in,x_in, &n, &a, 10);
-#endif
 
 			if (n<0 || n>CORDIC_SQRT2_255) {
 				printf("Error: polar gradient norm out of bound\n");
@@ -234,7 +229,7 @@ void HOG::calculate_windows()
 			//Each window contains a NormalizedHistogram list.
 			//nhlist is a pointer to this list
 			nhlist = &(windows[winIndex].nhists);
-			blockIndex=winBlockIndex;
+
 			//For each block of the window in y
 			for (m=0;m<15;m++)
 			{
@@ -242,12 +237,11 @@ void HOG::calculate_windows()
 				for (n=0;n<7;n++)
 				{
 					//the index of the block in the global image block indexing system
-					//blockIndex=winBlockIndex+(m*block_size_x)+n;
+					blockIndex=winBlockIndex+(m*block_size_x)+n;
 
 					//add the block to the current window's block list
-					nhlist->push_back(&blocks[blockIndex+n]);
+					nhlist->push_back(&blocks[blockIndex]);
 				}
-				blockIndex += block_size_x;
 			}
 
 			//Once a window is completed we can fill the values array
@@ -404,7 +398,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 	int i,j, index;
 
 	//need a 64 bits container to store squared values
-	signed int l2hysSum=0;
+	signed long int l2hysSum=0;
 
 	index=0;
 	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
@@ -413,7 +407,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 		{
 			//We will not right shift the result by CORDIC_FRAC_PART since the square root
 			//will remove the fractional part added by the square.
-			l2hysSum += ((*it)->hist[j])*((*it)->hist[j]);
+			l2hysSum += ((signed long int)((*it)->hist[j]))*((*it)->hist[j]);
 
 			//debug remove later
 			this->hist[index] = ((*it)->hist[j]);
@@ -433,7 +427,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 		for (j=0;j<9;j++)
 		{
 			//left shift by CORDIC_FRAC_PART before dividing to preserve alignment.
-			this->hist[index] = (((*it)->hist[j])<<CORDIC_FRAC_PART)/l2hys;
+			this->hist[index] = (((unsigned long int)((*it)->hist[j]))<<CORDIC_FRAC_PART)/l2hys;
 			index++;
 		}
 	}
@@ -477,26 +471,20 @@ bool HogWindow::detect(const SVM* reference)
 {
 	unsigned int i;
 
-	signed int dotProduct=0;
-#ifdef TIE
+	int dotProduct=0;
 	WUR_reg_A(dotProduct);
 
-	for (i=0;i<3780;i+=2)
-	{
-		tie_add(this->values[i],reference->values[i],this->values[i+1],reference->values[i+1]);
-	}
-	dotProduct = RUR_reg_A();
-#else
 	for (i=0;i<3780;i++)
-		{
-			dotProduct += this->values[i]*reference->values[i];
-		}
-#endif
+	{
+		tie_add(this->values[i]*reference->values[i]);
+		//dotProduct += this->values[i]*reference->values[i];
+	}
 
+	dotProduct = RUR_reg_A();
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
 
-	printf("prod=%d \t reference=%d\n",dotProduct,reference->bias);
+	printf("prod=%d reference=%d\n",dotProduct,reference->bias);
 	//return (dotProduct<=-0.7*reference->bias);
 	return (dotProduct<=-(reference->bias/10));
 }

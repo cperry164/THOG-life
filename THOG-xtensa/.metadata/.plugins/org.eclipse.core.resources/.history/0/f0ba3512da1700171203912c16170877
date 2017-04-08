@@ -1,0 +1,4 @@
+operation tie_add {in AR in1, in AR in2, out AR res} {}
+{
+	assign res = in1 + in2;
+}

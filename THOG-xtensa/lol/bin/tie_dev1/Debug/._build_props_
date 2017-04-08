@@ -1,0 +1,18 @@
+
+<PROJECT>:=lol
+<CONFIG>:=tie_dev1
+<TARGET>:=Debug
+<FEEDBACK>:=FBmode: Off
+
+<TIE_COMPILE>:=
+<PRE_FINAL>:=
+<OBJS>:=
+<MINSIZE_LINK>:=
+<FINAL>:=
+
+<COMPILE_START>
+src/image.cpp:=-c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-xtensa/lol/src" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-xtensa/lol/src/image.cpp" -o "C:/TEMP/THOG-xtensa/lol/bin/tie_dev1/Debug/src/image.o"
+src/detection.cpp:=-c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-xtensa/lol/src" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-xtensa/lol/src/detection.cpp" -o "C:/TEMP/THOG-xtensa/lol/bin/tie_dev1/Debug/src/detection.o"
+src/cordic.cpp:=-c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-xtensa/lol/src" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-xtensa/lol/src/cordic.cpp" -o "C:/TEMP/THOG-xtensa/lol/bin/tie_dev1/Debug/src/cordic.o"
+src/hog.cpp:=-c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-xtensa/lol/src" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-xtensa/lol/src/hog.cpp" -o "C:/TEMP/THOG-xtensa/lol/bin/tie_dev1/Debug/src/hog.o"
+<COMPILE_END>

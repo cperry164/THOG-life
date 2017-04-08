@@ -1,0 +1,56 @@
+ 
+----------------------------- DISCLAIMER ------------------------------
+The power reported here is an estimate of the actual power.
+The actual power should be obtained using hardware power analysis tools.
+The actual power depends on many factors beyond the control of the
+estimator. These factors include but are not limited to 
+technology process, standard cell library, synthesis tool quality,
+synthesis scripts, optimization switches, MHz / performance goal,
+and power goal. Furthermore, the power reported here is in pJ/cycle (uW/MHz)
+for 0.13 micron lv technology.
+
+Every attempt has been made to provide an accurate estimate, however,
+the actual power may vary. TIE developer is advised to rely on the 
+power estimate during the early phases of the design and validate the
+estimated power using hardware synthesis tool as design attains maturity.
+------------------------------ DISCLAIMER ------------------------------
+
+  145633 TIE
+            1125 TIE_decoder (0.77%)
+               0 TIE_AR_Regfile [additional power] (0.00%)
+            2253 TIE_reg_A_State (1.55%)
+              35 TIE_slot0_semantic_RUR_reg_A (0.02%)
+              35 TIE_slot0_semantic_WUR_reg_A (0.02%)
+          137413 TIE_slot0_semantic_tie_add (94.36%)
+            1003 TIE_slot0_operand_opnd_tie_add_in4 (0.69%)
+            1003 TIE_slot0_operand_opnd_tie_add_in3 (0.69%)
+            1003 TIE_slot0_operand_opnd_tie_add_in2 (0.69%)
+            1003 TIE_slot0_operand_opnd_tie_add_in1 (0.69%)
+             760 TIE toplogic for muxing and pipeline management (0.52%)
+
+
+  ACTIVATED BLOCK POWER BEGIN
+
+  decoder     1.125 toplogic    0.760
+  Instruction                            core semantic    state  regfile
+  RUR_reg_A                               nop    0.035    0.000    0.000
+  WUR_reg_A                               nop    0.035    2.253    0.000
+  tie_add                                 nop  137.413    2.253    0.000
+
+
+  ACTIVATED BLOCK POWER END
+
+
+
+  INSTRUCTION POWER BEGIN
+
+  rur.reg_a                               nop    0.031
+  wur.reg_a                               nop    0.144
+  tie_add                                 nop  122.864
+
+
+  INSTRUCTION POWER END
+
+
+
+cpu_seconds 0.03

@@ -1,0 +1,77 @@
+# Copyright (c) 2007-2012 by Tensilica Inc.  ALL RIGHTS RESERVED.
+# These coded instructions, statements, and computer programs are the
+# copyrighted works and confidential proprietary information of Tensilica Inc.
+# They may not be modified, copied, reproduced, distributed, or disclosed to
+# third parties in any manner, medium, or form, in whole or in part, without
+# the prior written consent of Tensilica Inc.
+
+Notation: <dir>   - path to this directory
+
+This is a brief list of the files in this directory.
+
+Miscellaneous:
+    README.first_tie		this file
+    first_tie.tie			a copy of the source tie file
+    first_tie.tppout               Output of running the .tie file through
+                                the TIE preprocessor
+    first_tie.tdb			Binary file containing the TIE extension 
+				description.  This is the file that gets 
+				uploaded to the Xtensa Processor Generator.
+    default-params		default param file to configure software tools
+    first_tie-params		param file to configure software tools for first_tie.tie
+    first_tie.area			Area estimate for the TIE extensions
+    first_tie.report		A useful report on various properties of your
+				TIE description
+
+Design Compiler or RTL Compiler Synthesis:
+    first_tie.v			Verilog source file for TIE extensions
+    run_syn.pl			Perl script to invoke synthesis flow
+
+Formal Verification:
+    verify			Subdirectory supporting formal verification
+    verify/src/verify_sem.v	Verilog source generated from semantics
+    verify/src/verify_ref.v	Verilog source generated from operation or reference
+    verify/verplex		Scripts and Makefile to run Incisive Conformal
+				formal verification tool from Cadence 
+
+Xtensa tool support:
+    libisa-first_tie.so		dynamically linked library used by all software tools
+    libcc-first_tie.so		dynamically linked library for the compiler (xt-xcc)
+    libcas-first_tie.so		dynamically linked library for the simulator (xt-run)
+    libcas-ref-first_tie.so	dynamically linked library for the simulator (xt-run)
+				this file is only created if the TIE compiler is invoked
+				with the "-reflib" flag.
+
+                                All the .so files are in the directory named lib-xxx/
+                                where "xxx" is based on the operation system.  This 
+                                directory also contains the corresponding .o files.
+				
+    first_tie.h			Macro definitions of the new TIE instructions.
+                                This file is in the include/xtensa/tie/ directory.
+
+
+To compile your application for Xtensa:
+    - add "--xtensa-params=<dir>" to the command line or add the environment 
+      variable 'XTENSA_PARAMS=<dir>; export XTENSA_PARAMS"
+    - include the "xtensa/tie/first_tie.h" file in your C application header file
+    - compile your application using xt-xcc
+
+
+To estimate the impact of your TIE description on Xtensa speed and area:
+  NOTE: This flow is not available for Windows build.
+    - Setup your shell environment to run Synopsys Design Compiler or Cadence RTL Compiler
+    - locate and edit CadSetup.file and Xttop.ioc files to specify library specific
+      parameters and unique timing constraints, respectively (see TIE user guide for details).
+    - Run synthesis from your tdk directory:
+            "run_syn.pl -xda <target xda directory> [optional flags]"
+	    (Note: run with the -help option first to see all possible synthesis tool options)
+    - cd into the generated syn* output directory
+    - Make sure there are no errors in the "TIE_compile.log" file.
+    - Inspect the synthesis results (see TIE user guide and/or Hardware User's Guide 
+      for explanation of results).
+
+
+If you have the Incisive Conformal tool from Cadence, you can run this formal 
+equivalence checker to compare the operation/reference description of
+your instructions against their semantic descriptions by doing the following:
+    - "cd <dir>/verify/verplex; make"
