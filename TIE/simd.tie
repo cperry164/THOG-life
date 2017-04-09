@@ -1,0 +1,14 @@
+
+
+regfile vec32x4 128 4 vec32x4
+
+operation dotprod {out AR acc, in vec32x4 a, in vec32x4 b}{}
+{
+	//4-way SIMD multiplication
+	wire [31:0] prod0 = a[31:0]*b[31:0];
+	wire [31:0] prod1 = a[63:32]*b[63:32];
+	wire [31:0] prod2 = a[95:64]*b[95:64];
+	wire [31:0] prod3 = a[127:96]*b[127:96];
+
+	assign acc = prod0+prod1+prod2+prod3;
+}

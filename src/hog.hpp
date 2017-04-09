@@ -24,7 +24,7 @@ public:
 						const signed int* angle,
 						int col_size);
 
-	unsigned int hist[9];
+	unsigned int hist[9] __attribute__((aligned(16)));
 private:
 };
 
@@ -54,7 +54,7 @@ public:
 	 */
 	SVM(std::string filepath);
 
-	signed int values[3780];
+	signed int values[3780] __attribute__((aligned(16)));
 	signed int bias;
 };
 
@@ -82,7 +82,7 @@ public:
 
 	// Utilisation d'un tableau de dimension fixe pour stocker les
 	// 105*36 dimensions
-	signed int values[3780];
+	signed int values[3780] __attribute__((aligned(16)));
 };
 
 class HOG {

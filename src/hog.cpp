@@ -5,9 +5,7 @@
 #include "hog.hpp"
 #include "cordic.hpp"
 
-#ifdef TIE
-	#include "C:\TEMP\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
-#endif
+#include "cordic.h"
 
 #define PI 3.14159265359
 #define EPSILLON std::numeric_limits<float>::epsilon()
@@ -409,6 +407,16 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 	index=0;
 	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
 	{
+#ifdef TIE_SIMD
+
+		vec32x4 *a;
+		a = (vec32x4 *)((*it)->hist);
+		l2hysSum +=dotprod(*a,*a);
+		a++;
+		l2hysSum +=dotprod(*a,*a);
+		l2hysSum += ((*it)->hist[8])*((*it)->hist[8]);
+
+#else
 		for (j=0;j<9;j++)
 		{
 			//We will not right shift the result by CORDIC_FRAC_PART since the square root
@@ -419,6 +427,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 			this->hist[index] = ((*it)->hist[j]);
 			index++;
 		}
+#endif
 	}
 
 	l2hysSum = sqrt(l2hysSum);
@@ -479,19 +488,25 @@ bool HogWindow::detect(const SVM* reference)
 
 	signed int dotProduct=0;
 
-#ifdef TIE
-	WUR_reg_A(dotProduct);
+#ifdef TIE_SIMD
 
-	for (i=0;i<3780;i+=2)
+	vec32x4 *a, *b;
+
+	for (i=0;i<(3780-4);i+=4)
 	{
-		tie_add(this->values[i],reference->values[i],this->values[i+1],reference->values[i+1]);
+		a = (vec32x4 *)(&this->values[i]);
+		b = (vec32x4 *)(&reference->values[i]);
+		dotProduct += dotprod(*a,*b);
 	}
-	dotProduct = RUR_reg_A();
+	for (;i<3780;i++)
+	{
+		dotProduct += this->values[i]*reference->values[i];
+	}
 #else
 	for (i=0;i<3780;i++)
-		{
-			dotProduct += this->values[i]*reference->values[i];
-		}
+	{
+		dotProduct += this->values[i]*reference->values[i];
+	}
 #endif
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);

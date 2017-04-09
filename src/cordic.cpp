@@ -1,7 +1,5 @@
 #include "cordic.hpp"
-
-#include "C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
-#define TIE_CORDIC
+#include "cordic.h"
 
 //Taken online from http://www.dcs.gla.ac.uk/~jhw/cordic/
 
