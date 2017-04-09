@@ -313,6 +313,9 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 			a = angle[index];
 			n = norm[index];
 
+#ifdef TIE_BIN
+			bin=tie_getbin(a);
+#else
 			// simple decision tree to determine the bin
 			if (a<=binsAngle[4]) {
 				if (a<=binsAngle[2]) {
@@ -355,6 +358,7 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 					}
 				}
 			}
+#endif
 
 			//excentricity is between 0 and 1
 			excentricity = (a-binsAngle[bin]);

@@ -1,6 +1,6 @@
 
 
-regfile vec32x4 128 4 vec32x4
+regfile vec32x4 128 4 vec
 
 operation dotprod {out AR acc, in vec32x4 a, in vec32x4 b}{}
 {
