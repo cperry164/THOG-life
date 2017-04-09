@@ -2882,3 +2882,51 @@ Total time taken: 100.205 secs
 Nothing to build.
 Total time taken: 0.003 secs
 **** Build Finished [sam., 8 avr. 2017 20:16:25] ****
+**** Incremental Build [dim., 9 avr. 2017 09:52:24] ****
+ Project: test
+ Configuration: tie_dev1
+ Build Target: Debug
+********************************
+Compiling TIE source(s) attached to configuration "tie_dev1" ...
+
+C:/Logiciels/Xtensa/XtDevTools/install/tools/RF-2015.2-win32/XtensaTools/bin/tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+0 error(s), 0 warning(s) 0 message(s)
+Time taken: 88012 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-life/THOG-xtensa/test" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-life/src/cordic.cpp" -o "C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/cordic.o" 
+Time taken: 2401 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-life/THOG-xtensa/test" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-life/src/image.cpp" -o "C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/image.o" 
+Time taken: 2358 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-life/THOG-xtensa/test" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-life/src/detection.cpp" -o "C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/detection.o" 
+Time taken: 2358 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -c -g -O0 -fmessage-length=0 -I "C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk" -I "C:/TEMP/THOG-life/THOG-xtensa/test" -DPROC_tie_dev1 -DCONFIG_tie_dev1 --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk "C:/TEMP/THOG-life/src/hog.cpp" -o "C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/hog.o" 
+C:/TEMP/THOG-life/src/hog.cpp: In constructor 'SVM::SVM(std::string)':
+C:/TEMP/THOG-life/src/hog.cpp:516: warning: cannot pass objects of non-POD type 'struct std::string' through '...'; call will abort at runtime
+Time taken: 2459 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/objfiles.list -o C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk 
+Time taken: 229 ms 
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xc++ -Wl,@C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/objfiles.list -o C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test -mlsp=sim --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk 
+Time taken: 580 ms 
+
+******* Code size summary *****
+
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test 
+TYPE   	   text	 rodata	   data	    bss	    dec    hex	filename
+code   	  83751	      0	     39	      0	  83790	  1474e	C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+literal	   1776	      0	      0	      0	   1776	    6f0	C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+other  	   3145	      0	  29853	   3600	  36598	   8ef6	C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+Total  	  88672	      0	  29892	   3600	 122164	  1dd34	C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+Time taken: 167 ms 
+
+******* ************** *****
+
+Build successful !!
+Total time taken: 93.032 secs
+**** Build Finished [dim., 9 avr. 2017 09:53:57] ****

@@ -1507,3 +1507,55 @@ If this is the case please stop the debugger in the DEBUG view.
 
 !ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:16:26.735
 !MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+!SESSION 2017-04-09 09:50:19.853 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_CA
+Framework arguments:  256m -application org.eclipse.ui.ide.workbench
+Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.eclipse.ui.ide.workbench
+
+!ENTRY org.eclipse.core.resources 4 380 2017-04-09 09:52:18.600
+!MESSAGE The resource tree is locked for modifications.
+
+!ENTRY org.eclipse.core.resources 4 380 2017-04-09 09:52:18.624
+!MESSAGE The resource tree is locked for modifications.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:52:22.826
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-09 09:52:23.130
+!MESSAGE Indexed 'test' (4 sources, 126 headers) in 3,98 sec: 9 930 declarations; 13 256 references; 0 unresolved inclusions; 0 syntax errors; 95 unresolved names (0,41 %)
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:52:23.340
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:52:23.346
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:52:23.476
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:52:24.796
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:/Logiciels/Xtensa/XtDevTools/install/tools/RF-2015.2-win32/XtensaTools/bin/tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-09 09:52:25.112
+!MESSAGE Indexed 'test' (4 sources, 126 headers) in 1,59 sec: 9 930 declarations; 13 256 references; 0 unresolved inclusions; 0 syntax errors; 95 unresolved names (0,41 %)
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:53:52.627
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:53:57.586
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:53:57.682
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.debug.ui 4 0 2017-04-09 09:53:57.952
+!MESSAGE Tab group extension: com.tensilica.xide.cdt.launch.AttachTabGroup for type com.tensilica.xide.cdt.launch.AttachLaunch for the * mode has been replaced by extension: com.tensilica.xide.cdt.launch.AttachTabGroup
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:53:57.964
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:53:57.969
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >

@@ -2,12 +2,12 @@
 <workingSetManager>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1490722239380_1" label="Active Set Content" name="Active Set Content">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XtensaInfo/TIEFiles/first_tie.tie" type="1"/>
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XtensaInfo/Models/tie_dev1.xc" type="1"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test" type="4"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1490722303740_2" label="My C Projects and TIE" name="My C Projects and TIE">
-<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test" type="4"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XtensaInfo/TIEFiles" type="2"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test" type="4"/>
 </workingSet>
 <workingSet aggregate="true" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1490722238083_0" label="Window Working Set" name="Aggregate for window 1490722238083"/>
 <mruList name="My C Projects and TIE"/>
