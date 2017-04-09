@@ -1,0 +1,70 @@
+
+
+
+package "first_tie" ""
+state reg_A 32 add_read_write
+
+
+state cordic_x 32 add_read_write
+state cordic_y 32 add_read_write
+state cordic_z 32 add_read_write
+state cordic_k 32 add_read_write
+state mask_out 32 add_read_write
+state ydiv2_out 32 add_read_write
+state xdiv2_out 32 add_read_write
+
+table cordic_ctab 32 10 {804,475,251,127,64,32,16,8,4,2}
+
+
+operation tie_add {in AR in1, in AR in2,in AR in3,in AR in4} {inout reg_A}
+{
+	assign reg_A = reg_A + in1 * in2 + in3*in4;
+	//wire[31:0] a1 = {in1[31:0]};
+	//wire[31:0] a2 = {in2[31:0]};
+	//assign res = a1+a2;
+}
+
+operation tie_cordic_init {in AR x, in AR y} {out cordic_x, out cordic_y, out cordic_z, out cordic_k}
+{
+	assign cordic_x = x;
+	assign cordic_y = y;
+	assign cordic_z = 0;
+	assign cordic_k = 0;
+}
+
+operation tie_cordic_iterate {in AR x, in AR y} {inout cordic_x, inout cordic_y, inout cordic_z, inout cordic_k, out mask_out, out ydiv2_out, out xdiv2_out}
+{
+	//wire [31:0] d = (cordic_y<=0) ? 32'h00000000 : 32'hFFFFFFFF;
+	
+	//wire [31:0] tx = cordic_x - (((cordic_y>>cordic_k) ^ d) - d);
+	//wire [31:0] ty = cordic_y + (((cordic_x>>cordic_k) ^ d) - d);
+	//wire [31:0] tz = cordic_z - ((cordic_ctab[cordic_k] ^ d) - d);
+	
+	//wire [31:0] mask = 32'hFFFFFFFF<<(31-cordic_k);
+	//wire [31:0] ydiv2 = (cordic_y<0) ? ((cordic_y>>cordic_k)|mask) : (cordic_y>>cordic_k);
+	//wire [31:0] xdiv2 = (cordic_x<0) ? ((cordic_x>>cordic_k)|mask) : (cordic_x>>cordic_k);
+	//wire [31:0] tx = (cordic_y<=0) ? cordic_x - ydiv2 : cordic_x + ydiv2;
+	//wire [31:0] ty = (cordic_y<=0) ? cordic_y + xdiv2 : cordic_y - xdiv2;
+	//wire [31:0] tz = (cordic_y<=0) ? cordic_z - cordic_ctab[cordic_k] : cordic_z + cordic_ctab[cordic_k];
+	
+	wire [31:0] mask = 32'hFFFFFFFF<<(31-cordic_k);
+	wire [31:0] ydiv2 = (y>>cordic_k);
+	wire [31:0] xdiv2 = (x>>cordic_k);
+	wire [31:0] ydiv2_sign = (y<0) ? (ydiv2|mask) : (ydiv2);
+	wire [31:0] xdiv2_sign = (x<0) ? (xdiv2|mask) : (xdiv2);
+	wire [31:0] tx = (y<=0) ? x - ydiv2 : x + ydiv2;
+	wire [31:0] ty = (y<=0) ? y + xdiv2 : y - xdiv2;
+	wire [31:0] tz = (y<=0) ? cordic_z - cordic_ctab[cordic_k] : cordic_z + cordic_ctab[cordic_k];
+	
+	assign cordic_x = tx;
+	assign cordic_y = ty;
+	assign cordic_z = tz;
+	assign mask_out = mask;
+	assign ydiv2_out = ydiv2;
+	assign xdiv2_out = xdiv2;
+	assign cordic_k = cordic_k + 1;
+}
+
+
+
+endpackage "first_tie"

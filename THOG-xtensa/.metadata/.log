@@ -251,3 +251,1259 @@ java.io.FileNotFoundException: C:\TEMP\THOG-life\THOG-xtensa\test\.xxproject (Ac
 
 !ENTRY com.tensilica.xide.core 1 0 2017-04-08 16:16:48.659
 !MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+!SESSION 2017-04-08 18:42:41.209 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_CA
+Framework arguments:  256m -application org.eclipse.ui.ide.workbench
+Command-line arguments:  -data C:\TEMP\THOG-life\THOG-xtensa -os win32 -ws win32 -arch x86 256m -application org.eclipse.ui.ide.workbench
+
+!ENTRY org.eclipse.core.resources 2 10035 2017-04-08 18:42:42.178
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.core.resources 4 368 2017-04-08 18:42:44.652
+!MESSAGE Resource '/XtensaInfo/Systems' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2017-04-08 18:42:44.662
+!MESSAGE Resource '/XtensaInfo/Hardware' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:42:46.727
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:42:47.611
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:42:47.852
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:42:48.122
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:42:48.127
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:42:48.157
+!MESSAGE Return Code: 2
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-08 18:42:50.534
+!MESSAGE Indexed 'test' (4 sources, 122 headers) in 2,03 sec: 9 600 declarations; 13 140 references; 3 unresolved inclusions; 2 syntax errors; 110 unresolved names (0,48 %)
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:42:55.045
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:/Logiciels/Xtensa/XtDevTools/install/tools/RF-2015.2-win32/XtensaTools/bin/tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:44:25.373
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:44:30.587
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 1 2017-04-08 18:45:18.646
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/test/util.cpp)[381]: java.io.IOException: File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:157)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:167)
+	at java.io.InputStream.read(InputStream.java:101)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:119)
+	at org.eclipse.core.internal.content.Util.getByteOrderMark(Util.java:119)
+	at org.eclipse.core.internal.content.TextContentDescriber.describe(TextContentDescriber.java:49)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:356)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:189)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.ui.internal.services.EvaluationResultCache.evaluate(EvaluationResultCache.java:74)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.evaluate(ExpressionAuthority.java:165)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.addEvaluationListener(EvaluationAuthority.java:79)
+	at org.eclipse.ui.internal.services.EvaluationService.addEvaluationListener(EvaluationService.java:47)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.registerVisibleWhen(WorkbenchMenuService.java:884)
+	at org.eclipse.ui.internal.menus.ContributionRoot.addContributionItem(ContributionRoot.java:60)
+	at org.eclipse.ui.internal.menus.MenuAdditionCacheEntry.createContributionItems(MenuAdditionCacheEntry.java:188)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService$5.run(WorkbenchMenuService.java:584)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.processAdditions(WorkbenchMenuService.java:656)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.addContributionsToManager(WorkbenchMenuService.java:744)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.populateContributionManager(WorkbenchMenuService.java:730)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:203)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:76)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:357)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:335)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:342)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:473)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1610)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2061)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4972)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4206)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 1 org.eclipse.core.resources 4 381 2017-04-08 18:45:18.650
+!MESSAGE Error retrieving content description for resource '/test/util.cpp'.
+!STACK 0
+java.io.IOException: File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:157)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:167)
+	at java.io.InputStream.read(InputStream.java:101)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:119)
+	at org.eclipse.core.internal.content.Util.getByteOrderMark(Util.java:119)
+	at org.eclipse.core.internal.content.TextContentDescriber.describe(TextContentDescriber.java:49)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:356)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:189)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.ui.internal.services.EvaluationResultCache.evaluate(EvaluationResultCache.java:74)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.evaluate(ExpressionAuthority.java:165)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.addEvaluationListener(EvaluationAuthority.java:79)
+	at org.eclipse.ui.internal.services.EvaluationService.addEvaluationListener(EvaluationService.java:47)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.registerVisibleWhen(WorkbenchMenuService.java:884)
+	at org.eclipse.ui.internal.menus.ContributionRoot.addContributionItem(ContributionRoot.java:60)
+	at org.eclipse.ui.internal.menus.MenuAdditionCacheEntry.createContributionItems(MenuAdditionCacheEntry.java:188)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService$5.run(WorkbenchMenuService.java:584)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.processAdditions(WorkbenchMenuService.java:656)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.addContributionsToManager(WorkbenchMenuService.java:744)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.populateContributionManager(WorkbenchMenuService.java:730)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:203)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:76)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:357)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:335)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:342)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:473)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1610)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2061)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4972)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4206)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+
+!ENTRY org.eclipse.core.resources 4 1 2017-04-08 18:45:18.666
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/test/util.cpp)[381]: java.io.IOException: File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:157)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:167)
+	at java.io.InputStream.read(InputStream.java:101)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:119)
+	at org.eclipse.core.internal.content.Util.getByteOrderMark(Util.java:119)
+	at org.eclipse.core.internal.content.TextContentDescriber.describe(TextContentDescriber.java:49)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:356)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:189)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.ui.internal.services.EvaluationResultCache.evaluate(EvaluationResultCache.java:74)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.evaluate(ExpressionAuthority.java:165)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.addEvaluationListener(EvaluationAuthority.java:79)
+	at org.eclipse.ui.internal.services.EvaluationService.addEvaluationListener(EvaluationService.java:47)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.registerVisibleWhen(WorkbenchMenuService.java:884)
+	at org.eclipse.ui.internal.menus.ContributionRoot.addContributionItem(ContributionRoot.java:60)
+	at org.eclipse.ui.internal.menus.MenuAdditionCacheEntry.createContributionItems(MenuAdditionCacheEntry.java:188)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService$5.run(WorkbenchMenuService.java:584)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.processAdditions(WorkbenchMenuService.java:656)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.addContributionsToManager(WorkbenchMenuService.java:744)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.populateContributionManager(WorkbenchMenuService.java:730)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:203)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:76)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:357)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:335)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:342)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:473)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1610)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2061)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4972)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4206)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 1 org.eclipse.core.resources 4 381 2017-04-08 18:45:18.666
+!MESSAGE Error retrieving content description for resource '/test/util.cpp'.
+!STACK 0
+java.io.IOException: File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:157)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:167)
+	at java.io.InputStream.read(InputStream.java:101)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:119)
+	at org.eclipse.core.internal.content.Util.getByteOrderMark(Util.java:119)
+	at org.eclipse.core.internal.content.TextContentDescriber.describe(TextContentDescriber.java:49)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:356)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:189)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.ui.internal.services.EvaluationResultCache.evaluate(EvaluationResultCache.java:74)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.evaluate(ExpressionAuthority.java:165)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.addEvaluationListener(EvaluationAuthority.java:79)
+	at org.eclipse.ui.internal.services.EvaluationService.addEvaluationListener(EvaluationService.java:47)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.registerVisibleWhen(WorkbenchMenuService.java:884)
+	at org.eclipse.ui.internal.menus.ContributionRoot.addContributionItem(ContributionRoot.java:60)
+	at org.eclipse.ui.internal.menus.MenuAdditionCacheEntry.createContributionItems(MenuAdditionCacheEntry.java:188)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService$5.run(WorkbenchMenuService.java:584)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.processAdditions(WorkbenchMenuService.java:656)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.addContributionsToManager(WorkbenchMenuService.java:744)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.populateContributionManager(WorkbenchMenuService.java:730)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:203)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:76)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:357)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:335)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:342)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:473)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1610)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2061)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4972)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4206)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+
+!ENTRY org.eclipse.core.resources 4 1 2017-04-08 18:45:18.670
+!MESSAGE Core exception while retrieving the content description
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(/test/util.cpp)[381]: java.io.IOException: File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:157)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:167)
+	at java.io.InputStream.read(InputStream.java:101)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:119)
+	at org.eclipse.core.internal.content.Util.getByteOrderMark(Util.java:119)
+	at org.eclipse.core.internal.content.TextContentDescriber.describe(TextContentDescriber.java:49)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:356)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:189)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.ui.internal.services.EvaluationResultCache.evaluate(EvaluationResultCache.java:74)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.evaluate(ExpressionAuthority.java:165)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.addEvaluationListener(EvaluationAuthority.java:79)
+	at org.eclipse.ui.internal.services.EvaluationService.addEvaluationListener(EvaluationService.java:47)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.registerVisibleWhen(WorkbenchMenuService.java:884)
+	at org.eclipse.ui.internal.menus.ContributionRoot.addContributionItem(ContributionRoot.java:60)
+	at org.eclipse.ui.internal.menus.MenuAdditionCacheEntry.createContributionItems(MenuAdditionCacheEntry.java:188)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService$5.run(WorkbenchMenuService.java:584)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.processAdditions(WorkbenchMenuService.java:656)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.addContributionsToManager(WorkbenchMenuService.java:744)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.populateContributionManager(WorkbenchMenuService.java:730)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:203)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:76)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:357)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:335)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:342)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:473)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1610)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2061)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4972)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4206)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+!SUBENTRY 1 org.eclipse.core.resources 4 381 2017-04-08 18:45:18.671
+!MESSAGE Error retrieving content description for resource '/test/util.cpp'.
+!STACK 0
+java.io.IOException: File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.ensureOpened(ContentDescriptionManager.java:157)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager$LazyFileInputStream.read(ContentDescriptionManager.java:167)
+	at java.io.InputStream.read(InputStream.java:101)
+	at org.eclipse.core.internal.content.LazyInputStream.loadBlock(LazyInputStream.java:99)
+	at org.eclipse.core.internal.content.LazyInputStream.ensureAvailable(LazyInputStream.java:64)
+	at org.eclipse.core.internal.content.LazyInputStream.read(LazyInputStream.java:119)
+	at org.eclipse.core.internal.content.Util.getByteOrderMark(Util.java:119)
+	at org.eclipse.core.internal.content.TextContentDescriber.describe(TextContentDescriber.java:49)
+	at org.eclipse.core.internal.content.ContentType.describe(ContentType.java:161)
+	at org.eclipse.core.internal.content.ContentType.internalGetDescriptionFor(ContentType.java:458)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:356)
+	at org.eclipse.core.internal.content.ContentTypeCatalog.getDescriptionFor(ContentTypeCatalog.java:360)
+	at org.eclipse.core.internal.content.ContentTypeMatcher.getDescriptionFor(ContentTypeMatcher.java:86)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.readDescription(ContentDescriptionManager.java:445)
+	at org.eclipse.core.internal.resources.ContentDescriptionManager.getDescriptionFor(ContentDescriptionManager.java:355)
+	at org.eclipse.core.internal.resources.File.getContentDescription(File.java:271)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.testContentType(FilePropertyTester.java:108)
+	at org.eclipse.core.internal.propertytester.FilePropertyTester.test(FilePropertyTester.java:60)
+	at org.eclipse.core.internal.expressions.Property.test(Property.java:58)
+	at org.eclipse.core.internal.expressions.TestExpression.evaluate(TestExpression.java:99)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.AdaptExpression.evaluate(AdaptExpression.java:91)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateOr(CompositeExpression.java:68)
+	at org.eclipse.core.internal.expressions.OrExpression.evaluate(OrExpression.java:21)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.IterateExpression.evaluate(IterateExpression.java:189)
+	at org.eclipse.core.internal.expressions.CompositeExpression.evaluateAnd(CompositeExpression.java:53)
+	at org.eclipse.core.internal.expressions.WithExpression.evaluate(WithExpression.java:72)
+	at org.eclipse.ui.internal.services.EvaluationResultCache.evaluate(EvaluationResultCache.java:74)
+	at org.eclipse.ui.internal.services.ExpressionAuthority.evaluate(ExpressionAuthority.java:165)
+	at org.eclipse.ui.internal.services.EvaluationAuthority.addEvaluationListener(EvaluationAuthority.java:79)
+	at org.eclipse.ui.internal.services.EvaluationService.addEvaluationListener(EvaluationService.java:47)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.registerVisibleWhen(WorkbenchMenuService.java:884)
+	at org.eclipse.ui.internal.menus.ContributionRoot.addContributionItem(ContributionRoot.java:60)
+	at org.eclipse.ui.internal.menus.MenuAdditionCacheEntry.createContributionItems(MenuAdditionCacheEntry.java:188)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService$5.run(WorkbenchMenuService.java:584)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.processAdditions(WorkbenchMenuService.java:656)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.addContributionsToManager(WorkbenchMenuService.java:744)
+	at org.eclipse.ui.internal.menus.WorkbenchMenuService.populateContributionManager(WorkbenchMenuService.java:730)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:203)
+	at org.eclipse.ui.internal.menus.SlaveMenuService.populateContributionManager(SlaveMenuService.java:76)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:357)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:335)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:342)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:473)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:469)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:495)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:247)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1610)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2061)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4972)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:256)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4206)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3748)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2701)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2665)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2499)
+	at org.eclipse.ui.internal.Workbench$7.run(Workbench.java:679)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:668)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:123)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:344)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:622)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:577)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1386)
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:45:25.698
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:45:47.529
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:45:49.033
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:45:55.912
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:46:25.066
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:46:26.909
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:46:26.948
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.debug.ui 4 0 2017-04-08 18:46:27.221
+!MESSAGE Tab group extension: com.tensilica.xide.cdt.launch.AttachTabGroup for type com.tensilica.xide.cdt.launch.AttachLaunch for the * mode has been replaced by extension: com.tensilica.xide.cdt.launch.AttachTabGroup
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:46:27.223
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:46:27.223
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:46:27.730
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:48:55.760
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:49:07.416
+!MESSAGE Return Code: 1
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 18:49:07.443
+!MESSAGE Compile was aborted for Configuration tie_dev1 please see problem view or TDK log for more information if any.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:50:46.222
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:52:27.464
+!MESSAGE Return Code: 0
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 18:52:27.484
+!MESSAGE Compilation succeeded with warnings. See problem view or TDK log for a more detailed explanation.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:58:40.090
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:58:40.148
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:58:40.411
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 18:58:40.415
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 18:58:40.979
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+!SESSION 2017-04-08 19:16:38.314 -----------------------------------------------
+eclipse.buildId=M20120208-0800
+java.version=1.7.0_21
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_CA
+Framework arguments:  256m -application org.eclipse.ui.ide.workbench
+Command-line arguments:  -data C:\TEMP\THOG-life\THOG-xtensa -os win32 -ws win32 -arch x86 256m -application org.eclipse.ui.ide.workbench
+
+!ENTRY org.eclipse.core.resources 4 368 2017-04-08 19:16:41.769
+!MESSAGE Resource '/XtensaInfo/Systems' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 368 2017-04-08 19:16:41.769
+!MESSAGE Resource '/XtensaInfo/Hardware' does not exist.
+
+!ENTRY org.eclipse.core.resources 4 274 2017-04-08 19:16:43.828
+!MESSAGE Resource is out of sync with the file system: '/test/cordic.cpp'.
+
+!ENTRY org.eclipse.core.resources 4 274 2017-04-08 19:27:00.641
+!MESSAGE Resource is out of sync with the file system: '/test/cordic.cpp'.
+
+!ENTRY org.eclipse.core.resources 4 274 2017-04-08 19:27:22.296
+!MESSAGE Resource is out of sync with the file system: '/test/cordic.cpp'.
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:27:35.696
+!MESSAGE Compile was aborted for Configuration tie_dev1 because some files in the TDK could not be deleted.
+
+A possible cause might be locked files while the debugger is in an active state.
+If this is the case please stop the debugger in the DEBUG view.
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:27:39.375
+!MESSAGE Compile was aborted for Configuration tie_dev1 because some files in the TDK could not be deleted.
+
+A possible cause might be locked files while the debugger is in an active state.
+If this is the case please stop the debugger in the DEBUG view.
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:27:44.440
+!MESSAGE Compile was aborted for Configuration tie_dev1 because some files in the TDK could not be deleted.
+
+A possible cause might be locked files while the debugger is in an active state.
+If this is the case please stop the debugger in the DEBUG view.
+
+!ENTRY org.eclipse.ui 4 0 2017-04-08 19:28:10.124
+!MESSAGE Unable to open external editor for C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk/tc.log.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:16.864
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:16.938
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:16.946
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:16.986
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.cdt.core 1 0 2017-04-08 19:28:19.126
+!MESSAGE Indexed 'test' (4 sources, 126 headers) in 2,07 sec: 9 932 declarations; 13 278 references; 0 unresolved inclusions; 0 syntax errors; 96 unresolved names (0,41 %)
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.641
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.676
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.676
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.676
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.697
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.712
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.717
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.717
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.740
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.746
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.747
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.747
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.767
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.767
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.785
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:24.798
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:28:33.387
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:08.737
+!MESSAGE Return Code: 0
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:30:08.757
+!MESSAGE Compilation succeeded with warnings. See problem view or TDK log for a more detailed explanation.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:08.846
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.135
+!MESSAGE Return Code: 1
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:30:44.152
+!MESSAGE Compile was aborted for Configuration tie_dev1 please see problem view or TDK log for more information if any.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.233
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=
+
+!ENTRY org.eclipse.core.resources 4 368 2017-04-08 19:30:44.249
+!MESSAGE Resource '/XtensaInfo/Models/tie_dev1.tdk' does not exist.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.287
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.290
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.290
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.326
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.333
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.350
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.351
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.351
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.370
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.387
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.392
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.392
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.452
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.471
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:30:44.513
+!MESSAGE Return Code: 2
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:31:01.226
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:32:39.240
+!MESSAGE Return Code: 0
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:32:39.258
+!MESSAGE Compilation succeeded with warnings. See problem view or TDK log for a more detailed explanation.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:32:39.350
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -v C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\indexer_includes.cpp --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:32:39.401
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:32:39.416
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-xcc -E -dM NUL --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:32:39.472
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 274 2017-04-08 19:33:07.872
+!MESSAGE Resource is out of sync with the file system: '/test/cordic.cpp'.
+
+!ENTRY org.eclipse.core.resources 4 274 2017-04-08 19:33:14.822
+!MESSAGE Resource is out of sync with the file system: '/test/cordic.cpp'.
+
+!ENTRY org.eclipse.core.resources 4 274 2017-04-08 19:33:39.608
+!MESSAGE Resource is out of sync with the file system: '/test/cordic.cpp'.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:33:42.303
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:33:42.354
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 274 2017-04-08 19:33:42.896
+!MESSAGE Resource is out of sync with the file system: '/test/cordic.cpp'.
+
+!ENTRY org.eclipse.debug.ui 4 0 2017-04-08 19:34:14.721
+!MESSAGE Tab group extension: com.tensilica.xide.cdt.launch.AttachTabGroup for type com.tensilica.xide.cdt.launch.AttachLaunch for the * mode has been replaced by extension: com.tensilica.xide.cdt.launch.AttachTabGroup
+
+!ENTRY org.eclipse.osgi 2 1 2017-04-08 19:34:14.975
+!MESSAGE NLS unused message: // in: com.tensilica.xide.dsf.core.reset.ResetMessages
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:34:15.158
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:34:15.158
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:34:22.392
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -y -Y --allow-tdk  -name first_tie -noerrformat C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:34:29.794
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:34:29.847
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:34:54.666
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:35:03.958
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:35:16.440
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:35:16.497
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:35:16.975
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:35:16.991
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:35:19.446
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:35:20.975
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:38:15.933
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:40:36.968
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:42:50.381
+!MESSAGE Return Code: 0
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:42:50.400
+!MESSAGE Compilation succeeded with warnings. See problem view or TDK log for a more detailed explanation.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:43:03.784
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:43:03.830
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:43:04.685
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:43:09.896
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:43:09.899
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:43:10.466
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:43:16.889
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -y -Y --allow-tdk  -name first_tie -noerrformat C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:43:28.831
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:43:28.864
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:43:30.489
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:47:50.974
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:47:57.973
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:49:32.996
+!MESSAGE Return Code: 0
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:49:33.010
+!MESSAGE Compilation succeeded with warnings. See problem view or TDK log for a more detailed explanation.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:50:04.353
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:50:04.407
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:50:05.211
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:50:09.667
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:50:09.672
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:50:10.272
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:50:12.156
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -y -Y --allow-tdk  -name first_tie -noerrformat C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:50:24.085
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:50:24.109
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:50:25.752
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:54:37.501
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:54:40.610
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:54:52.300
+!MESSAGE Return Code: 1
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:54:52.302
+!MESSAGE Compile was aborted for Configuration tie_dev1 please see problem view or TDK log for more information if any.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:55:08.300
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:55:19.932
+!MESSAGE Return Code: 1
+
+!ENTRY CompileTdkJob 2 2 2017-04-08 19:55:19.934
+!MESSAGE Compile was aborted for Configuration tie_dev1 please see problem view or TDK log for more information if any.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:55:42.827
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:57:18.059
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:57:40.257
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:57:49.420
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:57:50.884
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:57:59.671
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:58:17.975
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:58:20.485
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -y -Y --allow-tdk  -name first_tie -noerrformat C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:58:32.408
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:59:11.645
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:59:15.922
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:59:21.908
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:59:21.975
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:59:24.681
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:59:24.681
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 19:59:27.157
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:59:28.683
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:59:36.422
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:59:36.424
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 19:59:37.621
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:00:04.544
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:00:11.872
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:00:20.817
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:00:20.864
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:00:26.226
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:00:26.230
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:00:28.670
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:00:30.234
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:02:11.822
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:02:20.439
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:03:55.297
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:04:03.825
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:04:03.879
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:04:04.729
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:04:06.971
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:04:06.976
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:04:07.583
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:04:13.984
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -y -Y --allow-tdk  -name first_tie -noerrformat C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:04:21.357
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:04:21.387
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:04:23.145
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:05:18.696
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:05:18.697
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:05:19.924
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:11.967
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:11.974
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:13.125
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:13.131
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:14.670
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:14.852
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:14.859
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:16.711
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:16.714
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:16.714
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:06:25.661
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:06:25.704
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:06:30.407
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:06:30.407
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --gdbserve=0 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:06:32.879
+!MESSAGE C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gdb --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --quiet --nw --interpreter=mi2 C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:34.408
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:34.414
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:34.427
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:38.139
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:06:39.975
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:09:45.029
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:10:35.297
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:10:57.979
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:13:13.458
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:13:19.233
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:14:18.488
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:14:20.346
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:14:31.314
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:/Logiciels/Xtensa/XtDevTools/install/tools/RF-2015.2-win32/XtensaTools/bin/tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:16:06.382
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:16:11.375
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:16:11.422
+!MESSAGE Return Code: 0
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:16:12.229
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:16:26.057
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-08 20:16:26.061
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY org.eclipse.core.resources 4 271 2017-04-08 20:16:26.735
+!MESSAGE File not found: C:\TEMP\THOG-life\THOG-xtensa\test\util.cpp.

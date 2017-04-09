@@ -1,6 +1,7 @@
 #include "cordic.hpp"
 
-#include "C:\TEMP\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
+#include "C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
+#define TIE_CORDIC
 
 //Taken online from http://www.dcs.gla.ac.uk/~jhw/cordic/
 
@@ -47,10 +48,15 @@ void atan_cordic(signed int y_in, signed int x_in, signed int *norm, signed int 
 		return;
 	}
 
+#ifdef TIE_CORDIC
 	tie_cordic_init(x,y);
+#endif
 
 	for (k=0; k<n; ++k)
 	{
+#ifdef TIE_CORDIC
+		tie_cordic_iterate();
+#else
 		//direction
 		d = ((y<=0) ? 0 : -1);
 
@@ -59,20 +65,17 @@ void atan_cordic(signed int y_in, signed int x_in, signed int *norm, signed int 
 		ty = y + (((x>>k) ^ d) - d);
 		tz = z - ((cordic_ctab[k] ^ d) - d);
 
-		tie_cordic_iterate(4000,-2000);
-
-		signed int tie_x = RUR_cordic_x();
-		signed int tie_y = RUR_cordic_y();
-		signed int tie_z = RUR_cordic_z();
-		int mask = RUR_mask_out();
-		signed int xdiv2 = RUR_xdiv2_out();
-		signed int ydiv2 = RUR_ydiv2_out();
-		//update
 		x = tx;
 		y = ty;
 		z = tz;
+#endif
 	}
 
+#ifdef TIE_CORDIC
+	x = RUR_cordic_x();
+	y = RUR_cordic_y();
+	z = RUR_cordic_z();
+#endif
 	//set outputs
 	*norm = x;
 

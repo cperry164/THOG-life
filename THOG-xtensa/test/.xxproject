@@ -9,9 +9,12 @@
 <propertyGroup name="make.exclusion.data">
 <makeExclusionEntries>
 <exclusionEntry data="/.*/bin/.*"/>
+<exclusionEntry data="/.*/util\.cpp"/>
 </makeExclusionEntries>
 </propertyGroup>
 <propertyGroup name="build.auto.includes">
 <exportDirs autoConsumeDirs="true" includeDepDirs="true" mode="auto"/>
 </propertyGroup>
+<propertyGroup name="library.dependencies"/>
+<propertyGroup name="build.custom.steps"/>
 </xxProperties>

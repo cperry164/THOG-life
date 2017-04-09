@@ -95,7 +95,23 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_xt_mul32
 	TIE_semantic_slot0_RUR_reg_A
 	TIE_semantic_slot0_WUR_reg_A
+	TIE_semantic_slot0_RUR_cordic_x
+	TIE_semantic_slot0_WUR_cordic_x
+	TIE_semantic_slot0_RUR_cordic_y
+	TIE_semantic_slot0_WUR_cordic_y
+	TIE_semantic_slot0_RUR_cordic_z
+	TIE_semantic_slot0_WUR_cordic_z
+	TIE_semantic_slot0_RUR_cordic_k
+	TIE_semantic_slot0_WUR_cordic_k
+	TIE_semantic_slot0_RUR_mask_out
+	TIE_semantic_slot0_WUR_mask_out
+	TIE_semantic_slot0_RUR_ydiv2_out
+	TIE_semantic_slot0_WUR_ydiv2_out
+	TIE_semantic_slot0_RUR_xdiv2_out
+	TIE_semantic_slot0_WUR_xdiv2_out
 	TIE_semantic_slot0_tie_add
+	TIE_semantic_slot0_tie_cordic_init
+	TIE_semantic_slot0_tie_cordic_iterate
 );
 
 # This hash contains all the semantics that have been data-gated

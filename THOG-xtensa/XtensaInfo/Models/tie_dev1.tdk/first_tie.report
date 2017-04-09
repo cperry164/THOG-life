@@ -2,15 +2,18 @@
 
 # These are the instructions in each slot
 slot <Inst> instructions: nop=NOP
-    RUR.reg_A WUR.reg_A tie_add 
+    RUR.cordic_k RUR.cordic_x RUR.cordic_y RUR.cordic_z RUR.mask_out 
+    RUR.reg_A RUR.xdiv2_out RUR.ydiv2_out WUR.cordic_k WUR.cordic_x 
+    WUR.cordic_y WUR.cordic_z WUR.mask_out WUR.reg_A WUR.xdiv2_out 
+    WUR.ydiv2_out tie_add tie_cordic_init tie_cordic_iterate 
 
 
 ### Register File port information
 # These are the read and write ports for each regfile. 
 regfile AR:
     
-        port rd0: width( 32) stage( 1) operands( {ars,0} {opnd_tie_add_in4,0}) 
-        port rd1: width( 32) stage( 1 2 3) operands( {art,0} {opnd_tie_add_in3,0}) 
+        port rd0: width( 32) stage( 1) operands( {ars,0} {opnd_tie_add_in4,0} {opnd_tie_cordic_init_x,0}) 
+        port rd1: width( 32) stage( 1 2 3) operands( {art,0} {opnd_tie_add_in3,0} {opnd_tie_cordic_init_y,0}) 
         port rd2: width( 32) stage( 1) operands( {opnd_tie_add_in2,0}) 
         port rd3: width( 32) stage( 1) operands( {opnd_tie_add_in1,0}) 
         port wr0: width( 32) stage( 1 2) operands( {ar0,0} {ar12,0} {ar4,0} {ar8,0} {arr,0} {ars,0} {ars_entry,0} {art,0}) 
@@ -26,17 +29,19 @@ regfile BR:
 regfile AR:
     Port rd0 Operand ars Slot 0 Stage 1: CALLX12 CALLX8 CALLX4 ENTRY MOVSP RETW RETW.N L32E S32E ADD.N ADDI.N BEQZ.N BNEZ.N L32I.N MOV.N RET.N S32I.N ADDI ADDMI ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR BEQI BNEI BGEI BLTI BBCI BBSI BGEUI BLTUI BEQ BNE BGE BLT BGEU BLTU BANY BNONE BALL BNALL BBC BBS BEQZ BNEZ BGEZ BLTZ CALLX0 JX L16UI L16SI L32I L8UI LOOP LOOPNEZ LOOPGTZ MOVEQZ MOVNEZ MOVLTZ MOVGEZ RET S16I S32I S32NB S8I SSR SSL SSA8L SSA8B SLL SRC SLLI MUL16U MUL16S MULL LDDR32.P SDDR32.P MOVF MOVT IPF IHI III LICT LICW SICT SICW DHWB DHWBI DIWBUI.P DIWB DIWBI DHI DII DPFR DPFW DPFRO DPFWO SDCT LDCT IDTLB PDTLB RDTLB0 RDTLB1 WDTLB IITLB PITLB RITLB0 RITLB1 WITLB CLAMPS MIN MAX MINU MAXU NSA NSAU SEXT L32AI S32RI S32C1I QUOU QUOS REMU REMS RER WER
     Port rd0 Operand opnd_tie_add_in4 Slot 0 Stage 1: tie_add
-    Port rd1 Operand art Slot 0 Stage 1: WSR.WINDOWBASE XSR.WINDOWBASE WSR.WINDOWSTART XSR.WINDOWSTART ADD.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR BEQ BNE BGE BLT BGEU BLTU BANY BNONE BALL BNALL BBC BBS EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SRC SRL SRA SRAI SRLI WSR.LEND XSR.LEND WSR.LBEG XSR.LBEG WSR.SAR XSR.SAR WSR.MEMCTL XSR.MEMCTL WSR.LITBASE XSR.LITBASE WSR.PS XSR.PS MUL16U MUL16S MULL WSR.BR XSR.BR MIN MAX MINU MAXU QUOU QUOS REMU REMS WER WUR.reg_A
+    Port rd0 Operand opnd_tie_cordic_init_x Slot 0 Stage 1: tie_cordic_init
+    Port rd1 Operand art Slot 0 Stage 1: WSR.WINDOWBASE XSR.WINDOWBASE WSR.WINDOWSTART XSR.WINDOWSTART ADD.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR BEQ BNE BGE BLT BGEU BLTU BANY BNONE BALL BNALL BBC BBS EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SRC SRL SRA SRAI SRLI WSR.LEND XSR.LEND WSR.LBEG XSR.LBEG WSR.SAR XSR.SAR WSR.MEMCTL XSR.MEMCTL WSR.LITBASE XSR.LITBASE WSR.PS XSR.PS MUL16U MUL16S MULL WSR.BR XSR.BR MIN MAX MINU MAXU QUOU QUOS REMU REMS WER WUR.reg_A WUR.cordic_x WUR.cordic_y WUR.cordic_z WUR.cordic_k WUR.mask_out WUR.ydiv2_out WUR.xdiv2_out
     Port rd1 Operand art Slot 0 Stage 2: S32E S32I.N S16I S32I S32NB S8I WSR.CONFIGID0 WSR.INTENABLE XSR.INTENABLE WSR.ICOUNTLEVEL XSR.ICOUNTLEVEL SICT SICW SDCT S32RI S32C1I
     Port rd1 Operand art Slot 0 Stage 3: WSR.LCOUNT XSR.LCOUNT WSR.EPC1 XSR.EPC1 WSR.EXCSAVE1 XSR.EXCSAVE1 WSR.EPC2 XSR.EPC2 WSR.EXCSAVE2 XSR.EXCSAVE2 WSR.EPC3 XSR.EPC3 WSR.EXCSAVE3 XSR.EXCSAVE3 WSR.EPS2 XSR.EPS2 WSR.EPS3 XSR.EPS3 WSR.EXCVADDR XSR.EXCVADDR WSR.DEPC XSR.DEPC WSR.EXCCAUSE XSR.EXCCAUSE WSR.VECBASE XSR.VECBASE WSR.INTSET WSR.INTCLEAR WSR.DBREAKA0 XSR.DBREAKA0 WSR.DBREAKC0 XSR.DBREAKC0 WSR.IBREAKA0 XSR.IBREAKA0 WSR.IBREAKENABLE XSR.IBREAKENABLE WSR.DEBUGCAUSE XSR.DEBUGCAUSE WSR.ICOUNT XSR.ICOUNT WSR.DDR XSR.DDR WSR.CCOUNT XSR.CCOUNT WSR.CCOMPARE0 XSR.CCOMPARE0 WSR.CCOMPARE1 XSR.CCOMPARE1 WDTLB WITLB WSR.CPENABLE XSR.CPENABLE WSR.SCOMPARE1 XSR.SCOMPARE1 WSR.ATOMCTL XSR.ATOMCTL
     Port rd1 Operand opnd_tie_add_in3 Slot 0 Stage 1: tie_add
+    Port rd1 Operand opnd_tie_cordic_init_y Slot 0 Stage 1: tie_cordic_init
     Port rd2 Operand opnd_tie_add_in2 Slot 0 Stage 1: tie_add
     Port rd3 Operand opnd_tie_add_in1 Slot 0 Stage 1: tie_add
     Port wr0 Operand ar0 Slot 0 Stage 1: CALL0 CALLX0
     Port wr0 Operand ar12 Slot 0 Stage 1: CALL12 CALLX12
     Port wr0 Operand ar4 Slot 0 Stage 1: CALL4 CALLX4
     Port wr0 Operand ar8 Slot 0 Stage 1: CALL8 CALLX8
-    Port wr0 Operand arr Slot 0 Stage 1: ADD.N ADDI.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SLL SRC SRL SRA SLLI SRAI SRLI MOVF MOVT CLAMPS MIN MAX MINU MAXU SEXT QUOU QUOS REMU REMS RUR.reg_A
+    Port wr0 Operand arr Slot 0 Stage 1: ADD.N ADDI.N ADD SUB ADDX2 ADDX4 ADDX8 SUBX2 SUBX4 SUBX8 AND OR XOR EXTUI MOVEQZ MOVNEZ MOVLTZ MOVGEZ NEG ABS SLL SRC SRL SRA SLLI SRAI SRLI MOVF MOVT CLAMPS MIN MAX MINU MAXU SEXT QUOU QUOS REMU REMS RUR.reg_A RUR.cordic_x RUR.cordic_y RUR.cordic_z RUR.cordic_k RUR.mask_out RUR.ydiv2_out RUR.xdiv2_out
     Port wr0 Operand arr Slot 0 Stage 2: MUL16U MUL16S MULL
     Port wr0 Operand ars Slot 0 Stage 1: MOVI.N LDDR32.P SDDR32.P DIWBUI.P
     Port wr0 Operand ars_entry Slot 0 Stage 1: ENTRY
@@ -157,6 +162,20 @@ states:
     State ATOMCTL (def) Slot 0 Stage 3: WSR.ATOMCTL
     State reg_A (use) Slot 0 Stage 1: RUR.reg_A
     State reg_A (def) Slot 0 Stage 1: WUR.reg_A
+    State cordic_x (use) Slot 0 Stage 1: RUR.cordic_x
+    State cordic_x (def) Slot 0 Stage 1: WUR.cordic_x
+    State cordic_y (use) Slot 0 Stage 1: RUR.cordic_y
+    State cordic_y (def) Slot 0 Stage 1: WUR.cordic_y
+    State cordic_z (use) Slot 0 Stage 1: RUR.cordic_z
+    State cordic_z (def) Slot 0 Stage 1: WUR.cordic_z
+    State cordic_k (use) Slot 0 Stage 1: RUR.cordic_k
+    State cordic_k (def) Slot 0 Stage 1: WUR.cordic_k
+    State mask_out (use) Slot 0 Stage 1: RUR.mask_out
+    State mask_out (def) Slot 0 Stage 1: WUR.mask_out
+    State ydiv2_out (use) Slot 0 Stage 1: RUR.ydiv2_out
+    State ydiv2_out (def) Slot 0 Stage 1: WUR.ydiv2_out
+    State xdiv2_out (use) Slot 0 Stage 1: RUR.xdiv2_out
+    State xdiv2_out (def) Slot 0 Stage 1: WUR.xdiv2_out
 
 
 ### Register File port instruction information
@@ -183,6 +202,7 @@ regfile AR:
     SLLI<ars> SRC<ars> SSA8B<ars> SSA8L<ars> SSL<ars> SSR<ars> SUB<ars> 
     SUBX2<ars> SUBX4<ars> SUBX8<ars> WDTLB<ars> WER<ars> WITLB<ars> 
     XOR<ars> tie_add<opnd_tie_add_in4> 
+    tie_cordic_init<opnd_tie_cordic_init_x> 
   regfile AR: port rd0: slot #0 Inst16a
     ADD.N<ars> ADDI.N<ars> L32I.N<ars> S32I.N<ars> 
   regfile AR: port rd0: slot #0 Inst16b
@@ -207,7 +227,9 @@ regfile AR:
     WSR.INTENABLE<art> WSR.INTSET<art> WSR.LBEG<art> WSR.LCOUNT<art> 
     WSR.LEND<art> WSR.LITBASE<art> WSR.MEMCTL<art> WSR.PS<art> WSR.SAR<art> 
     WSR.SCOMPARE1<art> WSR.VECBASE<art> WSR.WINDOWBASE<art> 
-    WSR.WINDOWSTART<art> WUR.reg_A<art> XOR<art> XSR.ATOMCTL<art> 
+    WSR.WINDOWSTART<art> WUR.cordic_k<art> WUR.cordic_x<art> 
+    WUR.cordic_y<art> WUR.cordic_z<art> WUR.mask_out<art> WUR.reg_A<art> 
+    WUR.xdiv2_out<art> WUR.ydiv2_out<art> XOR<art> XSR.ATOMCTL<art> 
     XSR.BR<art> XSR.CCOMPARE0<art> XSR.CCOMPARE1<art> XSR.CCOUNT<art> 
     XSR.CPENABLE<art> XSR.DBREAKA0<art> XSR.DBREAKC0<art> XSR.DDR<art> 
     XSR.DEBUGCAUSE<art> XSR.DEPC<art> XSR.EPC1<art> XSR.EPC2<art> 
@@ -218,6 +240,7 @@ regfile AR:
     XSR.LEND<art> XSR.LITBASE<art> XSR.MEMCTL<art> XSR.PS<art> XSR.SAR<art> 
     XSR.SCOMPARE1<art> XSR.VECBASE<art> XSR.WINDOWBASE<art> 
     XSR.WINDOWSTART<art> tie_add<opnd_tie_add_in3> 
+    tie_cordic_init<opnd_tie_cordic_init_y> 
   regfile AR: port rd1: slot #0 Inst16a
     ADD.N<art> S32I.N<art> 
   regfile AR: port rd2: slot #0 Inst
@@ -246,19 +269,21 @@ regfile AR:
     RSR.INTERRUPT<art> RSR.LBEG<art> RSR.LCOUNT<art> RSR.LEND<art> 
     RSR.LITBASE<art> RSR.MEMCTL<art> RSR.PRID<art> RSR.PS<art> RSR.SAR<art> 
     RSR.SCOMPARE1<art> RSR.VECBASE<art> RSR.WINDOWBASE<art> 
-    RSR.WINDOWSTART<art> RUR.reg_A<arr> S32C1I<art> SDDR32.P<ars> SEXT<arr> 
-    SLL<arr> SLLI<arr> SRA<arr> SRAI<arr> SRC<arr> SRL<arr> SRLI<arr> 
-    SUB<arr> SUBX2<arr> SUBX4<arr> SUBX8<arr> XOR<arr> XSR.ATOMCTL<art> 
-    XSR.BR<art> XSR.CCOMPARE0<art> XSR.CCOMPARE1<art> XSR.CCOUNT<art> 
-    XSR.CPENABLE<art> XSR.DBREAKA0<art> XSR.DBREAKC0<art> XSR.DDR<art> 
-    XSR.DEBUGCAUSE<art> XSR.DEPC<art> XSR.EPC1<art> XSR.EPC2<art> 
-    XSR.EPC3<art> XSR.EPS2<art> XSR.EPS3<art> XSR.EXCCAUSE<art> 
-    XSR.EXCSAVE1<art> XSR.EXCSAVE2<art> XSR.EXCSAVE3<art> XSR.EXCVADDR<art> 
-    XSR.IBREAKA0<art> XSR.IBREAKENABLE<art> XSR.ICOUNT<art> 
-    XSR.ICOUNTLEVEL<art> XSR.INTENABLE<art> XSR.LBEG<art> XSR.LCOUNT<art> 
-    XSR.LEND<art> XSR.LITBASE<art> XSR.MEMCTL<art> XSR.PS<art> XSR.SAR<art> 
-    XSR.SCOMPARE1<art> XSR.VECBASE<art> XSR.WINDOWBASE<art> 
-    XSR.WINDOWSTART<art> 
+    RSR.WINDOWSTART<art> RUR.cordic_k<arr> RUR.cordic_x<arr> 
+    RUR.cordic_y<arr> RUR.cordic_z<arr> RUR.mask_out<arr> RUR.reg_A<arr> 
+    RUR.xdiv2_out<arr> RUR.ydiv2_out<arr> S32C1I<art> SDDR32.P<ars> 
+    SEXT<arr> SLL<arr> SLLI<arr> SRA<arr> SRAI<arr> SRC<arr> SRL<arr> 
+    SRLI<arr> SUB<arr> SUBX2<arr> SUBX4<arr> SUBX8<arr> XOR<arr> 
+    XSR.ATOMCTL<art> XSR.BR<art> XSR.CCOMPARE0<art> XSR.CCOMPARE1<art> 
+    XSR.CCOUNT<art> XSR.CPENABLE<art> XSR.DBREAKA0<art> XSR.DBREAKC0<art> 
+    XSR.DDR<art> XSR.DEBUGCAUSE<art> XSR.DEPC<art> XSR.EPC1<art> 
+    XSR.EPC2<art> XSR.EPC3<art> XSR.EPS2<art> XSR.EPS3<art> 
+    XSR.EXCCAUSE<art> XSR.EXCSAVE1<art> XSR.EXCSAVE2<art> XSR.EXCSAVE3<art> 
+    XSR.EXCVADDR<art> XSR.IBREAKA0<art> XSR.IBREAKENABLE<art> 
+    XSR.ICOUNT<art> XSR.ICOUNTLEVEL<art> XSR.INTENABLE<art> XSR.LBEG<art> 
+    XSR.LCOUNT<art> XSR.LEND<art> XSR.LITBASE<art> XSR.MEMCTL<art> 
+    XSR.PS<art> XSR.SAR<art> XSR.SCOMPARE1<art> XSR.VECBASE<art> 
+    XSR.WINDOWBASE<art> XSR.WINDOWSTART<art> 
   regfile AR: port wr0: slot #0 Inst16a
     ADD.N<arr> ADDI.N<arr> L32I.N<art> 
   regfile AR: port wr0: slot #0 Inst16b
@@ -278,10 +303,38 @@ regfile BR:
 State: reg_A
   use stages: 1
   def stages: 1
+State: cordic_x
+  use stages: 1
+  def stages: 1
+State: cordic_y
+  use stages: 1
+  def stages: 1
+State: cordic_z
+  use stages: 1
+  def stages: 1
+State: cordic_k
+  use stages: 1
+  def stages: 1
+State: mask_out
+  use stages: 1
+  def stages: 1
+State: ydiv2_out
+  use stages: 1
+  def stages: 1
+State: xdiv2_out
+  use stages: 1
+  def stages: 1
 
 
 ### User register write instruction def stages
 Instruction WUR.reg_A defs user_register reg_A in stage 1.
+Instruction WUR.cordic_x defs user_register cordic_x in stage 1.
+Instruction WUR.cordic_y defs user_register cordic_y in stage 1.
+Instruction WUR.cordic_z defs user_register cordic_z in stage 1.
+Instruction WUR.cordic_k defs user_register cordic_k in stage 1.
+Instruction WUR.mask_out defs user_register mask_out in stage 1.
+Instruction WUR.ydiv2_out defs user_register ydiv2_out in stage 1.
+Instruction WUR.xdiv2_out defs user_register xdiv2_out in stage 1.
 
 
 ### Report the generated flops in each semantic 

@@ -17,6 +17,7 @@ void detect_image_window(string imagePath, string svmPath, string windowPath);
 
 int main(int argc, char* argv[])
 {
+
 	if (argc==2)
 	{
 		string path(argv[1]);

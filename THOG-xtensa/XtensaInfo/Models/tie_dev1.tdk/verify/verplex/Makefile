@@ -34,5 +34,5 @@ clean:
 
 
 warnings:
-	@echo "The following opcodes are not checked:RUR_reg_A, WUR_reg_A, tie_add \n" | tee -a verplex.log
+	@echo "The following opcodes are not checked:RUR_reg_A, WUR_reg_A, RUR_cordic_x, WUR_cordic_x, RUR_cordic_y, WUR_cordic_y, RUR_cordic_z, WUR_cordic_z, RUR_cordic_k, WUR_cordic_k, RUR_mask_out, WUR_mask_out, RUR_ydiv2_out, WUR_ydiv2_out, RUR_xdiv2_out, WUR_xdiv2_out, tie_add, tie_cordic_init, tie_cordic_iterate \n" | tee -a verplex.log
 

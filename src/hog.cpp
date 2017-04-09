@@ -478,6 +478,7 @@ bool HogWindow::detect(const SVM* reference)
 	unsigned int i;
 
 	signed int dotProduct=0;
+
 #ifdef TIE
 	WUR_reg_A(dotProduct);
 
@@ -492,7 +493,6 @@ bool HogWindow::detect(const SVM* reference)
 			dotProduct += this->values[i]*reference->values[i];
 		}
 #endif
-
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
 

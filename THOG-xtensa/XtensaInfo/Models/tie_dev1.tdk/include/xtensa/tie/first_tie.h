@@ -36,14 +36,74 @@
 
 extern unsigned _TIE_first_tie_RUR_reg_A(void);
 extern void _TIE_first_tie_WUR_reg_A(unsigned v);
+extern unsigned _TIE_first_tie_RUR_cordic_x(void);
+extern void _TIE_first_tie_WUR_cordic_x(unsigned v);
+extern unsigned _TIE_first_tie_RUR_cordic_y(void);
+extern void _TIE_first_tie_WUR_cordic_y(unsigned v);
+extern unsigned _TIE_first_tie_RUR_cordic_z(void);
+extern void _TIE_first_tie_WUR_cordic_z(unsigned v);
+extern unsigned _TIE_first_tie_RUR_cordic_k(void);
+extern void _TIE_first_tie_WUR_cordic_k(unsigned v);
+extern unsigned _TIE_first_tie_RUR_mask_out(void);
+extern void _TIE_first_tie_WUR_mask_out(unsigned v);
+extern unsigned _TIE_first_tie_RUR_ydiv2_out(void);
+extern void _TIE_first_tie_WUR_ydiv2_out(unsigned v);
+extern unsigned _TIE_first_tie_RUR_xdiv2_out(void);
+extern void _TIE_first_tie_WUR_xdiv2_out(unsigned v);
 extern void _TIE_first_tie_tie_add(unsigned in1, unsigned in2, unsigned in3, unsigned in4);
+extern void _TIE_first_tie_tie_cordic_init(unsigned x, unsigned y);
+extern void _TIE_first_tie_tie_cordic_iterate(void);
 #define RUR_reg_A _TIE_first_tie_RUR_reg_A
 #define Rreg_A _TIE_first_tie_RUR_reg_A
 #define RUR0 _TIE_first_tie_RUR_reg_A
 #define WUR_reg_A _TIE_first_tie_WUR_reg_A
 #define Wreg_A _TIE_first_tie_WUR_reg_A
 #define WUR0 _TIE_first_tie_WUR_reg_A
+#define RUR_cordic_x _TIE_first_tie_RUR_cordic_x
+#define Rcordic_x _TIE_first_tie_RUR_cordic_x
+#define RUR1 _TIE_first_tie_RUR_cordic_x
+#define WUR_cordic_x _TIE_first_tie_WUR_cordic_x
+#define Wcordic_x _TIE_first_tie_WUR_cordic_x
+#define WUR1 _TIE_first_tie_WUR_cordic_x
+#define RUR_cordic_y _TIE_first_tie_RUR_cordic_y
+#define Rcordic_y _TIE_first_tie_RUR_cordic_y
+#define RUR2 _TIE_first_tie_RUR_cordic_y
+#define WUR_cordic_y _TIE_first_tie_WUR_cordic_y
+#define Wcordic_y _TIE_first_tie_WUR_cordic_y
+#define WUR2 _TIE_first_tie_WUR_cordic_y
+#define RUR_cordic_z _TIE_first_tie_RUR_cordic_z
+#define Rcordic_z _TIE_first_tie_RUR_cordic_z
+#define RUR3 _TIE_first_tie_RUR_cordic_z
+#define WUR_cordic_z _TIE_first_tie_WUR_cordic_z
+#define Wcordic_z _TIE_first_tie_WUR_cordic_z
+#define WUR3 _TIE_first_tie_WUR_cordic_z
+#define RUR_cordic_k _TIE_first_tie_RUR_cordic_k
+#define Rcordic_k _TIE_first_tie_RUR_cordic_k
+#define RUR4 _TIE_first_tie_RUR_cordic_k
+#define WUR_cordic_k _TIE_first_tie_WUR_cordic_k
+#define Wcordic_k _TIE_first_tie_WUR_cordic_k
+#define WUR4 _TIE_first_tie_WUR_cordic_k
+#define RUR_mask_out _TIE_first_tie_RUR_mask_out
+#define Rmask_out _TIE_first_tie_RUR_mask_out
+#define RUR5 _TIE_first_tie_RUR_mask_out
+#define WUR_mask_out _TIE_first_tie_WUR_mask_out
+#define Wmask_out _TIE_first_tie_WUR_mask_out
+#define WUR5 _TIE_first_tie_WUR_mask_out
+#define RUR_ydiv2_out _TIE_first_tie_RUR_ydiv2_out
+#define Rydiv2_out _TIE_first_tie_RUR_ydiv2_out
+#define RUR6 _TIE_first_tie_RUR_ydiv2_out
+#define WUR_ydiv2_out _TIE_first_tie_WUR_ydiv2_out
+#define Wydiv2_out _TIE_first_tie_WUR_ydiv2_out
+#define WUR6 _TIE_first_tie_WUR_ydiv2_out
+#define RUR_xdiv2_out _TIE_first_tie_RUR_xdiv2_out
+#define Rxdiv2_out _TIE_first_tie_RUR_xdiv2_out
+#define RUR7 _TIE_first_tie_RUR_xdiv2_out
+#define WUR_xdiv2_out _TIE_first_tie_WUR_xdiv2_out
+#define Wxdiv2_out _TIE_first_tie_WUR_xdiv2_out
+#define WUR7 _TIE_first_tie_WUR_xdiv2_out
 #define tie_add _TIE_first_tie_tie_add
+#define tie_cordic_init _TIE_first_tie_tie_cordic_init
+#define tie_cordic_iterate _TIE_first_tie_tie_cordic_iterate
 
 #ifndef RUR
 #define RUR(NUM) RUR##NUM()
