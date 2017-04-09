@@ -4,6 +4,8 @@
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XtensaInfo/TIEFiles/first_tie.tie" type="1"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XtensaInfo/Models/tie_dev1.xc" type="1"/>
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/test" type="4"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XtensaInfo/TIEFiles/THOG-TIE.tie" type="1"/>
+<item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/libc_RF-2015.2/LinkToBuild_tie_dev1/include/xcc/c++/bits/stl_list.h" type="1"/>
 </workingSet>
 <workingSet editPageId="org.eclipse.ui.resourceWorkingSetPage" factoryID="org.eclipse.ui.internal.WorkingSetFactory" id="1490722303740_2" label="My C Projects and TIE" name="My C Projects and TIE">
 <item factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/XtensaInfo/TIEFiles" type="2"/>

@@ -4,7 +4,7 @@
 <TARGET>:=Debug
 <FEEDBACK>:=FBmode: Off
 
-<TIE_COMPILE>:=--xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+<TIE_COMPILE>:=
 <PRE_FINAL>:=
 <OBJS>:=[C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/image.o, C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/hog.o, C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/detection.o, C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/cordic.o]
 <MINSIZE_LINK>:=-Wl,@C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/objfiles.list -o C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test.minsize -mlsp=sim -Wl,-r -nostdlib --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk

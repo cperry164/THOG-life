@@ -109,6 +109,7 @@ my @all_semantic_names = qw(
 	TIE_semantic_slot0_WUR_ydiv2_out
 	TIE_semantic_slot0_RUR_xdiv2_out
 	TIE_semantic_slot0_WUR_xdiv2_out
+	TIE_semantic_slot0_tie_getbin
 	TIE_semantic_slot0_tie_add
 	TIE_semantic_slot0_tie_cordic_init
 	TIE_semantic_slot0_tie_cordic_iterate

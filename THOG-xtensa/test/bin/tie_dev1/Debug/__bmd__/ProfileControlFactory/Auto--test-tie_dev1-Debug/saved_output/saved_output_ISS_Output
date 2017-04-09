@@ -1,0 +1,111 @@
+C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database
+Calculating gradients...
+Calculating cells (building histograms)...
+Calculating blocks (normalization)...
+Calculating windows (svm product)...
+prod=-213745 	 reference=4194304
+prod=-148366 	 reference=4194304
+prod=-29832 	 reference=4194304
+prod=35535 	 reference=4194304
+prod=21662 	 reference=4194304
+prod=-66657 	 reference=4194304
+prod=-240285 	 reference=4194304
+prod=-163089 	 reference=4194304
+prod=-213758 	 reference=4194304
+prod=-199526 	 reference=4194304
+prod=-75098 	 reference=4194304
+prod=-300002 	 reference=4194304
+prod=-243135 	 reference=4194304
+prod=-124746 	 reference=4194304
+prod=-155138 	 reference=4194304
+prod=-171881 	 reference=4194304
+prod=-97121 	 reference=4194304
+prod=-296723 	 reference=4194304
+prod=-228493 	 reference=4194304
+prod=-93204 	 reference=4194304
+prod=17455 	 reference=4194304
+prod=-101201 	 reference=4194304
+prod=-69774 	 reference=4194304
+prod=-160648 	 reference=4194304
+prod=-273436 	 reference=4194304
+prod=-234179 	 reference=4194304
+prod=-218500 	 reference=4194304
+prod=-29729 	 reference=4194304
+prod=-142052 	 reference=4194304
+prod=-225698 	 reference=4194304
+prod=-98305 	 reference=4194304
+prod=-169195 	 reference=4194304
+prod=-213809 	 reference=4194304
+prod=-63841 	 reference=4194304
+prod=-301188 	 reference=4194304
+prod=-244451 	 reference=4194304
+prod=-111195 	 reference=4194304
+prod=12187 	 reference=4194304
+prod=-51533 	 reference=4194304
+prod=-75141 	 reference=4194304
+prod=-85492 	 reference=4194304
+prod=-151669 	 reference=4194304
+prod=-289701 	 reference=4194304
+prod=-458193 	 reference=4194304
+prod=-133288 	 reference=4194304
+prod=-179687 	 reference=4194304
+prod=-353460 	 reference=4194304
+prod=-189484 	 reference=4194304
+prod=-221935 	 reference=4194304
+prod=-322360 	 reference=4194304
+prod=-198261 	 reference=4194304
+Person detected in window x=72,y=16
+1 detection on 51 windows
+
+Xtensa Core: "tie_dev1"  ISS Version: 11.0.2
+
+Time for Simulation = 60.23 seconds
+
+Current PC = 0x6001a19f
+
+Cache Configuration:
+  ICache: 131072 bytes (128KB), 4-way set associative, 64-byte line
+  DCache: 131072 bytes (128KB), 4-way set associative, 64-byte line, writeback
+
+Events                             Number  Number
+                                           per 100
+                                           instrs 
+
+Committed instructions          29577226 ( 100.00 )
+Instruction fetches             16677013 (  56.38 )
+   Uncached                          259 (   0.00 )
+   ICache fetches               16676754 (  56.38 )
+      ICache misses                  373 (   0.00 )  0.00% of ICache fetches
+Taken branches                   3306702 (  11.18 )
+Exceptions                        163901 (   0.55 )
+   WindowOverflow                  81951 (   0.28 )
+   WindowUnderflow                 81950 (   0.28 )
+Loads                           10770559 (  36.42 )
+   Uncached                            8 (   0.00 )
+   DCache loads                 10770551 (  36.42 )
+      DCache load misses           11220 (   0.04 )  0.10% of DCache loads
+Stores                           5043573 (  17.05 )
+   DCache stores                 5043573 (  17.05 )
+      DCache store misses          21605 (   0.07 )  0.43% of DCache stores
+DCache castouts                    21474 (   0.07 )
+PIF transfers (4 bytes each)      875262 (   2.96 )
+   IFetch reads                     6470 (   0.02 )
+   Data reads                     525208 (   1.78 )
+   Data writes                    343584 (   1.16 )
+
+Cycles: total = 43175741
+                                                  Summed |          Summed
+                                          CPI      CPI   |% Cycle  % Cycle
+Committed instructions        29577226 ( 1.0000   1.0000 |  68.50    68.50 )
+Taken branches                 6761669 ( 0.2286   1.2286 |  15.66    84.17 )
+Pipeline interlocks            5313519 ( 0.1796   1.4083 |  12.31    96.47 )
+ICache misses                     7732 ( 0.0003   1.4085 |   0.02    96.49 )
+DCache misses                   691095 ( 0.0234   1.4319 |   1.60    98.09 )
+Exceptions                      819506 ( 0.0277   1.4596 |   1.90    99.99 )
+Uncached ifetches                 1562 ( 0.0001   1.4596 |   0.00    99.99 )
+Uncached loads                      47 ( 0.0000   1.4596 |   0.00    99.99 )
+Sync replays                      1690 ( 0.0001   1.4597 |   0.00   100.00 )
+Special instructions              1079 ( 0.0000   1.4597 |   0.00   100.00 )
+Loop overhead                      611 ( 0.0000   1.4598 |   0.00   100.00 )
+Reset                                5 ( 0.0000   1.4598 |   0.00   100.00 )
+

@@ -5,8 +5,9 @@
 #include "hog.hpp"
 #include "cordic.hpp"
 
+//#define TIE
 #ifdef TIE
-	#include "C:\TEMP\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
+	#include "C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
 #endif
 
 #define PI 3.14159265359
@@ -92,9 +93,13 @@ void HOG::calculate_gradient()
 
 	for (i=0;i<row_size;i++)
 	{
-		for (j=0;j<col_size;j++)
+		index = i*col_size;
+
+
+
+		for (j=0;j<col_size;j++, index++)
 		{
-			index = i*col_size+j;
+			//index = i*col_size+j;
 
 			//gradient X
 			if (j==0)
@@ -132,9 +137,7 @@ void HOG::calculate_gradient()
 			signed int y_in=(signed int)yGrad[index];
 #ifdef TIE
 			atan_cordic(y_in,x_in, &n, &a, 10);
-#else
-			atan_cordic(y_in,x_in, &n, &a, 10);
-#endif
+
 
 			if (n<0 || n>CORDIC_SQRT2_255) {
 				printf("Error: polar gradient norm out of bound\n");
@@ -144,6 +147,16 @@ void HOG::calculate_gradient()
 			}
 			norm[index] = (n>>CORDIC_FRAC_PART);
 			angle[index] = a;
+#else
+			float x = ((float)x_in) /pow(2, CORDIC_FRAC_PART);
+			float y = ((float)y_in) /pow(2, CORDIC_FRAC_PART);
+			float slowNorm = sqrt(x*x+y*y);
+			float slowAngle = atan2(y,x);
+			if(slowAngle < 0) slowAngle += 3.1415926535;
+			norm[index] = (int)(slowNorm * pow(2, CORDIC_FRAC_PART));
+		    angle[index] = (int)(slowAngle * pow(2, CORDIC_FRAC_PART));
+			//atan_cordic(y_in,x_in, &n, &a, 10);
+#endif
 
 			//float angle_cordicf = ((float)a)*180.0f/(float)CORDIC_PI;
 			//float norm_cordicf = (float)n/(float)CORDIC_ONE;
@@ -239,15 +252,16 @@ void HOG::calculate_windows()
 			for (m=0;m<15;m++)
 			{
 				//For each block of the window in x
-				for (n=0;n<7;n++)
+				for (n=0;n<7;n++, blockIndex++ )
 				{
 					//the index of the block in the global image block indexing system
 					//blockIndex=winBlockIndex+(m*block_size_x)+n;
 
 					//add the block to the current window's block list
-					nhlist->push_back(&blocks[blockIndex+n]);
+					nhlist->push_back(&blocks[blockIndex]);
 				}
-				blockIndex += block_size_x;
+
+				blockIndex += block_size_x-n;
 			}
 
 			//Once a window is completed we can fill the values array
@@ -307,13 +321,19 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 	signed int a,n;
 	signed int excentricity, angleToNextBin, angleToCurrentBin;
 
+
+
 	for (i=0;i<8;i++)
 	{
-		for (j=0;j<8;j++)
+		index=i*col_size;
+		for (j=0;j<8;j++, index++)
 		{
-			index=i*col_size+j;
 			a = angle[index];
 			n = norm[index];
+#ifdef TIE
+			bin = tie_getbin(a);
+
+#else
 
 			// simple decision tree to determine the bin
 			if (a<=binsAngle[4]) {
@@ -358,6 +378,7 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 				}
 			}
 
+#endif
 			//excentricity is between 0 and 1
 			excentricity = (a-binsAngle[bin]);
 
@@ -460,10 +481,9 @@ void HogWindow::calculate_values()
 		for(std::list<const NormalizedHistogram*>::iterator it = nhists.begin();
 				it != nhists.end(); it++)
 		{
-			for(unsigned int j=0;j<36;j++)
+			for(unsigned int j=0;j<36;j++, index++)
 			{
 				values[index]=(*it)->hist[j];
-				index++;
 			}
 		}
 	}

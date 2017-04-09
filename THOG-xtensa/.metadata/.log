@@ -1559,3 +1559,2115 @@ Command-line arguments:  -os win32 -ws win32 -arch x86 256m -application org.ecl
 
 !ENTRY com.tensilica.xide.core 1 0 2017-04-09 09:53:57.969
 !MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:00:35.026
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:00:35.032
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:42.751
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:42.956
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:42.963
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.062
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.067
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.118
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.122
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.170
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.175
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.227
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.232
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.281
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.285
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.336
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.340
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.392
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.397
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.446
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.450
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.498
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.502
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.550
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.559
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.599
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.608
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.660
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.665
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.719
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.723
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.779
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.784
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.833
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.837
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.887
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.891
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.943
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.948
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:43.999
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.004
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.054
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.058
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.106
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.111
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.162
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.167
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.208
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.654
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.720
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.725
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:44.749
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:45.245
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007693 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:01:45.290
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:02:40.422
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008d98 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:02:40.488
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:02:40.607
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008ae8 --stop-address=0x60008d99 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:02:40.656
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:02:47.196
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007d48 --stop-address=0x60007e11 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:02:47.244
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:03:33.805
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:03:33.851
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:03:42.745
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:03:42.749
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:48.988
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.136
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.142
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.195
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.199
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.250
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.254
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.302
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.307
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.355
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.360
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.408
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.413
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.461
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.465
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.515
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.520
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.570
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.574
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.622
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.628
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.678
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.685
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.727
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.736
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.786
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.793
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.843
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.848
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.897
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.901
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.950
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:49.955
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.007
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.012
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.066
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.071
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.137
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.144
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.192
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.197
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.245
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.250
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.297
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.302
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.345
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.886
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:50.933
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:51.010
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:51.034
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:51.140
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007d48 --stop-address=0x60007e13 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:51.195
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:51.595
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008d98 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:04:51.660
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:08:16.010
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:08:16.067
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:08:24.238
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:08:24.286
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:08:24.560
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:08:24.565
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:09:05.920
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:09:05.937
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.440
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.596
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.603
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.656
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.660
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.712
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.718
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.765
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.769
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.822
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.826
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.876
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.881
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.930
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.935
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.987
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:11.991
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.041
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.045
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.097
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.101
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.154
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.162
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.203
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.212
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.262
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.267
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.318
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.323
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.373
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.379
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.436
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.440
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.496
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.500
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.551
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.556
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.609
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.614
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.662
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.667
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.718
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.723
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.772
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.776
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:12.818
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:13.380
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:13.428
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:13.500
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:13.524
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:13.534
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007d48 --stop-address=0x60007e11 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:13.584
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 4 4 2017-04-09 10:10:13.589
+!MESSAGE XIDE ERROR: in ProfileManager.disassemblyDone(), request(27) is not in submitted set
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:14.022
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007d48 --stop-address=0x60007e11 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:14.069
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 4 4 2017-04-09 10:10:14.074
+!MESSAGE XIDE ERROR: in ProfileManager.disassemblyDone(), request(29) is not in submitted set
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:14.086
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008d98 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:14.158
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:41.660
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007693 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:10:41.706
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:12:41.983
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:12:42.028
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:13:09.091
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007ecc --stop-address=0x60008122 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:13:09.143
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:17:45.311
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:19:11.397
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:24:45.169
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:24:45.220
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:24:45.540
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:24:45.545
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY org.eclipse.osgi 2 1 2017-04-09 10:24:45.627
+!MESSAGE NLS unused message: // in: com.tensilica.xide.dsf.core.reset.ResetMessages
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:30:09.885
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:30:09.890
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.024
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.210
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.217
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.271
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.275
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.331
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.337
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.391
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.397
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.447
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.453
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.505
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.509
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.565
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.570
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.627
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.632
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.682
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.687
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.738
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.743
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.796
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.803
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.846
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.858
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.908
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.914
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.966
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:38.971
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.021
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.026
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.085
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.090
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.140
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.147
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.204
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.209
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.264
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.269
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.323
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.328
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.377
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.382
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.434
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.439
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:39.481
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.043
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x600077d8 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.096
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.179
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.203
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.306
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007a38 --stop-address=0x60008e38 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.377
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.459
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007ebc --stop-address=0x60008112 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:40.520
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 4 4 2017-04-09 10:31:40.525
+!MESSAGE XIDE ERROR: in ProfileManager.disassemblyDone(), request(41) is not in submitted set
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:41.071
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007a38 --stop-address=0x60008e38 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:41.138
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:41.160
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007ebc --stop-address=0x60008112 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:41.211
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 4 4 2017-04-09 10:31:41.217
+!MESSAGE XIDE ERROR: in ProfileManager.disassemblyDone(), request(44) is not in submitted set
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:41.237
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007a38 --stop-address=0x60008e38 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:31:41.306
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:34:50.553
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:34:50.594
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:35:20.237
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:35:20.284
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:35:25.134
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:35:25.139
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:31.856
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.014
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.021
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.075
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.081
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.140
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.146
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.199
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.204
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.256
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.262
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.314
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.320
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.377
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.382
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.433
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.439
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.492
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.498
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.548
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.552
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.602
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.611
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.655
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.666
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.720
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.724
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.785
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.790
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.844
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.851
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.914
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.918
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.969
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:32.974
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.034
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.040
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.117
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.122
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.174
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.180
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.232
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.237
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.295
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.301
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.341
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:33.702
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:34.001
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:34.076
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:34.100
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:34.209
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008db0 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:34.285
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:34.311
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007e34 --stop-address=0x6000808a C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:34.364
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:35.423
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008db0 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:36:35.504
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:41:15.618
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007cb0 --stop-address=0x60007d79 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:41:15.667
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:41:54.361
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008828 --stop-address=0x600089aa C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:41:54.409
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:42:35.334
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007693 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:42:35.380
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:47:07.821
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008b00 --stop-address=0x60008db1 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:47:07.872
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:49:00.970
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:49:01.019
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:49:01.550
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:49:01.555
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:50:14.284
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:50:14.330
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:50:14.678
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:50:14.684
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:51:39.656
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:51:39.661
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:46.736
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:46.888
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:46.895
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:46.948
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:46.952
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.003
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.009
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.057
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.061
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.114
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.119
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.168
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.172
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.220
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.224
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.275
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.279
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.328
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.333
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.382
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.387
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.436
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.443
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.483
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.493
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.541
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.547
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.597
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.602
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.651
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.658
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.708
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.712
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.765
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.770
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.839
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.844
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.894
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.899
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.949
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:47.954
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.002
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.006
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.058
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.063
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.103
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.648
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.696
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.768
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.792
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.806
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008db8 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.870
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:48.999
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007cb0 --stop-address=0x60007d79 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:49.047
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:49.541
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008db8 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:52:49.606
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:53:09.610
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007758 --stop-address=0x600079ab C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:53:09.659
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:53:09.666
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007800 --stop-address=0x600078bf C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:53:09.712
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:53:34.786
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008828 --stop-address=0x600089b1 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:53:34.834
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:54:21.068
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007e34 --stop-address=0x6000808a C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:54:21.117
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:54:34.870
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008b08 --stop-address=0x60008db9 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:54:34.919
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:54:58.289
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007693 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:54:58.336
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:58:53.524
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:58:53.579
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:58:54.054
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 10:58:54.058
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:01:27.404
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -y -Y --allow-tdk  -name first_tie -noerrformat C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:01:37.030
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:01:37.050
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -k -a 1 --allow-tdk  -name first_tie -noerrformat C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:01:42.423
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:05:01.632
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:05:01.636
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:07:21.098
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:07:21.103
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.618
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.772
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.780
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.836
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.840
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.895
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.901
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.956
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:29.960
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.010
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.015
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.069
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.073
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.123
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.129
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.183
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.188
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.242
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.247
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.297
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.302
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.353
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.360
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.400
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.410
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.462
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.467
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.522
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.529
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.579
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.584
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.640
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.645
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.701
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.708
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.759
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.764
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.818
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.823
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.878
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.883
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.933
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.938
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.988
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:30.994
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:31.032
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:31.619
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:31.675
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:31.758
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:31.780
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:31.885
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008dba C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:31.959
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.032
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008b08 --stop-address=0x60008dbb C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.082
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 4 4 2017-04-09 11:08:32.089
+!MESSAGE XIDE ERROR: in ProfileManager.disassemblyDone(), request(96) is not in submitted set
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.699
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008dba C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.773
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.791
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008b08 --stop-address=0x60008dbb C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.841
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 4 4 2017-04-09 11:08:32.847
+!MESSAGE XIDE ERROR: in ProfileManager.disassemblyDone(), request(99) is not in submitted set
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.867
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008dba C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.934
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:32.951
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007758 --stop-address=0x600079ab C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:08:33.000
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:29:54.247
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:29:54.294
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:29:54.785
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:29:54.789
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:31:03.748
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:31:03.752
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.068
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.215
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.222
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.272
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.276
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.327
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.332
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.380
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.384
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.432
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.436
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.482
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.486
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.535
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.540
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.591
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.596
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.645
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.649
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.700
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.704
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.752
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.761
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.800
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.810
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.862
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.866
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.916
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.921
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.969
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:12.974
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.023
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.028
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.080
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.085
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.136
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.141
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.193
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.199
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.248
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.253
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.302
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.307
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.355
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.361
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.402
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:13.964
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.012
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.082
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.105
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.121
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008dda C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.184
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.312
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008b08 --stop-address=0x60008ddb C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.362
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.807
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008dda C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.872
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.887
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007758 --stop-address=0x600079ab C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:32:14.933
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:38:19.589
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007e34 --stop-address=0x6000808a C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:38:19.643
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:40:46.487
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:40:46.537
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:40:47.005
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:40:47.005
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:41:27.508
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:41:27.556
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:41:30.271
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:41:30.271
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:31.976
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.128
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.128
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.180
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.197
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.247
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.251
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.302
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.302
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.358
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.362
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.403
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.403
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.474
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.474
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.524
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.524
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.575
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.575
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.616
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.635
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.683
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.688
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.728
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.728
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.787
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.789
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.840
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.845
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.891
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.891
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.950
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.955
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:32.992
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.011
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.061
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.063
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.104
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.120
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.175
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.175
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.231
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.235
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.276
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.276
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.317
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.875
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074f8 --stop-address=0x60007754 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.920
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:33.987
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.013
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.035
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008dbe C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.098
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.227
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007e34 --stop-address=0x6000808c C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.276
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.750
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600079b0 --stop-address=0x60008dbe C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.819
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.820
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007758 --stop-address=0x600079ab C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:42:34.879
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:59:51.913
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008e80 --stop-address=0x6001b908 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 11:59:53.411
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:13:40.950
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:13:50.326
+!MESSAGE Return Code: 1
+
+!ENTRY CompileTdkJob 2 2 2017-04-09 12:13:50.356
+!MESSAGE Compile was aborted for Configuration tie_dev1 please see problem view or TDK log for more information if any.
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:14:31.540
+!MESSAGE Run: /C:/Logiciels/Xtensa/Xplorer-6.0.2/eclipse/plugins/other.xide.external.utils_6.0.2.2000/os/i686-MSWin32/runjob.exe  C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\tc --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 -d C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -libdebug -Y -noerrformat  -name first_tie C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\TIEFiles\first_tie.tie 
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:15:57.539
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:17:09.956
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:17:10.006
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:17:10.319
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:17:10.323
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:18:28.332
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:18:28.378
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:18:29.352
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:18:29.356
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console --mem_model --mlatency=0 --blockrepeat=0 --write_delay=0 --write_repeat=0 --icline=64 --icsize=131072 --icways=4 --dcline=64 --dcsize=131072 --dcways=4 --summary --client=C:\TEMP\THOG-life\THOG-xtensa\.metadata\.plugins\com.tensilica.xide.cdt\Auto_--_test_-_tie_dev1_-_Debug.clientcmds C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.306
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --exe=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test --lineno=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\linenumbers
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.462
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.468
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.521
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.525
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.577
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.580
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.628
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.632
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.681
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.686
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.735
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.740
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.789
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.793
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.843
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.847
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.901
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.907
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.954
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:30.959
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.008
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.015
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile  gmon.xx.bdelay function.gmon.xx.bdelay gmon.xx.cyc function.gmon.xx.cyc gmon.xx.dcmiss function.gmon.xx.dcmiss gmon.xx.dcmiss_cyc function.gmon.xx.dcmiss_cyc gmon.xx.icmiss function.gmon.xx.icmiss gmon.xx.icmiss_cyc function.gmon.xx.icmiss_cyc gmon.xx.insn function.gmon.xx.insn gmon.xx.interlock function.gmon.xx.interlock gmon.xx.unc_ifetch function.gmon.xx.unc_ifetch gmon.xx.unc_load function.gmon.xx.unc_load
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.056
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.065
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.bdelay.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.bdelay.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.117
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.122
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.173
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.178
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.227
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.232
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.dcmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.dcmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.281
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.286
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.341
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.346
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.icmiss_cyc.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.icmiss_cyc.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.432
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.437
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.insn.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.insn.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.489
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.493
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.interlock.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.interlock.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.541
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.548
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_ifetch.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_ifetch.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.597
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.604
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-gprof --profile-file=function.gmon.xx.unc_load.incl C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.653
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.657
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\misc\xxprof --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --aggregate=C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\__bmd__\ProfileControlFactory\Auto--test-tie_dev1-Debug\profile.incl  gmon.xx.bdelay.incl function.gmon.xx.bdelay.incl gmon.xx.cyc.incl function.gmon.xx.cyc.incl gmon.xx.dcmiss.incl function.gmon.xx.dcmiss.incl gmon.xx.dcmiss_cyc.incl function.gmon.xx.dcmiss_cyc.incl gmon.xx.icmiss.incl function.gmon.xx.icmiss.incl gmon.xx.icmiss_cyc.incl function.gmon.xx.icmiss_cyc.incl gmon.xx.insn.incl function.gmon.xx.insn.incl gmon.xx.interlock.incl function.gmon.xx.interlock.incl gmon.xx.unc_ifetch.incl function.gmon.xx.unc_ifetch.incl gmon.xx.unc_load.incl function.gmon.xx.unc_load.incl
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:31.698
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.242
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x600074d8 --stop-address=0x60007734 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.290
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.362
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-size -t C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test.minsize
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.386
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.398
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007990 --stop-address=0x60008c9a C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.460
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.595
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007e14 --stop-address=0x60007f69 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:32.644
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:33.167
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007990 --stop-address=0x60008c9a C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:33.231
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:33.247
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60007738 --stop-address=0x6000798b C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:33.294
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:33.300
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk -d -l -S -C -w --no-show-raw-insn --start-address=0x60008d60 --stop-address=0x6001b7e8 C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:19:34.762
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:35:04.843
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:35:04.888
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:35:05.390
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:35:05.394
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:39:25.247
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:39:25.294
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:39:25.589
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:39:25.592
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:44:33.648
+!MESSAGE Run: C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-objdump --xtensa-system=C:/Logiciels/Xtensa/XtDevTools/install/builds/RF-2015.2-win32/tie_dev1/config --xtensa-core=tie_dev1 --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk  -t -C C:/TEMP/THOG-life/THOG-xtensa/test/bin/tie_dev1/Debug/test
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:44:33.699
+!MESSAGE Return Code: 0
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:44:34.012
+!MESSAGE xt-run working directory <C:\TEMP\THOG-life\THOG-xtensa\test>
+
+!ENTRY com.tensilica.xide.core 1 0 2017-04-09 12:44:34.016
+!MESSAGE xt-run launch <C:\Logiciels\Xtensa\XtDevTools\install\tools\RF-2015.2-win32\XtensaTools\bin\xt-run --xtensa-core=tie_dev1 --xtensa-system=C:\Logiciels\Xtensa\XtDevTools\install\builds\RF-2015.2-win32\tie_dev1\config --xtensa-params=C:/TEMP/THOG-life/THOG-xtensa/XtensaInfo/Models/tie_dev1.tdk --console C:\TEMP\THOG-life\THOG-xtensa\test\bin\tie_dev1\Debug\test C:/TEMP/THOG-life/database >

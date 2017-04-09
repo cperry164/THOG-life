@@ -5,7 +5,7 @@ slot <Inst> instructions: nop=NOP
     RUR.cordic_k RUR.cordic_x RUR.cordic_y RUR.cordic_z RUR.mask_out 
     RUR.reg_A RUR.xdiv2_out RUR.ydiv2_out WUR.cordic_k WUR.cordic_x 
     WUR.cordic_y WUR.cordic_z WUR.mask_out WUR.reg_A WUR.xdiv2_out 
-    WUR.ydiv2_out tie_add tie_cordic_init tie_cordic_iterate 
+    WUR.ydiv2_out tie_add tie_cordic_init tie_cordic_iterate tie_getbin 
 
 
 ### Register File port information
@@ -13,10 +13,10 @@ slot <Inst> instructions: nop=NOP
 regfile AR:
     
         port rd0: width( 32) stage( 1) operands( {ars,0} {opnd_tie_add_in4,0} {opnd_tie_cordic_init_x,0}) 
-        port rd1: width( 32) stage( 1 2 3) operands( {art,0} {opnd_tie_add_in3,0} {opnd_tie_cordic_init_y,0}) 
+        port rd1: width( 32) stage( 1 2 3) operands( {art,0} {opnd_tie_add_in3,0} {opnd_tie_cordic_init_y,0} {opnd_tie_getbin_a,0}) 
         port rd2: width( 32) stage( 1) operands( {opnd_tie_add_in2,0}) 
         port rd3: width( 32) stage( 1) operands( {opnd_tie_add_in1,0}) 
-        port wr0: width( 32) stage( 1 2) operands( {ar0,0} {ar12,0} {ar4,0} {ar8,0} {arr,0} {ars,0} {ars_entry,0} {art,0}) 
+        port wr0: width( 32) stage( 1 2) operands( {ar0,0} {ar12,0} {ar4,0} {ar8,0} {arr,0} {ars,0} {ars_entry,0} {art,0} {opnd_tie_getbin_bin,0}) 
 regfile BR:
     
         port rd0: width( 1 4 8 16) stage( 1) operands( {brall,0} {bs4,0} {bs8,0} {bt,0}) 
@@ -35,6 +35,7 @@ regfile AR:
     Port rd1 Operand art Slot 0 Stage 3: WSR.LCOUNT XSR.LCOUNT WSR.EPC1 XSR.EPC1 WSR.EXCSAVE1 XSR.EXCSAVE1 WSR.EPC2 XSR.EPC2 WSR.EXCSAVE2 XSR.EXCSAVE2 WSR.EPC3 XSR.EPC3 WSR.EXCSAVE3 XSR.EXCSAVE3 WSR.EPS2 XSR.EPS2 WSR.EPS3 XSR.EPS3 WSR.EXCVADDR XSR.EXCVADDR WSR.DEPC XSR.DEPC WSR.EXCCAUSE XSR.EXCCAUSE WSR.VECBASE XSR.VECBASE WSR.INTSET WSR.INTCLEAR WSR.DBREAKA0 XSR.DBREAKA0 WSR.DBREAKC0 XSR.DBREAKC0 WSR.IBREAKA0 XSR.IBREAKA0 WSR.IBREAKENABLE XSR.IBREAKENABLE WSR.DEBUGCAUSE XSR.DEBUGCAUSE WSR.ICOUNT XSR.ICOUNT WSR.DDR XSR.DDR WSR.CCOUNT XSR.CCOUNT WSR.CCOMPARE0 XSR.CCOMPARE0 WSR.CCOMPARE1 XSR.CCOMPARE1 WDTLB WITLB WSR.CPENABLE XSR.CPENABLE WSR.SCOMPARE1 XSR.SCOMPARE1 WSR.ATOMCTL XSR.ATOMCTL
     Port rd1 Operand opnd_tie_add_in3 Slot 0 Stage 1: tie_add
     Port rd1 Operand opnd_tie_cordic_init_y Slot 0 Stage 1: tie_cordic_init
+    Port rd1 Operand opnd_tie_getbin_a Slot 0 Stage 1: tie_getbin
     Port rd2 Operand opnd_tie_add_in2 Slot 0 Stage 1: tie_add
     Port rd3 Operand opnd_tie_add_in1 Slot 0 Stage 1: tie_add
     Port wr0 Operand ar0 Slot 0 Stage 1: CALL0 CALLX0
@@ -47,6 +48,7 @@ regfile AR:
     Port wr0 Operand ars_entry Slot 0 Stage 1: ENTRY
     Port wr0 Operand art Slot 0 Stage 1: MOVSP RSR.WINDOWBASE XSR.WINDOWBASE RSR.WINDOWSTART XSR.WINDOWSTART MOV.N ADDI ADDMI MOVI RSIL RSR.LEND XSR.LEND RSR.LBEG XSR.LBEG RSR.SAR XSR.SAR RSR.MEMCTL XSR.MEMCTL RSR.LITBASE XSR.LITBASE RSR.BR XSR.BR NSA NSAU RER
     Port wr0 Operand art Slot 0 Stage 2: L32E L32I.N L16UI L16SI L32I L32R L8UI RSR.LCOUNT XSR.LCOUNT RSR.CONFIGID0 RSR.CONFIGID1 RSR.PS XSR.PS RSR.EPC1 XSR.EPC1 RSR.EXCSAVE1 XSR.EXCSAVE1 RSR.EPC2 XSR.EPC2 RSR.EXCSAVE2 XSR.EXCSAVE2 RSR.EPC3 XSR.EPC3 RSR.EXCSAVE3 XSR.EXCSAVE3 RSR.EPS2 XSR.EPS2 RSR.EPS3 XSR.EPS3 RSR.EXCVADDR XSR.EXCVADDR RSR.DEPC XSR.DEPC RSR.EXCCAUSE XSR.EXCCAUSE RSR.PRID RSR.VECBASE XSR.VECBASE RSR.INTERRUPT RSR.INTENABLE XSR.INTENABLE RSR.DBREAKA0 XSR.DBREAKA0 RSR.DBREAKC0 XSR.DBREAKC0 RSR.IBREAKA0 XSR.IBREAKA0 RSR.IBREAKENABLE XSR.IBREAKENABLE RSR.DEBUGCAUSE XSR.DEBUGCAUSE RSR.ICOUNT XSR.ICOUNT RSR.ICOUNTLEVEL XSR.ICOUNTLEVEL RSR.DDR XSR.DDR RSR.CCOUNT XSR.CCOUNT RSR.CCOMPARE0 XSR.CCOMPARE0 RSR.CCOMPARE1 XSR.CCOMPARE1 LICT LICW LDCT PDTLB RDTLB0 RDTLB1 PITLB RITLB0 RITLB1 RSR.CPENABLE XSR.CPENABLE L32AI S32C1I RSR.SCOMPARE1 XSR.SCOMPARE1 RSR.ATOMCTL XSR.ATOMCTL
+    Port wr0 Operand opnd_tie_getbin_bin Slot 0 Stage 1: tie_getbin
 regfile BR:
     Port rd0 Operand brall Slot 0 Stage 1: RSR.BR XSR.BR
     Port rd0 Operand bs4 Slot 0 Stage 1: ANY4 ALL4
@@ -240,7 +242,7 @@ regfile AR:
     XSR.LEND<art> XSR.LITBASE<art> XSR.MEMCTL<art> XSR.PS<art> XSR.SAR<art> 
     XSR.SCOMPARE1<art> XSR.VECBASE<art> XSR.WINDOWBASE<art> 
     XSR.WINDOWSTART<art> tie_add<opnd_tie_add_in3> 
-    tie_cordic_init<opnd_tie_cordic_init_y> 
+    tie_cordic_init<opnd_tie_cordic_init_y> tie_getbin<opnd_tie_getbin_a> 
   regfile AR: port rd1: slot #0 Inst16a
     ADD.N<art> S32I.N<art> 
   regfile AR: port rd2: slot #0 Inst
@@ -284,6 +286,7 @@ regfile AR:
     XSR.LCOUNT<art> XSR.LEND<art> XSR.LITBASE<art> XSR.MEMCTL<art> 
     XSR.PS<art> XSR.SAR<art> XSR.SCOMPARE1<art> XSR.VECBASE<art> 
     XSR.WINDOWBASE<art> XSR.WINDOWSTART<art> 
+    tie_getbin<opnd_tie_getbin_bin> 
   regfile AR: port wr0: slot #0 Inst16a
     ADD.N<arr> ADDI.N<arr> L32I.N<art> 
   regfile AR: port wr0: slot #0 Inst16b
