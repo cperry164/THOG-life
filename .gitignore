@@ -1,2 +1,5 @@
 /build/*
 /THOG-xtensa/.metadata/*
+*.snap
+*.log
+*.prefs
