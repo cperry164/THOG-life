@@ -21,9 +21,9 @@ table compare_ctab 32 9 {32'h00000000, 32'h00000165, 32'h000002CB,
 						  32'h00000861, 32'h000009C6, 32'h00000B2C}
 
 
-operation tie_getbin {in AR a, out AR bin} {}
+operation tie_getbin {in AR a, in AR n, out AR bin} {}
 {
-	assign bin = 
+	wire [31:0] index  =
 //if (a<=binsAngle[4]) {
 	(a <= compare_ctab[4]) ? (
 //	if (a<=binsAngle[2]) {
@@ -106,6 +106,8 @@ operation tie_getbin {in AR a, out AR bin} {}
 )
 //}
 );
+
+	assign bin = index;
 }
 
 operation tie_add {in AR in1, in AR in2,in AR in3,in AR in4} {inout reg_A}

@@ -5,6 +5,8 @@
 #include "hog.hpp"
 #include "cordic.hpp"
 
+//#define CHECK4ERRORS
+
 #define TIE
 #ifdef TIE
 	#include "C:\TEMP\THOG-life\THOG-xtensa\XtensaInfo\Models\tie_dev1.tdk\include\xtensa\tie\first_tie.h"
@@ -138,13 +140,14 @@ void HOG::calculate_gradient()
 #ifdef TIE
 			atan_cordic(y_in,x_in, &n, &a, 10);
 
-
+#ifdef CHECK4ERRORS
 			if (n<0 || n>CORDIC_SQRT2_255) {
 				printf("Error: polar gradient norm out of bound\n");
 			}
 			if (a<0 || a>CORDIC_PI) {
 				printf("Error: polar gradient angle out of bound\n");
 			}
+#endif
 			norm[index] = (n>>CORDIC_FRAC_PART);
 			angle[index] = a;
 #else
@@ -331,8 +334,8 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 			a = angle[index];
 			n = norm[index];
 #ifdef TIE
-			bin = tie_getbin(a);
-
+			bin = tie_getbin(a,0);
+			excentricity = a-binsAngle[bin];
 #else
 
 			// simple decision tree to determine the bin
@@ -377,25 +380,28 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 					}
 				}
 			}
-
-#endif
 			//excentricity is between 0 and 1
 			excentricity = (a-binsAngle[bin]);
+#endif
 
+#ifdef CHECK4ERRORS
 			if (excentricity<0 || excentricity>CORDIC_NINTH_PI) {
 				printf("Error: histogram excentricity is out of bound\n");
 			}
+#endif
 
 			angleToNextBin = (n*excentricity)/CORDIC_NINTH_PI;
 
 			//if the angle is above 160, the next bin is 0 degrees
-			hist[(bin+1)%9]+=(unsigned int)angleToNextBin;
+			hist[(bin+1)%9]+= angleToNextBin;
 
 			angleToCurrentBin = n-angleToNextBin;
 
+#ifdef CHECK4ERRORS
 			if (angleToCurrentBin<0) {
 				printf("Error: Norm to current bin is out of bound\n");
 			}
+#endif
 
 			hist[bin]+=angleToCurrentBin;
 		}
@@ -437,8 +443,8 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 			l2hysSum += ((*it)->hist[j])*((*it)->hist[j]);
 
 			//debug remove later
-			this->hist[index] = ((*it)->hist[j]);
-			index++;
+			//this->hist[index] = ((*it)->hist[j]);
+			//index++;
 		}
 	}
 
@@ -489,7 +495,9 @@ void HogWindow::calculate_values()
 	}
 	else
 	{
+#ifdef CHECK4ERRORS
 		printf("HogWindow trying to calculate values of a window with %d normalized histograms (105 required)",nhists.size());
+#endif
 	}
 }
 
@@ -515,8 +523,9 @@ bool HogWindow::detect(const SVM* reference)
 #endif
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
-
+#ifdef CHECK4ERRORS
 	printf("prod=%d \t reference=%d\n",dotProduct,reference->bias);
+#endif
 	//return (dotProduct<=-0.7*reference->bias);
 	return (dotProduct<=-(reference->bias/10));
 }
@@ -531,11 +540,12 @@ SVM::SVM(std::string filepath)
 	FILE* fd;
 
 	fd=fopen(filepath.c_str(),"rb");
-
+#ifdef CHECK4ERRORS
 	if(fd==NULL){
 		printf("Cannot open %s\n",filepath);
 		return;
 	}
+#endif
 
 	//Reading the file
 	fread(&this->bias,sizeof(int),1,fd);

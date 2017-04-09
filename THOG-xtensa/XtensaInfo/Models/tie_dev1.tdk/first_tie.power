@@ -15,7 +15,7 @@ power estimate during the early phases of the design and validate the
 estimated power using hardware synthesis tool as design attains maturity.
 ------------------------------ DISCLAIMER ------------------------------
 
-  229731 TIE
+  230734 TIE
             1271 TIE_decoder (0.55%)
                0 TIE_AR_Regfile [additional power] (0.00%)
             2253 TIE_reg_A_State (0.98%)
@@ -42,19 +42,20 @@ estimated power using hardware synthesis tool as design attains maturity.
               35 TIE_slot0_semantic_WUR_ydiv2_out (0.02%)
               35 TIE_slot0_semantic_RUR_xdiv2_out (0.02%)
               35 TIE_slot0_semantic_WUR_xdiv2_out (0.02%)
-           15357 TIE_slot0_semantic_tie_getbin (6.68%)
-          137413 TIE_slot0_semantic_tie_add (59.81%)
+           15357 TIE_slot0_semantic_tie_getbin (6.66%)
+          137413 TIE_slot0_semantic_tie_add (59.55%)
               35 TIE_slot0_semantic_tie_cordic_init (0.02%)
-           39291 TIE_slot0_semantic_tie_cordic_iterate (17.10%)
-            1003 TIE_slot0_operand_opnd_tie_getbin_bin (0.44%)
-            1003 TIE_slot0_operand_opnd_tie_getbin_a (0.44%)
-            1003 TIE_slot0_operand_opnd_tie_add_in4 (0.44%)
-            1003 TIE_slot0_operand_opnd_tie_add_in3 (0.44%)
-            1003 TIE_slot0_operand_opnd_tie_add_in2 (0.44%)
-            1003 TIE_slot0_operand_opnd_tie_add_in1 (0.44%)
-            1003 TIE_slot0_operand_opnd_tie_cordic_init_y (0.44%)
-            1003 TIE_slot0_operand_opnd_tie_cordic_init_x (0.44%)
-            9756 TIE toplogic for muxing and pipeline management (4.25%)
+           39291 TIE_slot0_semantic_tie_cordic_iterate (17.03%)
+            1003 TIE_slot0_operand_opnd_tie_getbin_bin (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_getbin_n (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_getbin_a (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_add_in4 (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_add_in3 (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_add_in2 (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_add_in1 (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_cordic_init_y (0.43%)
+            1003 TIE_slot0_operand_opnd_tie_cordic_init_x (0.43%)
+            9756 TIE toplogic for muxing and pipeline management (4.23%)
 
 
   ACTIVATED BLOCK POWER BEGIN

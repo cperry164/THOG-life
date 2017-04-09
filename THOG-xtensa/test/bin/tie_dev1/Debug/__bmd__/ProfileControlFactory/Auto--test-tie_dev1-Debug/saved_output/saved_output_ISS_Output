@@ -3,65 +3,14 @@ Calculating gradients...
 Calculating cells (building histograms)...
 Calculating blocks (normalization)...
 Calculating windows (svm product)...
-prod=-213745 	 reference=4194304
-prod=-148366 	 reference=4194304
-prod=-29832 	 reference=4194304
-prod=35535 	 reference=4194304
-prod=21662 	 reference=4194304
-prod=-66657 	 reference=4194304
-prod=-240285 	 reference=4194304
-prod=-163089 	 reference=4194304
-prod=-213758 	 reference=4194304
-prod=-199526 	 reference=4194304
-prod=-75098 	 reference=4194304
-prod=-300002 	 reference=4194304
-prod=-243135 	 reference=4194304
-prod=-124746 	 reference=4194304
-prod=-155138 	 reference=4194304
-prod=-171881 	 reference=4194304
-prod=-97121 	 reference=4194304
-prod=-296723 	 reference=4194304
-prod=-228493 	 reference=4194304
-prod=-93204 	 reference=4194304
-prod=17455 	 reference=4194304
-prod=-101201 	 reference=4194304
-prod=-69774 	 reference=4194304
-prod=-160648 	 reference=4194304
-prod=-273436 	 reference=4194304
-prod=-234179 	 reference=4194304
-prod=-218500 	 reference=4194304
-prod=-29729 	 reference=4194304
-prod=-142052 	 reference=4194304
-prod=-225698 	 reference=4194304
-prod=-98305 	 reference=4194304
-prod=-169195 	 reference=4194304
-prod=-213809 	 reference=4194304
-prod=-63841 	 reference=4194304
-prod=-301188 	 reference=4194304
-prod=-244451 	 reference=4194304
-prod=-111195 	 reference=4194304
-prod=12187 	 reference=4194304
-prod=-51533 	 reference=4194304
-prod=-75141 	 reference=4194304
-prod=-85492 	 reference=4194304
-prod=-151669 	 reference=4194304
-prod=-289701 	 reference=4194304
-prod=-458193 	 reference=4194304
-prod=-133288 	 reference=4194304
-prod=-179687 	 reference=4194304
-prod=-353460 	 reference=4194304
-prod=-189484 	 reference=4194304
-prod=-221935 	 reference=4194304
-prod=-322360 	 reference=4194304
-prod=-198261 	 reference=4194304
 Person detected in window x=72,y=16
 1 detection on 51 windows
 
 Xtensa Core: "tie_dev1"  ISS Version: 11.0.2
 
-Time for Simulation = 64.48 seconds
+Time for Simulation = 55.59 seconds
 
-Current PC = 0x6001a19f
+Current PC = 0x60019eff
 
 Cache Configuration:
   ICache: 131072 bytes (128KB), 4-way set associative, 64-byte line
@@ -71,41 +20,41 @@ Events                             Number  Number
                                            per 100
                                            instrs 
 
-Committed instructions          29577226 ( 100.00 )
-Instruction fetches             16677013 (  56.38 )
+Committed instructions          27264534 ( 100.00 )
+Instruction fetches             15479303 (  56.77 )
    Uncached                          259 (   0.00 )
-   ICache fetches               16676754 (  56.38 )
-      ICache misses                  373 (   0.00 )  0.00% of ICache fetches
-Taken branches                   3306702 (  11.18 )
-Exceptions                        163901 (   0.55 )
-   WindowOverflow                  81951 (   0.28 )
-   WindowUnderflow                 81950 (   0.28 )
-Loads                           10770559 (  36.42 )
+   ICache fetches               15479044 (  56.77 )
+      ICache misses                  363 (   0.00 )  0.00% of ICache fetches
+Taken branches                   3149865 (  11.55 )
+Exceptions                        163085 (   0.60 )
+   WindowOverflow                  81543 (   0.30 )
+   WindowUnderflow                 81542 (   0.30 )
+Loads                           10217407 (  37.48 )
    Uncached                            8 (   0.00 )
-   DCache loads                 10770551 (  36.42 )
-      DCache load misses           11220 (   0.04 )  0.10% of DCache loads
-Stores                           5043573 (  17.05 )
-   DCache stores                 5043573 (  17.05 )
-      DCache store misses          21605 (   0.07 )  0.43% of DCache stores
-DCache castouts                    21474 (   0.07 )
-PIF transfers (4 bytes each)      875262 (   2.96 )
-   IFetch reads                     6470 (   0.02 )
-   Data reads                     525208 (   1.78 )
-   Data writes                    343584 (   1.16 )
+   DCache loads                 10217399 (  37.48 )
+      DCache load misses           10987 (   0.04 )  0.11% of DCache loads
+Stores                           4650877 (  17.06 )
+   DCache stores                 4650877 (  17.06 )
+      DCache store misses          21561 (   0.08 )  0.46% of DCache stores
+DCache castouts                    21401 (   0.08 )
+PIF transfers (4 bytes each)      869518 (   3.19 )
+   IFetch reads                     6326 (   0.02 )
+   Data reads                     520776 (   1.91 )
+   Data writes                    342416 (   1.26 )
 
-Cycles: total = 43175741
+Cycles: total = 40244493
                                                   Summed |          Summed
                                           CPI      CPI   |% Cycle  % Cycle
-Committed instructions        29577226 ( 1.0000   1.0000 |  68.50    68.50 )
-Taken branches                 6761669 ( 0.2286   1.2286 |  15.66    84.17 )
-Pipeline interlocks            5313519 ( 0.1796   1.4083 |  12.31    96.47 )
-ICache misses                     7732 ( 0.0003   1.4085 |   0.02    96.49 )
-DCache misses                   691095 ( 0.0234   1.4319 |   1.60    98.09 )
-Exceptions                      819506 ( 0.0277   1.4596 |   1.90    99.99 )
-Uncached ifetches                 1562 ( 0.0001   1.4596 |   0.00    99.99 )
-Uncached loads                      47 ( 0.0000   1.4596 |   0.00    99.99 )
-Sync replays                      1690 ( 0.0001   1.4597 |   0.00   100.00 )
-Special instructions              1079 ( 0.0000   1.4597 |   0.00   100.00 )
-Loop overhead                      611 ( 0.0000   1.4598 |   0.00   100.00 )
-Reset                                5 ( 0.0000   1.4598 |   0.00   100.00 )
+Committed instructions        27264534 ( 1.0000   1.0000 |  67.75    67.75 )
+Taken branches                 6439810 ( 0.2362   1.2362 |  16.00    83.75 )
+Pipeline interlocks            5028850 ( 0.1844   1.4206 |  12.50    96.24 )
+ICache misses                     7543 ( 0.0003   1.4209 |   0.02    96.26 )
+DCache misses                   685158 ( 0.0251   1.4461 |   1.70    97.97 )
+Exceptions                      815426 ( 0.0299   1.4760 |   2.03    99.99 )
+Uncached ifetches                 1562 ( 0.0001   1.4760 |   0.00   100.00 )
+Uncached loads                      47 ( 0.0000   1.4760 |   0.00   100.00 )
+Sync replays                       435 ( 0.0000   1.4760 |   0.00   100.00 )
+Special instructions              1002 ( 0.0000   1.4761 |   0.00   100.00 )
+Loop overhead                      121 ( 0.0000   1.4761 |   0.00   100.00 )
+Reset                                5 ( 0.0000   1.4761 |   0.00   100.00 )
 

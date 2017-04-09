@@ -50,7 +50,7 @@ extern unsigned _TIE_first_tie_RUR_ydiv2_out(void);
 extern void _TIE_first_tie_WUR_ydiv2_out(unsigned v);
 extern unsigned _TIE_first_tie_RUR_xdiv2_out(void);
 extern void _TIE_first_tie_WUR_xdiv2_out(unsigned v);
-extern unsigned _TIE_first_tie_tie_getbin(unsigned a);
+extern unsigned _TIE_first_tie_tie_getbin(unsigned a, unsigned n);
 extern void _TIE_first_tie_tie_add(unsigned in1, unsigned in2, unsigned in3, unsigned in4);
 extern void _TIE_first_tie_tie_cordic_init(unsigned x, unsigned y);
 extern void _TIE_first_tie_tie_cordic_iterate(void);

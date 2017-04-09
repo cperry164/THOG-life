@@ -32,17 +32,17 @@ estimated area using hardware synthesis tool as design attains maturity.
 
 
 
-   15141 TIE
-             231 TIE_decoder (1.53%)
-            2148 TIE_AR_Regfile [additional area] (14.19%)
-             398 TIE_reg_A_State (2.63%)
-             398 TIE_cordic_x_State (2.63%)
-             398 TIE_cordic_y_State (2.63%)
-             398 TIE_cordic_z_State (2.63%)
-             398 TIE_cordic_k_State (2.63%)
-             398 TIE_mask_out_State (2.63%)
-             398 TIE_ydiv2_out_State (2.63%)
-             398 TIE_xdiv2_out_State (2.63%)
+   15233 TIE
+             231 TIE_decoder (1.52%)
+            2148 TIE_AR_Regfile [additional area] (14.10%)
+             398 TIE_reg_A_State (2.61%)
+             398 TIE_cordic_x_State (2.61%)
+             398 TIE_cordic_y_State (2.61%)
+             398 TIE_cordic_z_State (2.61%)
+             398 TIE_cordic_k_State (2.61%)
+             398 TIE_mask_out_State (2.61%)
+             398 TIE_ydiv2_out_State (2.61%)
+             398 TIE_xdiv2_out_State (2.61%)
                8 TIE_slot0_semantic_RUR_reg_A (0.05%)
                8 TIE_slot0_semantic_WUR_reg_A (0.05%)
                8 TIE_slot0_semantic_RUR_cordic_x (0.05%)
@@ -59,12 +59,12 @@ estimated area using hardware synthesis tool as design attains maturity.
                8 TIE_slot0_semantic_WUR_ydiv2_out (0.05%)
                8 TIE_slot0_semantic_RUR_xdiv2_out (0.05%)
                8 TIE_slot0_semantic_WUR_xdiv2_out (0.05%)
-             638 TIE_slot0_semantic_tie_getbin (4.21%)
-            4596 TIE_slot0_semantic_tie_add (30.35%)
+             638 TIE_slot0_semantic_tie_getbin (4.19%)
+            4596 TIE_slot0_semantic_tie_add (30.17%)
                8 TIE_slot0_semantic_tie_cordic_init (0.05%)
-            2716 TIE_slot0_semantic_tie_cordic_iterate (17.94%)
-             736 TIE instruction operand logic (4.86%)
-             756 TIE toplogic for muxing and pipeline management (4.99%)
+            2716 TIE_slot0_semantic_tie_cordic_iterate (17.83%)
+             828 TIE instruction operand logic (5.44%)
+             756 TIE toplogic for muxing and pipeline management (4.96%)
 
 
 cpu_seconds 0.14
