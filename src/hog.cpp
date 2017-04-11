@@ -128,18 +128,17 @@ void HOG::calculate_gradient()
 			signed int n,a;
 			signed int x_in=(signed int)xGrad[index];
 			signed int y_in=(signed int)yGrad[index];
-#ifdef TIE
-			atan_cordic(y_in,x_in, &n, &a, 10);
-#else
-			atan_cordic(y_in,x_in, &n, &a, 10);
-#endif
 
+			atan_cordic(y_in,x_in, &n, &a, 10);
+
+			/*
 			if (n<0 || n>CORDIC_SQRT2_255) {
 				printf("Error: polar gradient norm out of bound\n");
 			}
 			if (a<0 || a>CORDIC_PI) {
 				printf("Error: polar gradient angle out of bound\n");
-			}
+			}*/
+
 			norm[index] = (n>>CORDIC_FRAC_PART);
 			angle[index] = a;
 
@@ -362,22 +361,22 @@ void Histogram::calculate_hist(const signed int* norm, const signed int* angle,i
 
 			//excentricity is between 0 and 1
 			excentricity = (a-binsAngle[bin]);
-
+/*
 			if (excentricity<0 || excentricity>CORDIC_NINTH_PI) {
 				printf("Error: histogram excentricity is out of bound\n");
 			}
-
+*/
 			angleToNextBin = (n*excentricity)/CORDIC_NINTH_PI;
 
 			//if the angle is above 160, the next bin is 0 degrees
 			hist[(bin+1)%9]+=(unsigned int)angleToNextBin;
 
 			angleToCurrentBin = n-angleToNextBin;
-
+/*
 			if (angleToCurrentBin<0) {
 				printf("Error: Norm to current bin is out of bound\n");
 			}
-
+*/
 			hist[bin]+=angleToCurrentBin;
 		}
 	}
@@ -407,6 +406,7 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 
 	//need a 64 bits container to store squared values
 	signed int l2hysSum=0;
+	WUR_simdAcc(0);
 
 	index=0;
 	for (std::list<const Histogram*>::iterator it=hists.begin(); it != hists.end(); it++)
@@ -415,9 +415,10 @@ void NormalizedHistogram::calculate_normedhist(std::list<const Histogram*> hists
 
 		vec32x4 *a;
 		a = (vec32x4 *)((*it)->hist);
-		l2hysSum +=dotprod(*a,*a);
+		dotprod(*a,*a);
 		a++;
-		l2hysSum +=dotprod(*a,*a);
+		dotprod(*a,*a);
+		l2hysSum = RUR_simdAcc();
 		l2hysSum += ((*it)->hist[8])*((*it)->hist[8]);
 
 #else
@@ -496,12 +497,17 @@ bool HogWindow::detect(const SVM* reference)
 
 	vec32x4 *a, *b;
 
+	WUR_simdAcc(0);
+
 	for (i=0;i<(3780-4);i+=4)
 	{
 		a = (vec32x4 *)(&this->values[i]);
 		b = (vec32x4 *)(&reference->values[i]);
-		dotProduct += dotprod(*a,*b);
+		dotprod(*a,*b);
+		//dotProduct += dotprod(*a,*b);
 	}
+	dotProduct=RUR_simdAcc();
+
 	for (;i<3780;i++)
 	{
 		dotProduct += this->values[i]*reference->values[i];
@@ -515,7 +521,7 @@ bool HogWindow::detect(const SVM* reference)
 
 	dotProduct = dotProduct>>(CORDIC_FRAC_PART);
 
-	printf("prod=%d \t reference=%d\n",dotProduct,reference->bias);
+	//printf("prod=%d \t reference=%d\n",dotProduct,reference->bias);
 	//return (dotProduct<=-0.7*reference->bias);
 	return (dotProduct<=-(reference->bias/10));
 }

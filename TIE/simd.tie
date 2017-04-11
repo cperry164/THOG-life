@@ -1,8 +1,9 @@
 
 
 regfile vec32x4 128 4 vec
+state simdAcc 32 add_read_write
 
-operation dotprod {out AR acc, in vec32x4 a, in vec32x4 b}{}
+operation dotprod {out AR sum, in vec32x4 a, in vec32x4 b}{inout simdAcc}
 {
 	//4-way SIMD multiplication
 	wire [31:0] prod0 = a[31:0]*b[31:0];
@@ -10,5 +11,6 @@ operation dotprod {out AR acc, in vec32x4 a, in vec32x4 b}{}
 	wire [31:0] prod2 = a[95:64]*b[95:64];
 	wire [31:0] prod3 = a[127:96]*b[127:96];
 
-	assign acc = prod0+prod1+prod2+prod3;
+	assign simdAcc = simdAcc+prod0+prod1+prod2+prod3;
+	assign sum=prod0+prod1+prod2+prod3;
 }
